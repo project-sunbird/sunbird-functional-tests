@@ -3,7 +3,7 @@
   "firstName": "testName",
   "lastName": "test",
   "password": "password",
-  "userName": "manzarul109",
+  "userName": "citrus:concat('ft_username',citrus:randomString(10, MIXED, true))",
   "email":"manzarul07+769@gmail.com"
 } 
 }
