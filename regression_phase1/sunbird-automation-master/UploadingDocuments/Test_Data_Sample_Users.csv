@@ -1,0 +1,9 @@
+firstName,lastName,phone,email,userName,password,provider,phoneVerified,roles,position,grade,location,dob,gender,language,profileSummary,subject
+testing,sunbird,,,autoadmin,autoadmin123,sdvgb,,ORG_ADMIN,,,,,,,,
+,,,,autoconcreater,autocreater123,,,CONTENT_CREATOR,,,,,,,,
+,,,,autoconreviewer,autoreviewer123,,,CONTENT_REVIEWER,,,,,,,,
+,,,,autobookcreater,autobcreater123,,,BOOK_CREATOR,,,,,,,,
+,,,,autobookreviewer,autoreviewer123,,,BOOK_REVIEWER,,,,,,,,
+,,,,autoflagreviewer,autoflagreviewer123,,,FLAG_REVIEWER,,,,,,,,
+,,,,autopublic,autopublic123,,,PUBLIC,,,,,,,,
+,,,,autocoursementor,autocoursementor123,,,COURSE_MENTOR,,,,,,,,

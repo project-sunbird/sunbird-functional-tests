@@ -9,60 +9,99 @@ import org.testng.annotations.Test;
 
 public class OrganisationBulkUploadTest extends BaseCitrusTestRunner {
 
-  private static final String TEMPLATE_DIR = "templates/bulkupload/organisation";
-  private static final String BULK_UPLOAD_ORGANISATION_SERVER_URI = "/api/org/v1/upload";
-  private static final String BULK_UPLOAD_ORGANISATION_LOCAL_URI = "/v1/org/upload";
+  public static final String TEST_NAME_ORG_BULK_UPLOAD_FAILURE_WITHOUT_ACCESS_TOKEN =
+      "testOrgBulkUploadFailureWithoutAccessToken";
+  public static final String TEST_NAME_ORG_BULK_UPLOAD_FAILURE_WITHOUT_CSV_FILE =
+      "testOrgBulkUploadFailureWithoutCsvFile";
+  public static final String TEST_NAME_ORG_BULK_UPLOAD_FAILURE_WITH_EMPTY_CSV_FILE =
+      "testOrgBulkUploadFailureWithEmptyCsvFile";
+  public static final String TEST_NAME_ORG_BULK_UPLOAD_FAILURE_WITH_INVALID_COLUMN =
+      "testOrgBulkUploadFailureWithInvalidColumn";
+  public static final String TEST_NAME_ORG_BULK_UPLOAD_FAILURE_WITHOUT_COLUMN_HEADER_IN_CSV_FILE =
+      "testOrgBulkUploadFailureWithoutColumnHeaderInCsvFile";
+  public static final String TEST_NAME_ORG_BULK_UPLOAD_FAILURE_WITH_EXCEEDING_FILE_SIZE =
+      "testOrgBulkUploadFailureWithExceedingFileSize";
 
-  @DataProvider(name = "organisationBulkUploadSuccessDataProvider")
-  public Object[][] organisationBulkUploadSuccessDataProvider() {
-    return new Object[][] {new Object[] {"testOrgBulkUploadSuccess"}};
+  public static final String TEST_NAME_ORG_BULK_UPLOAD_SUCCESS = "testOrgBulkUploadSuccess";
+
+  public static final String TEMPLATE_DIR = "templates/bulkupload/organisation";
+
+  private String getUserBulkUploadUrl() {
+    return getLmsApiUriPath("/api/org/v1/upload", "/v1/org/upload");
   }
 
-  @DataProvider(name = "organisationBulkUploadFailureDataProvider")
-  public Object[][] organisationBulkUploadFailureDataProvider() {
+  @DataProvider(name = "orgBulkUploadFailureDataProvider")
+  public Object[][] orgBulkUploadFailureDataProvider() {
+
     return new Object[][] {
-      new Object[] {"testOrgBulkUploadFailureWithInvalidColumn", HttpStatus.BAD_REQUEST},
-      new Object[] {"testOrgBulkUploadFailureWithEmptyCsvFile", HttpStatus.BAD_REQUEST},
-      new Object[] {"testOrgBulkUploadFailureWithoutCsvFile", HttpStatus.INTERNAL_SERVER_ERROR}
+      new Object[] {
+        TEST_NAME_ORG_BULK_UPLOAD_FAILURE_WITHOUT_ACCESS_TOKEN, HttpStatus.UNAUTHORIZED, false
+      },
+      new Object[] {
+        TEST_NAME_ORG_BULK_UPLOAD_FAILURE_WITHOUT_CSV_FILE, HttpStatus.BAD_REQUEST, true
+      },
+      new Object[] {
+        TEST_NAME_ORG_BULK_UPLOAD_FAILURE_WITH_EMPTY_CSV_FILE, HttpStatus.BAD_REQUEST, true
+      },
+      new Object[] {
+        TEST_NAME_ORG_BULK_UPLOAD_FAILURE_WITHOUT_COLUMN_HEADER_IN_CSV_FILE,
+        HttpStatus.BAD_REQUEST,
+        true
+      },
+      new Object[] {
+        TEST_NAME_ORG_BULK_UPLOAD_FAILURE_WITH_INVALID_COLUMN, HttpStatus.BAD_REQUEST, true
+      },
+      new Object[] {
+        TEST_NAME_ORG_BULK_UPLOAD_FAILURE_WITH_EXCEEDING_FILE_SIZE, HttpStatus.BAD_REQUEST, true
+      },
     };
   }
 
-  @Test(dataProvider = "organisationBulkUploadSuccessDataProvider")
-  @CitrusParameters({"testName"})
+  @Test(dataProvider = "orgBulkUploadFailureDataProvider")
+  @CitrusParameters({"testName", "httpStatusCode", "isAuthRequired"})
   @CitrusTest
-  public void testOrgBulkUploadSuccess(String testName) {
+  public void testOrgBulkUploadFailure(
+      String testName, HttpStatus httpStatusCode, boolean isAuthRequired) {
+    getTestCase().setName(testName);
     getAuthToken(this, true);
+
     performMultipartTest(
         this,
         TEMPLATE_DIR,
         testName,
-        getOrgBulkUploadUrl(),
+        getUserBulkUploadUrl(),
         REQUEST_FORM_DATA,
         null,
-        true,
-        HttpStatus.OK,
+        isAuthRequired,
+        httpStatusCode,
         RESPONSE_JSON);
   }
 
-  @Test(dataProvider = "organisationBulkUploadFailureDataProvider")
-  @CitrusParameters({"testName", "status"})
+  @DataProvider(name = "orgBulkUploadSuccessDataProvider")
+  public Object[][] orgBulkUploadSuccessDataProvider() {
+
+    return new Object[][] {
+      new Object[] {TEST_NAME_ORG_BULK_UPLOAD_SUCCESS, HttpStatus.OK, true},
+    };
+  }
+
+  @Test(dataProvider = "orgBulkUploadSuccessDataProvider")
+  @CitrusParameters({"testName", "httpStatusCode", "isAuthRequired"})
   @CitrusTest
-  public void testOrgBulkUploadFailure(String testName, HttpStatus status) {
+  public void testOrgBulkUploadSuccess(
+      String testName, HttpStatus httpStatusCode, boolean isAuthRequired) {
+    getTestCase().setName(testName);
     getAuthToken(this, true);
+
     performMultipartTest(
         this,
         TEMPLATE_DIR,
         testName,
-        getOrgBulkUploadUrl(),
+        getUserBulkUploadUrl(),
         REQUEST_FORM_DATA,
         null,
-        true,
-        status,
+        isAuthRequired,
+        httpStatusCode,
         RESPONSE_JSON);
-  }
-
-  private String getOrgBulkUploadUrl() {
-    return getLmsApiUriPath(
-        BULK_UPLOAD_ORGANISATION_SERVER_URI, BULK_UPLOAD_ORGANISATION_LOCAL_URI);
   }
 }

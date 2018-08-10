@@ -1,0 +1,2 @@
+firstName,lastName,phone,email,userName,password,externalId,externalIdType,externalIdProvider,externalIds,phoneVerified,emailVerified,roles,position,grade,location,dob,gender,language,profileSummary,subject
+SubOrg,User,,suborguser@automation.com,SubOrgUser1,password,,,,,,,,,,,,,,,

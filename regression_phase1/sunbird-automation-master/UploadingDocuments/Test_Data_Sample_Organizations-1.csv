@@ -1,0 +1,2 @@
+orgName,isRootOrg,channel,externalId,provider,description,homeUrl,orgCode,orgType,preferredLanguage,contactDetail
+Sample Org1,TRUE,samplechannel,sampleexternal,sampleprovider,sampledescription,samplehomeurl,sampleorgcode,,English,

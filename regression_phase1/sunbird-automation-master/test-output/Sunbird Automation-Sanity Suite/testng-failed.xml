@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Sunbird Automation-Sanity Suite]">
+  <listeners>
+    <listener class-name="org.open_sunbird.staging.generic.TestListener"/>
+  </listeners>
+  <test name="SanityTests(failed)">
+    <classes>
+      <class name="org.open_sunbird.staging.testscripts.Admin_TC09_11">
+        <methods>
+          <include name="openApplication"/>
+          <include name="testCase09_11"/>
+          <include name="closeApplication"/>
+        </methods>
+      </class> <!-- org.open_sunbird.staging.testscripts.Admin_TC09_11 -->
+      <class name="org.open_sunbird.staging.testscripts.Admin_TC01">
+        <methods>
+          <include name="openApplication"/>
+          <include name="closeApplication"/>
+        </methods>
+      </class> <!-- org.open_sunbird.staging.testscripts.Admin_TC01 -->
+      <class name="org.open_sunbird.staging.testscripts.Admin_TC06">
+        <methods>
+          <include name="openApplication"/>
+          <include name="closeApplication"/>
+        </methods>
+      </class> <!-- org.open_sunbird.staging.testscripts.Admin_TC06 -->
+      <class name="org.open_sunbird.staging.testscripts.Admin_TC04">
+        <methods>
+          <include name="openApplication"/>
+          <include name="closeApplication"/>
+        </methods>
+      </class> <!-- org.open_sunbird.staging.testscripts.Admin_TC04 -->
+      <class name="org.open_sunbird.staging.testscripts.Admin_TC03">
+        <methods>
+          <include name="openApplication"/>
+          <include name="testCase03"/>
+          <include name="closeApplication"/>
+        </methods>
+      </class> <!-- org.open_sunbird.staging.testscripts.Admin_TC03 -->
+      <class name="org.open_sunbird.staging.testscripts.Admin_TC07">
+        <methods>
+          <include name="openApplication"/>
+          <include name="closeApplication"/>
+        </methods>
+      </class> <!-- org.open_sunbird.staging.testscripts.Admin_TC07 -->
+      <class name="org.open_sunbird.staging.testscripts.Admin_TC02">
+        <methods>
+          <include name="openApplication"/>
+          <include name="closeApplication"/>
+        </methods>
+      </class> <!-- org.open_sunbird.staging.testscripts.Admin_TC02 -->
+      <class name="org.open_sunbird.staging.testscripts.Admin_TC05">
+        <methods>
+          <include name="openApplication"/>
+          <include name="testCase05"/>
+          <include name="closeApplication"/>
+        </methods>
+      </class> <!-- org.open_sunbird.staging.testscripts.Admin_TC05 -->
+    </classes>
+  </test> <!-- SanityTests(failed) -->
+</suite> <!-- Failed suite [Sunbird Automation-Sanity Suite] -->

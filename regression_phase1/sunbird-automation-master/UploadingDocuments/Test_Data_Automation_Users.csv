@@ -1,0 +1,9 @@
+firstName,lastName,phone,email,userName,password,provider,phoneVerified,roles,position,grade,location,dob,gender,language,profileSummary,subject
+Test,Admin,,tech-automation+1@qualitrix.com,autoadmin,automation,,,ORG_ADMIN,,,,,,,,
+Test,ContentCreator,,tech-automation+2@qualitrix.com,autocontentcreater,automation,,,CONTENT_CREATOR,,,,,,,,
+Test,ContentReviewer,,tech-automation+3@qualitrix.com,autocontentreviewer,automation,,,CONTENT_REVIEWER,,,,,,,,
+Test,BookCreator,,tech-automation+4@qualitrix.com,autobookcreator,automation,,,BOOK_CREATOR,,,,,,,,
+Test,BookReviewer,,tech-automation+5@qualitrix.com,autobookreviewer,automation,,,BOOK_REVIEWER,,,,,,,,
+Test,FlagReviewer,,tech-automation+6@qualitrix.com,autoflagreviewer,automation,,,FLAG_REVIEWER,,,,,,,,
+Test,Public,,tech-automation+7@qualitrix.com,autopublic,automation,,,PUBLIC,,,,,,,,
+Test,CourseMentor,,tech-automation+8@qualitrix.com,autocoursementor,automation,,,COURSE_MENTOR,,,,,,,,

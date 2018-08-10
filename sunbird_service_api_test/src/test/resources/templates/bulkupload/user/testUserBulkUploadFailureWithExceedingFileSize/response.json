@@ -1,0 +1,14 @@
+{
+    "id": "api.user.upload",
+    "ver": "v1",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": null,
+        "msgid": "@ignore@",
+        "err": "DATA_SIZE_EXCEEDED",
+        "status": "DATA_SIZE_EXCEEDED",
+        "errmsg": "Maximum upload data size should be 1,000"
+    },
+    "responseCode": "CLIENT_ERROR",
+    "result": {}
+}

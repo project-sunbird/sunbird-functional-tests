@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+<listener class-name="org.sunbird.generic.TestListener"></listener>
+</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="org.sunbird.testscripts.PublicUser_TC01_02"/>
+      <class name="org.sunbird.testscripts.Admin_TC09_11"/>
+      <class name="org.sunbird.testscripts.Reviewer_TC16"/>
+      <class name="org.sunbird.testscripts.Admin_TC07"/>
+      <class name="org.sunbird.testscripts.Admin_TC06"/>
+      <class name="org.sunbird.testscripts.Admin_TC05"/>
+      <class name="org.sunbird.testscripts.Admin_TC04"/>
+      <class name="org.sunbird.testscripts.Reviewer_TC14"/>
+      <class name="org.sunbird.testscripts.Creator_TC20"/>
+      <class name="org.sunbird.testscripts.Admin_TC03"/>
+      <class name="org.sunbird.testscripts.Admin_TC02"/>
+      <class name="org.sunbird.testscripts.Announcement_TC02_03_04"/>
+      <class name="org.sunbird.testscripts.Admin_TC01"/>
+      <class name="org.sunbird.testscripts.Announcement_TC01"/>
+      <class name="org.sunbird.generic.GenericFunctions"/>
+      <class name="org.sunbird.testscripts.Creator_TC18"/>
+      <class name="org.sunbird.testscripts.Creator_TC19"/>
+      <class name="org.sunbird.testscripts.Creator_TC16"/>
+      <class name="org.sunbird.testscripts.Creator_TC17"/>
+      <class name="org.sunbird.testscripts.Creator_TC14"/>
+      <class name="org.sunbird.testscripts.Reviewer_TC01"/>
+      <class name="org.sunbird.testscripts.Creator_TC15"/>
+      <class name="org.sunbird.testscripts.Creator_TC12"/>
+      <class name="org.sunbird.testscripts.Creator_TC13"/>
+      <class name="org.sunbird.testscripts.Creator_TC10"/>
+      <class name="org.sunbird.testscripts.Creator_TC11"/>
+      <class name="org.sunbird.testscripts.Creator_TC09"/>
+      <class name="org.sunbird.testscripts.Creator_TC07"/>
+      <class name="org.sunbird.testscripts.Creator_TC08"/>
+      <class name="org.sunbird.testscripts.Creator_TC05"/>
+      <class name="org.sunbird.testscripts.Creator_TC06"/>
+      <class name="org.sunbird.testscripts.Creator_TC03"/>
+      <class name="org.sunbird.testscripts.Creator_TC04"/>
+      <class name="org.sunbird.testscripts.Creator_TC01"/>
+      <class name="org.sunbird.testscripts.Creator_TC02"/>
+      <class name="org.sunbird.testscripts.FlagReviewer_TC02"/>
+      <class name="org.sunbird.testscripts.PublicUser_TC11"/>
+      <class name="org.sunbird.testscripts.FlagReviewer_TC03"/>
+      <class name="org.sunbird.testscripts.PublicUser_TC10"/>
+      <class name="org.sunbird.testscripts.PublicUser_TC13"/>
+      <class name="org.sunbird.testscripts.PublicUser_TC12"/>
+      <class name="org.sunbird.testscripts.FlagReviewer_TC01"/>
+      <class name="org.sunbird.testscripts.PublicUser_TC14"/>
+      <class name="org.sunbird.testscripts.Mentor_TC10"/>
+      <class name="org.sunbird.testscripts.Mentor_TC14"/>
+      <class name="org.sunbird.testscripts.Mentor_TC13"/>
+      <class name="org.sunbird.testscripts.FlagReviewer_TC07"/>
+      <class name="org.sunbird.testscripts.Mentor_TC12"/>
+      <class name="org.sunbird.testscripts.FlagReviewer_TC04"/>
+      <class name="org.sunbird.testscripts.Mentor_TC11"/>
+      <class name="org.sunbird.testscripts.FlagReviewer_TC05"/>
+      <class name="org.sunbird.testscripts.Announcement_TC07"/>
+      <class name="org.sunbird.testscripts.Announcement_TC06"/>
+      <class name="org.sunbird.testscripts.Announcement_TC09"/>
+      <class name="org.sunbird.testscripts.Announcement_TC08"/>
+      <class name="org.sunbird.testscripts.Announcement_TC03"/>
+      <class name="org.sunbird.testscripts.Announcement_TC02"/>
+      <class name="org.sunbird.testscripts.Announcement_TC05"/>
+      <class name="org.sunbird.testscripts.Announcement_TC04"/>
+      <class name="org.sunbird.testscripts.Admin_TC08_10"/>
+      <class name="org.sunbird.testscripts.Mentor_TC07"/>
+      <class name="org.sunbird.testscripts.Mentor_TC06"/>
+      <class name="org.sunbird.testscripts.Mentor_TC05"/>
+      <class name="org.sunbird.testscripts.PublicUser_TC04"/>
+      <class name="org.sunbird.testscripts.PublicUser_TC03"/>
+      <class name="org.sunbird.testscripts.Mentor_TC09"/>
+      <class name="org.sunbird.testscripts.PublicUser_TC06"/>
+      <class name="org.sunbird.testscripts.PublicUser_TC05"/>
+      <class name="org.sunbird.testscripts.PublicUser_TC08"/>
+      <class name="org.sunbird.testscripts.PublicUser_TC07"/>
+      <class name="org.sunbird.testscripts.PublicUser_TC09"/>
+      <class name="org.sunbird.testscripts.Mentor_TC03"/>
+      <class name="org.sunbird.testscripts.Mentor_TC02"/>
+      <class name="org.sunbird.testscripts.Mentor_TC01"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

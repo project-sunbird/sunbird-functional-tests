@@ -1,0 +1,2 @@
+orgName,isRootOrg,channel,externalId,provider,description,homeUrl,orgCode,preferredLanguage
+Auto Organization,TRUE,Auto Root Channel,Auto Root External,Auto Root Provider,Auto Root Description,http://qatestautomation.centralus.cloudapp.azure.com,Auto Org,English

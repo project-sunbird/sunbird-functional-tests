@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="org.sunbird.generic.TestListener"/>
+  </listeners>
+  <test name="Test(failed)">
+    <classes>
+      <class name="org.sunbird.testscripts.PublicUser_TC08">
+        <methods>
+          <include name="courseSearchFilterTestCase08"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.PublicUser_TC08 -->
+      <class name="org.sunbird.testscripts.PublicUser_TC04">
+        <methods>
+          <include name="verifyHomePageTestCase04"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.PublicUser_TC04 -->
+      <class name="org.sunbird.testscripts.Announcement_TC07">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+          <include name="resendAndVerifyAsReviewerAnnouncement_TC07"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Announcement_TC07 -->
+      <class name="org.sunbird.testscripts.Announcement_TC09">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+          <include name="createWithAttachmentAnnouncement_TC09"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Announcement_TC09 -->
+      <class name="org.sunbird.testscripts.Creator_TC07">
+        <methods>
+          <include name="uploadEpubTestCase07"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Creator_TC07 -->
+      <class name="org.sunbird.testscripts.Admin_TC09_11">
+        <methods>
+          <include name="adminConsumptionAndCsvTestCase09_11"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Admin_TC09_11 -->
+      <class name="org.sunbird.testscripts.FlagReviewer_TC01">
+        <methods>
+          <include name="flagReviewerTestCase01"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.FlagReviewer_TC01 -->
+      <class name="org.sunbird.testscripts.Admin_TC03">
+        <methods>
+          <include name="rootOrgUsersTestCase03"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Admin_TC03 -->
+      <class name="org.sunbird.testscripts.Creator_TC16">
+        <methods>
+          <include name="verifyPublishedBucketTestCase16"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Creator_TC16 -->
+      <class name="org.sunbird.testscripts.PublicUser_TC03">
+        <methods>
+          <include name="forgotPasswordTestCase03"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.PublicUser_TC03 -->
+      <class name="org.sunbird.testscripts.Creator_TC12">
+        <methods>
+          <include name="myActivityTestCase12"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Creator_TC12 -->
+      <class name="org.sunbird.testscripts.Reviewer_TC14">
+        <methods>
+          <include name="testCase16"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Reviewer_TC14 -->
+      <class name="org.sunbird.testscripts.Announcement_TC03">
+        <methods>
+          <include name="deleteAnnouncement_TC03"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Announcement_TC03 -->
+      <class name="org.sunbird.testscripts.Creator_TC04">
+        <methods>
+          <include name="uploadMp4TestCase04"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Creator_TC04 -->
+      <class name="org.sunbird.testscripts.Creator_TC05">
+        <methods>
+          <include name="uploadWebmTestCase05"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Creator_TC05 -->
+      <class name="org.sunbird.testscripts.Mentor_TC11">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Mentor_TC11 -->
+      <class name="org.sunbird.testscripts.FlagReviewer_TC02">
+        <methods>
+          <include name="flagReviewerTestCase02"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.FlagReviewer_TC02 -->
+      <class name="org.sunbird.testscripts.PublicUser_TC06">
+        <methods>
+          <include name="librarySearchTestCase06"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.PublicUser_TC06 -->
+      <class name="org.sunbird.testscripts.Announcement_TC05">
+        <methods>
+          <include name="resendAnnouncement_TC05"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Announcement_TC05 -->
+      <class name="org.sunbird.testscripts.Announcement_TC01">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Announcement_TC01 -->
+      <class name="org.sunbird.testscripts.Reviewer_TC01">
+        <methods>
+          <include name="testCase01"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Reviewer_TC01 -->
+      <class name="org.sunbird.testscripts.Creator_TC08">
+        <methods>
+          <include name="uploadHtmlTestCase08"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Creator_TC08 -->
+      <class name="org.sunbird.testscripts.Mentor_TC07">
+        <methods>
+          <include name="NavigateToMyActivityMentorTC_07"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Mentor_TC07 -->
+      <class name="org.sunbird.testscripts.Mentor_TC12">
+        <methods>
+          <include name="testcaseMentor12"/>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Mentor_TC12 -->
+      <class name="org.sunbird.testscripts.Creator_TC19">
+        <methods>
+          <include name="bookCreateOptionValidation"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Creator_TC19 -->
+      <class name="org.sunbird.testscripts.Creator_TC06">
+        <methods>
+          <include name="uploadYoutubeTestCase06"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Creator_TC06 -->
+      <class name="org.sunbird.testscripts.Creator_TC15">
+        <methods>
+          <include name="checkReviewSubmissionTestCase15"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Creator_TC15 -->
+      <class name="org.sunbird.testscripts.Admin_TC04">
+        <methods>
+          <include name="subOrgUsersTestCase04"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Admin_TC04 -->
+      <class name="org.sunbird.testscripts.FlagReviewer_TC03">
+        <methods>
+          <include name="flagReviewerTestCase03"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.FlagReviewer_TC03 -->
+      <class name="org.sunbird.testscripts.PublicUser_TC12">
+        <methods>
+          <include name="searchUsersTestCase12"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.PublicUser_TC12 -->
+      <class name="org.sunbird.testscripts.PublicUser_TC07">
+        <methods>
+          <include name="flagContentTestCase07"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.PublicUser_TC07 -->
+      <class name="org.sunbird.testscripts.PublicUser_TC10">
+        <methods>
+          <include name="profilePhototTestCase10"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.PublicUser_TC10 -->
+      <class name="org.sunbird.testscripts.Admin_TC05">
+        <methods>
+          <include name="rootUsersProviderAndExtIDtestCase05"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Admin_TC05 -->
+      <class name="org.sunbird.testscripts.Announcement_TC02">
+        <methods>
+          <include name="createAnnouncement_TC02"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Announcement_TC02 -->
+      <class name="org.sunbird.testscripts.Admin_TC02">
+        <methods>
+          <include name="uploadSubOrgTestCase02"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Admin_TC02 -->
+      <class name="org.sunbird.testscripts.Creator_TC02">
+        <methods>
+          <include name="bookCreationTestCase02"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Creator_TC02 -->
+      <class name="org.sunbird.testscripts.PublicUser_TC09">
+        <methods>
+          <include name="librarySearchFilterTestCase09"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.PublicUser_TC09 -->
+      <class name="org.sunbird.testscripts.Mentor_TC13">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Mentor_TC13 -->
+      <class name="org.sunbird.testscripts.PublicUser_TC05">
+        <methods>
+          <include name="searchCourseTestCase05"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.PublicUser_TC05 -->
+      <class name="org.sunbird.testscripts.FlagReviewer_TC04">
+        <methods>
+          <include name="flagReviewerTestCase04"/>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.FlagReviewer_TC04 -->
+      <class name="org.sunbird.testscripts.Mentor_TC09">
+        <methods>
+          <include name="suborgMentorInvitingOrgMentor_TC09"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Mentor_TC09 -->
+      <class name="org.sunbird.testscripts.PublicUser_TC13">
+        <methods>
+          <include name="searchOrgsTestCase13"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.PublicUser_TC13 -->
+      <class name="org.sunbird.testscripts.Mentor_TC05">
+        <methods>
+          <include name="checkStatForOpenBatchMentor_TC05"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Mentor_TC05 -->
+      <class name="org.sunbird.testscripts.Creator_TC20">
+        <methods>
+          <include name="bookCreatortestCase20"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Creator_TC20 -->
+      <class name="org.sunbird.testscripts.Creator_TC11">
+        <methods>
+          <include name="resourceCreationTestCase11"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Creator_TC11 -->
+      <class name="org.sunbird.testscripts.FlagReviewer_TC05">
+        <methods>
+          <include name="flagReviewerTestCase05"/>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.FlagReviewer_TC05 -->
+      <class name="org.sunbird.testscripts.Mentor_TC03">
+        <methods>
+          <include name="checkAvailabilityCourseForInvitedMemberInMentor_TC03"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Mentor_TC03 -->
+      <class name="org.sunbird.testscripts.Admin_TC08_10">
+        <methods>
+          <include name="adminCreationAndCsvTestCaseTC08_10"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Admin_TC08_10 -->
+      <class name="org.sunbird.testscripts.Mentor_TC02">
+        <methods>
+          <include name="consumeOpenCourseByPublicUserInMentor_TC02"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Mentor_TC02 -->
+      <class name="org.sunbird.testscripts.Creator_TC03">
+        <methods>
+          <include name="lessonplanCreationTestCase03"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Creator_TC03 -->
+      <class name="org.sunbird.testscripts.Announcement_TC08">
+        <methods>
+          <include name="openAnnouncement_TC08"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Announcement_TC08 -->
+      <class name="org.sunbird.testscripts.Admin_TC07">
+        <methods>
+          <include name="adminDashboardTestCase07"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Admin_TC07 -->
+      <class name="org.sunbird.testscripts.Creator_TC14">
+        <methods>
+          <include name="contentLimitedSharingTestCase14"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Creator_TC14 -->
+      <class name="org.sunbird.testscripts.PublicUser_TC14">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.PublicUser_TC14 -->
+      <class name="org.sunbird.testscripts.Creator_TC13">
+        <methods>
+          <include name="editAndSendForReviewTestCase13"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Creator_TC13 -->
+      <class name="org.sunbird.testscripts.Announcement_TC02_03_04">
+        <methods>
+          <include name="createAnnouncement_TC02"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Announcement_TC02_03_04 -->
+      <class name="org.sunbird.testscripts.Creator_TC18">
+        <methods>
+          <include name="unlinkDailcodeTestCase18"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Creator_TC18 -->
+      <class name="org.sunbird.testscripts.Mentor_TC01">
+        <methods>
+          <include name="checkCourseStatAsMentor_TC01"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Mentor_TC01 -->
+      <class name="org.sunbird.testscripts.Mentor_TC10">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Mentor_TC10 -->
+      <class name="org.sunbird.testscripts.Creator_TC17">
+        <methods>
+          <include name="dialCodeLinkTestCase17"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Creator_TC17 -->
+      <class name="org.sunbird.testscripts.FlagReviewer_TC07">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.FlagReviewer_TC07 -->
+      <class name="org.sunbird.testscripts.Admin_TC01">
+        <methods>
+          <include name="uploadRootOrgTestCase01"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Admin_TC01 -->
+      <class name="org.sunbird.testscripts.Creator_TC09">
+        <methods>
+          <include name="uploadH5pTestCase09"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Creator_TC09 -->
+      <class name="org.sunbird.testscripts.Reviewer_TC16">
+        <methods>
+          <include name="testCase16"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Reviewer_TC16 -->
+      <class name="org.sunbird.testscripts.Admin_TC06">
+        <methods>
+          <include name="subOrgUsersProviderAndExtIdtestCase06"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Admin_TC06 -->
+      <class name="org.sunbird.testscripts.Creator_TC01">
+        <methods>
+          <include name="courseCreationTestCase01"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Creator_TC01 -->
+      <class name="org.sunbird.testscripts.PublicUser_TC11">
+        <methods>
+          <include name="profileInfoUpdateTestCase11"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.PublicUser_TC11 -->
+      <class name="org.sunbird.testscripts.Mentor_TC14">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Mentor_TC14 -->
+      <class name="org.sunbird.testscripts.Announcement_TC04">
+        <methods>
+          <include name="deleteAndVerifyAnnouncement_TC04"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Announcement_TC04 -->
+      <class name="org.sunbird.testscripts.Announcement_TC06">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+          <include name="resendAndVerifyAsReviewerAnnouncement_TC06"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Announcement_TC06 -->
+      <class name="org.sunbird.testscripts.Mentor_TC06">
+        <methods>
+          <include name="updateBatchAsMemberInMentor_TC06"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Mentor_TC06 -->
+      <class name="org.sunbird.testscripts.PublicUser_TC01_02">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.PublicUser_TC01_02 -->
+      <class name="org.sunbird.testscripts.Creator_TC10">
+        <methods>
+          <include name="collectionCreationTestCase10"/>
+        </methods>
+      </class> <!-- org.sunbird.testscripts.Creator_TC10 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
