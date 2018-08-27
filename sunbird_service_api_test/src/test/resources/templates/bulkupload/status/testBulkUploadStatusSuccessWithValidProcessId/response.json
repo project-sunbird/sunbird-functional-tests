@@ -11,13 +11,6 @@
   },
   "responseCode": "OK",
   "result": {
-    "response": [
-      {
-        "failureResult":"@ignore@",
-        "processId": "@ignore@",
-        "successResult": "@ignore@",
-        "objectType": "@ignore@"
-      }
-    ]
+    "response": "@ignore@"
   }
 }

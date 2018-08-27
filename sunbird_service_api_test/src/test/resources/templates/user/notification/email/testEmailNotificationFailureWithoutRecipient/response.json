@@ -1,0 +1,14 @@
+{
+    "id": "api.notification.email",
+    "ver": "v1",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": null,
+        "msgid": "@ignore@",
+        "err": "RECIPIENT_ADDRESS_ERROR",
+        "status": "RECIPIENT_ADDRESS_ERROR",
+        "errmsg": "Please send recipientEmails or recipientUserIds."
+    },
+    "responseCode": "CLIENT_ERROR",
+    "result": {}
+}

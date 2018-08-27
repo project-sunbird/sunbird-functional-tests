@@ -1,0 +1,6 @@
+{
+  "request": {
+    "endorsedUserId": "${endorsedUserId}",
+    "skillName": "C"
+  }
+}

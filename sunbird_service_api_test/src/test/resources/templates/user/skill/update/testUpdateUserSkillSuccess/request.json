@@ -1,0 +1,10 @@
+{
+  "request": {
+    "userId": "${userId}",
+    "skills": [
+      "C",
+      "JAVA-2",
+      "C++"
+    ]
+  }
+}

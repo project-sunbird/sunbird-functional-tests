@@ -5,9 +5,9 @@
     "params": {
         "resmsgid": null,
         "msgid": "@ignore@",
-        "err": "INVALID_USER_ID",
-        "status": "INVALID_USER_ID",
-        "errmsg": "INVALID_USER_ID"
+        "err": "ENDORSED_USER_ID_REQUIRED",
+        "status": "ENDORSED_USER_ID_REQUIRED",
+        "errmsg": " Endorsed user id required ."
     },
     "responseCode": "CLIENT_ERROR",
     "result": {}

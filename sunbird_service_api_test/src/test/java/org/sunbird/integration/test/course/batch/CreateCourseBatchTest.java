@@ -38,17 +38,17 @@ public class CreateCourseBatchTest extends BaseCitrusTestRunner {
   public static final String TEST_NAME_CREATE_COURSE_BATCH_FAILURE_WITH_INVALID_MENTOR =
       "testCreateCourseBatchFailureInviteOnlyWithInvalidMentor";
 
-  public static final String TEST_NAME_CREATE_COURSE_BATCH_SUCCESS_INVITE_ONLY =
-      "testCreateCourseBatchSuccessInviteOnly";
+  public static final String TEST_NAME_CREATE_COURSE_BATCH_SUCCESS_INVITE_ONLY_BATCH =
+      "testCreateCourseBatchSuccessInviteOnlyBatch";
   public static final String TEST_NAME_CREATE_COURSE_BATCH_SUCCESS_INVITE_ONLY_WITH_CREATED_FOR =
       "testCreateCourseBatchSuccessInviteOnlyWithCreatedFor";
   public static final String TEST_NAME_CREATE_COURSE_BATCH_SUCCESS_INVITE_ONLY_WITH_MENTORS =
       "testCreateCourseBatchSuccessInviteOnlyWithMentors";
-  public static final String TEST_NAME_CREATE_COURSE_BATCH_SUCCESS_OPEN =
-      "testCreateCourseBatchSuccessOpen";
+  public static final String TEST_NAME_CREATE_COURSE_BATCH_SUCCESS_OPEN_BATCH =
+      "testCreateCourseBatchSuccessOpenBatch";
 
   public static final String TEMPLATE_DIR = "templates/course/batch/create";
-  private static final String TODAY_DATE = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+  public static final String TODAY_DATE = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
 
   private String getCreateCourseBatchUrl() {
     return getLmsApiUriPath("/api/course/v1/batch/create", "/v1/course/batch/create");
@@ -119,8 +119,8 @@ public class CreateCourseBatchTest extends BaseCitrusTestRunner {
   @DataProvider(name = "createCourseBatchSuccessDataProvider")
   public Object[][] createCourseBatchSuccessDataProvider() {
     return new Object[][] {
-      new Object[] {TEST_NAME_CREATE_COURSE_BATCH_SUCCESS_INVITE_ONLY, false, false, HttpStatus.OK},
-      new Object[] {TEST_NAME_CREATE_COURSE_BATCH_SUCCESS_OPEN, false, false, HttpStatus.OK},
+      new Object[] {TEST_NAME_CREATE_COURSE_BATCH_SUCCESS_INVITE_ONLY_BATCH, false, false, HttpStatus.OK},
+      new Object[] {TEST_NAME_CREATE_COURSE_BATCH_SUCCESS_OPEN_BATCH, false, false, HttpStatus.OK},
       new Object[] {
         TEST_NAME_CREATE_COURSE_BATCH_SUCCESS_INVITE_ONLY_WITH_CREATED_FOR,
         true,

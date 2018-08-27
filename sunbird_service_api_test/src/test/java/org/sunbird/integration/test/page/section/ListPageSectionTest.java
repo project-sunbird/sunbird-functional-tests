@@ -27,9 +27,7 @@ public class ListPageSectionTest extends BaseCitrusTestRunner {
       new Object[] {
         TEST_NAME_LIST_PAGE_SECTION_FAILURE_WITHOUT_ACCESS_TOKEN, false, HttpStatus.UNAUTHORIZED
       },
-      new Object[] {
-        TEST_NAME_LIST_PAGE_SECTION_SUCCESS, true, HttpStatus.OK,
-      },
+      new Object[] {TEST_NAME_LIST_PAGE_SECTION_SUCCESS, true, HttpStatus.OK},
     };
   }
 

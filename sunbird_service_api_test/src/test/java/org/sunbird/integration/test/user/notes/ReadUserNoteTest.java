@@ -4,7 +4,6 @@ import com.consol.citrus.annotations.CitrusTest;
 import com.consol.citrus.testng.CitrusParameters;
 import org.springframework.http.HttpStatus;
 import org.sunbird.common.action.UserNoteUtil;
-import org.sunbird.common.action.UserUtil;
 import org.sunbird.integration.test.common.BaseCitrusTestRunner;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -17,10 +16,7 @@ public class ReadUserNoteTest extends BaseCitrusTestRunner {
   private static final String TEST_READ_USER_NOTE_FAILURE_WITH_INVALID_NOTEID =
       "testReadUserNoteFailureWithInvalidNoteId";
   private static final String TEST_READ_USER_NOTE_SUCCESS = "testReadUserSuccess";
-  public static final String BT_CREATE_NOTE_TEMPLATE_DIR = "templates/user/note/create";
   public static final String TEMPLATE_DIR = "templates/user/note/read";
-  private static final String TEST_CREATE_USER_NOTE_SUCCESS_WITH_BOTH_COURSEID_AND_CONTENTID =
-      "testCreateUserNoteSuccessWithCourseIdAndContentId";
 
   private String getReadNoteUrl(String pathParam) {
     return getLmsApiUriPath("/api/notes/v1/read", "/v1/note/read", pathParam);
@@ -44,7 +40,7 @@ public class ReadUserNoteTest extends BaseCitrusTestRunner {
   @CitrusTest
   public void testReadUserNoteFailure(
       String testName, boolean isAuthRequired, HttpStatus httpStatusCode) {
-    beforeTest(isAuthRequired);
+    beforeTest();
     getAuthToken(this, isAuthRequired);
     performGetTest(
         this,
@@ -61,7 +57,7 @@ public class ReadUserNoteTest extends BaseCitrusTestRunner {
   public void testReadUserNoteSuccess(
       String testName, boolean isAuthRequired, HttpStatus httpStatusCode) {
     getTestCase().setName(testName);
-    beforeTest(isAuthRequired);
+    beforeTest();
     performGetTest(
         this,
         testName,
@@ -75,7 +71,7 @@ public class ReadUserNoteTest extends BaseCitrusTestRunner {
   @CitrusTest
   public void testReadUserNoteFailureWithInvalidNoteId() {
     getTestCase().setName(TEST_READ_USER_NOTE_FAILURE_WITH_INVALID_NOTEID);
-    beforeTest(true);
+    beforeTest();
     performGetTest(
         this,
         TEST_READ_USER_NOTE_FAILURE_WITH_INVALID_NOTEID,
@@ -85,20 +81,7 @@ public class ReadUserNoteTest extends BaseCitrusTestRunner {
         RESPONSE_JSON);
   }
 
-  void beforeTest(boolean isAuthRequired) {
-    UserUtil.getUserId(this, testContext);
-    String channelName = System.getenv("sunbird_default_channel");
-    getAuthToken(
-        this,
-        testContext.getVariable("userName") + "@" + channelName,
-        "password",
-        testContext.getVariable("userId"),
-        true);
-    variable("userId", testContext.getVariable("userId"));
-    UserNoteUtil.createUserNote(
-        this,
-        testContext,
-        BT_CREATE_NOTE_TEMPLATE_DIR,
-        TEST_CREATE_USER_NOTE_SUCCESS_WITH_BOTH_COURSEID_AND_CONTENTID);
+  void beforeTest() {
+    UserNoteUtil.createNote(this, testContext);
   }
 }

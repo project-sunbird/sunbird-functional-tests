@@ -7,7 +7,7 @@
         "msgid": "@ignore@",
         "err": "INVALID_USER_ID",
         "status": "INVALID_USER_ID",
-        "errmsg": "INVALID_USER_ID"
+        "errmsg": "User Id does not exists in our records"
     },
     "responseCode": "CLIENT_ERROR",
     "result": {}

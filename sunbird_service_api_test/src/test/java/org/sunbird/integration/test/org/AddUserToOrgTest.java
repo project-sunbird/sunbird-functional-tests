@@ -4,11 +4,11 @@ import com.consol.citrus.annotations.CitrusTest;
 import com.consol.citrus.testng.CitrusParameters;
 import javax.ws.rs.core.MediaType;
 import org.springframework.http.HttpStatus;
-import org.sunbird.integration.test.common.BaseCitrusTest;
+import org.sunbird.integration.test.common.BaseCitrusTestRunner;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class AddUserToOrgTest extends BaseCitrusTest {
+public class AddUserToOrgTest extends BaseCitrusTestRunner {
 
   public static final String TEST_ADD_USER_TO_ORG_FAILURE_WITH_EMPTY_ROLE_ARRAY =
       "testAddUserToOrgFailureWithEmptyRoleArray";
@@ -38,15 +38,16 @@ public class AddUserToOrgTest extends BaseCitrusTest {
   @CitrusParameters({"testName"})
   @CitrusTest
   public void testAddUserToOrgFailure(String testName) {
-
+    getAuthToken(this, true);
     performPostTest(
-        testName,
+        this,
         TEMPLATE_DIR,
+        testName,
         getAddUserToOrgUrl(),
         REQUEST_JSON,
-        HttpStatus.BAD_REQUEST,
-        RESPONSE_JSON,
+        MediaType.APPLICATION_JSON,
         true,
-        MediaType.APPLICATION_JSON);
+        HttpStatus.BAD_REQUEST,
+        RESPONSE_JSON);
   }
 }

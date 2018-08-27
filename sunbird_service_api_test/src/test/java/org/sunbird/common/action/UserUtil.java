@@ -29,6 +29,17 @@ public class UserUtil {
 
   public static void createUser(
       BaseCitrusTestRunner runner, TestContext testContext, String templateDir, String testName) {
+    createUser(runner, testContext, templateDir, testName, "userId");
+    runner.sleep(Constant.ES_SYNC_WAIT_TIME);
+  }
+
+  public static void createUser(
+      BaseCitrusTestRunner runner,
+      TestContext testContext,
+      String templateDir,
+      String testName,
+      String variable) {
+
     runner.http(
         builder ->
             TestActionUtil.getPostRequestTestAction(
@@ -49,7 +60,7 @@ public class UserUtil {
                 Constant.LMS_ENDPOINT,
                 HttpStatus.OK,
                 "$.result.userId",
-                "userId"));
+                variable));
     runner.sleep(Constant.ES_SYNC_WAIT_TIME);
   }
 
@@ -70,13 +81,33 @@ public class UserUtil {
 
   public static void getUserId(BaseCitrusTestRunner runner, TestContext testContext) {
     if (StringUtils.isBlank((String) testContext.getVariables().get("userId"))) {
-      String userName = Constant.USER_NAME_PREFIX + UUID.randomUUID().toString();
-      testContext.setVariable("userName", userName);
-      runner.variable("username", userName);
-      runner.variable("channel", System.getenv("sunbird_default_channel"));
+      getUser(runner, testContext, null);
+    }
+  }
+
+  public static void getUserId(
+      BaseCitrusTestRunner runner, TestContext testContext, String variable) {
+    if (StringUtils.isBlank((String) testContext.getVariables().get(variable))) {
+      getUser(runner, testContext, variable);
+    }
+  }
+
+  public static void getUser(
+      BaseCitrusTestRunner runner, TestContext testContext, String variable) {
+    String userName = Constant.USER_NAME_PREFIX + UUID.randomUUID().toString();
+    testContext.setVariable("userName", userName);
+    runner.variable("username", userName);
+    runner.variable("channel", System.getenv("sunbird_default_channel"));
+    if (null == variable)
       UserUtil.createUser(
           runner, testContext, TEMPLATE_DIR_USER_CREATE, TEMPLATE_DIR_USER_CREATE_TEST_CASE);
-    }
+    else
+      UserUtil.createUser(
+          runner,
+          testContext,
+          TEMPLATE_DIR_USER_CREATE,
+          TEMPLATE_DIR_USER_CREATE_TEST_CASE,
+          variable);
   }
 
   public static void setProfileVisibilityPrivate(
@@ -92,5 +123,11 @@ public class UserUtil {
                 Constant.REQUEST_JSON,
                 MediaType.APPLICATION_JSON.toString(),
                 TestActionUtil.getHeaders(true)));
+  }
+
+  public static String getUserNameWithChannel(
+      BaseCitrusTestRunner runner, TestContext testContext) {
+    String channelName = System.getenv("sunbird_default_channel");
+    return testContext.getVariable("userName") + "@" + channelName;
   }
 }

@@ -4,7 +4,7 @@ import com.consol.citrus.annotations.CitrusTest;
 import com.consol.citrus.testng.CitrusParameters;
 import javax.ws.rs.core.MediaType;
 import org.springframework.http.HttpStatus;
-import org.sunbird.common.action.UserUtil;
+import org.sunbird.common.action.UserNoteUtil;
 import org.sunbird.integration.test.common.BaseCitrusTestRunner;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -80,7 +80,7 @@ public class CreateUserNoteTest extends BaseCitrusTestRunner {
   public void testCreateUserNoteFailure(
       String testName, boolean isAuthRequired, HttpStatus httpStatusCode) {
     getTestCase().setName(testName);
-    beforeTest(isAuthRequired);
+    beforeTest();
     performPostTest(
         this,
         TEMPLATE_DIR,
@@ -99,7 +99,7 @@ public class CreateUserNoteTest extends BaseCitrusTestRunner {
   public void testCreateUserNoteSuccess(
       String testName, boolean isAuthRequired, HttpStatus httpStatusCode) {
     getTestCase().setName(testName);
-    beforeTest(isAuthRequired);
+    beforeTest();
     performPostTest(
         this,
         TEMPLATE_DIR,
@@ -112,16 +112,7 @@ public class CreateUserNoteTest extends BaseCitrusTestRunner {
         RESPONSE_JSON);
   }
 
-  void beforeTest(boolean isAuthRequired) {
-    UserUtil.getUserId(this, testContext);
-    String channelName = System.getenv("sunbird_default_channel");
-    testContext.setVariable("password", "password");
-    variable("userId", testContext.getVariable("userId"));
-    getAuthToken(
-        this,
-        testContext.getVariable("userName") + "@" + channelName,
-        "password",
-        testContext.getVariable("userId"),
-        true);
+  void beforeTest() {
+    UserNoteUtil.createNote(this, testContext);
   }
 }

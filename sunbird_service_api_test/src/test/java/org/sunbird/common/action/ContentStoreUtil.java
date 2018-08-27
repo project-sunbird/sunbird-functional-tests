@@ -15,6 +15,7 @@ public class ContentStoreUtil {
   private static final String CONTENT_STORE_CREATE_URL = "/content/v3/create";
   private static final String CONTENT_STORE_UPDATE_HIERARCHY_URL = "/content/v3/hierarchy/update";
   private static final String CONTENT_STORE_CONTENT_PUBLISH_URL = "/content/v3/publish/";
+  private static final String CONTENT_STORE_RETIRE_CONTENT_URL = "/content/v3/retire/";
   private static String courseId = null;
   private static final String courseUnitId = "SB_FT_COURSEUNIT_" + UUID.randomUUID().toString();
   private static final String resourceId = "do_1125535199417548801180";
@@ -41,11 +42,22 @@ public class ContentStoreUtil {
   private static void createLiveCourse(BaseCitrusTestRunner runner, TestContext testContext) {
     createCourse(runner, testContext);
 
-    updateCourseHierarchy(runner, testContext);
+    if (StringUtils.isNotBlank(courseId)) {
+      updateCourseHierarchy(runner, testContext);
 
-    publishCourse(runner, testContext);
+      publishCourse(runner, testContext);
 
-    runner.sleep(Constant.ES_SYNC_WAIT_TIME);
+      runner.sleep(Constant.ES_SYNC_WAIT_TIME);
+
+      // retire course post all test (before jvm shutdown)
+      Runtime.getRuntime()
+          .addShutdownHook(
+              new Thread() {
+                public void run() {
+                  retireCourse(runner, testContext);
+                }
+              });
+    }
   }
 
   private static void createCourse(BaseCitrusTestRunner runner, TestContext testContext) {
@@ -111,6 +123,27 @@ public class ContentStoreUtil {
                 builder,
                 Constant.CONTENT_STORE_ENDPOINT,
                 "testPublishCourseSuccess",
+                HttpStatus.OK));
+  }
+
+  private static void retireCourse(BaseCitrusTestRunner runner, TestContext testContext) {
+    runner.http(
+        builder ->
+            TestActionUtil.getDeleteRequestTestAction(
+                builder,
+                Constant.CONTENT_STORE_ENDPOINT,
+                TEMPLATE_DIR,
+                "testRetireCourseSuccess",
+                CONTENT_STORE_RETIRE_CONTENT_URL + courseId,
+                Constant.REQUEST_JSON,
+                MediaType.APPLICATION_JSON.toString(),
+                getHeaders()));
+    runner.http(
+        builder ->
+            TestActionUtil.getResponseTestAction(
+                builder,
+                Constant.CONTENT_STORE_ENDPOINT,
+                "testRetireCourseSuccess",
                 HttpStatus.OK));
   }
 }

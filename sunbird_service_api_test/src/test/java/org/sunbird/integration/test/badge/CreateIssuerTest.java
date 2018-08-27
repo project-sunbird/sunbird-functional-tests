@@ -5,12 +5,12 @@ import com.consol.citrus.http.client.HttpClient;
 import com.consol.citrus.testng.CitrusParameters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.sunbird.integration.test.common.BaseCitrusTest;
+import org.sunbird.integration.test.common.BaseCitrusTestRunner;
 import org.sunbird.integration.test.user.EndpointConfig.TestGlobalProperty;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class CreateIssuerTest extends BaseCitrusTest {
+public class CreateIssuerTest extends BaseCitrusTestRunner {
 
   public static final String TEST_NAME_CREATE_ISSUER_SUCCESS = "testCreateIssuerSuccess";
   public static final String TEST_NAME_CREATE_ISSUER_SUCCESS_WITH_IMAGE =
@@ -78,15 +78,15 @@ public class CreateIssuerTest extends BaseCitrusTest {
       String requestFormData, String responseJson, String testName) {
     System.out.println("initGlobalValues = " + initGlobalValues);
     performMultipartTest(
-        testName,
+        this,
         TEMPLATE_DIR,
-        restTestClient,
-        initGlobalValues,
+        testName,
         getCreateIssuerUrl(),
         requestFormData,
-        responseJson,
+        null,
+        false,
         HttpStatus.OK,
-        null);
+        responseJson);
   }
 
   @Test(dataProvider = "createIssuerDataProviderFailure")
@@ -96,14 +96,14 @@ public class CreateIssuerTest extends BaseCitrusTest {
       String requestFormData, String responseJson, String testName) {
     System.out.println("initGlobalValues = " + initGlobalValues);
     performMultipartTest(
-        testName,
+        this,
         TEMPLATE_DIR,
-        restTestClient,
-        initGlobalValues,
+        testName,
         getCreateIssuerUrl(),
         requestFormData,
-        responseJson,
+        null,
+        false,
         HttpStatus.BAD_REQUEST,
-        null);
+        responseJson);
   }
 }

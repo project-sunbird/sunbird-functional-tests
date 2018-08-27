@@ -51,4 +51,7 @@ public class Constant {
   public static final String EXTRACT_VAR_ISSUER_ID = "issuerId";
   public static final String EXTRACT_VAR_BADGE_ID = "badgeId";
   public static final String EXTRACT_VAR_ASSERTION_ID = "assertionId";
+  public static final String EXTRACT_VAR_BATCH_ID = "batchId";
+  public static final String EXTRACT_VAR_ROOT_ORG_ID = "organisationId";
+  public static final String EXTRACT_VAR_SUB_ORG_ID = "subOrganisationId";
 }

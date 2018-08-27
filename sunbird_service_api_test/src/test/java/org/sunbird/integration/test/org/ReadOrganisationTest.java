@@ -7,6 +7,7 @@ import javax.ws.rs.core.MediaType;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.HttpStatus;
 import org.sunbird.common.action.OrgUtil;
+import org.sunbird.common.util.Constant;
 import org.sunbird.integration.test.common.BaseCitrusTestRunner;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -108,6 +109,7 @@ public class ReadOrganisationTest extends BaseCitrusTestRunner {
           testContext,
           "templates/organisation/create",
           "testCreateRootOrgSuccessWithProviderAndExternalId",
+          Constant.EXTRACT_VAR_ROOT_ORG_ID,
           HttpStatus.OK);
       orgId = testContext.getVariable("organisationId");
     } else {
