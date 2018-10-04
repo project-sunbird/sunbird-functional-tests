@@ -111,7 +111,7 @@ public class AddUserToCourseBatch extends BaseCitrusTestRunner {
       if (isOpenBatch) {
         courseBatchId = CourseBatchUtil.getOpenCourseBatchId(this, testContext);
       } else {
-        courseBatchId = CourseBatchUtil.getInviteOnlyCourseBatchId(this, testContext);
+        courseBatchId = CourseBatchUtil.getInviteOnlyCourseBatchId(this, testContext, "", "");
       }
     }
   }

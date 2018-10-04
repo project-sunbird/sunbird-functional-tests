@@ -1,6 +1,6 @@
 {
   "request": {
-    "id":"invalid",
+    "id": "${batchId}",
     "name":"testCourseBatch",
     "startDate":"${requestedStartDate}"
   }

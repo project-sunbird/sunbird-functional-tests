@@ -1,0 +1,14 @@
+{
+  "id": "api.course.batch.update",
+  "ver": "v1",
+  "ts": "@ignore@",
+  "params": {
+    "resmsgid": null,
+    "msgid": "@ignore@",
+    "err": "INVALID_BATCH_END_DATE_ERROR",
+    "status": "INVALID_BATCH_END_DATE_ERROR",
+    "errmsg": "Please provide valid End Date."
+  },
+  "responseCode": "CLIENT_ERROR",
+  "result": {}
+}

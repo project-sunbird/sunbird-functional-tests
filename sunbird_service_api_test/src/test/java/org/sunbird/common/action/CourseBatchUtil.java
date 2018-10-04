@@ -30,9 +30,14 @@ public class CourseBatchUtil {
   }
 
   public static String getInviteOnlyCourseBatchId(
-      BaseCitrusTestRunner runner, TestContext testContext) {
-    if (StringUtils.isBlank(inviteOnlyCourseBatchId)) {
+          BaseCitrusTestRunner runner, TestContext testContext, String startDate, String endDate) {
 
+    if (StringUtils.isBlank(inviteOnlyCourseBatchId)) {
+      runner.variable("startDate",startDate);
+      runner.variable("endDate",endDate);
+
+      String courseId = ContentStoreUtil.getCourseId(runner, testContext);
+      runner.variable("courseId", courseId);
       inviteOnlyCourseBatchId =
           getCourseBatchId(
               runner, testContext, TEST_NAME_CREATE_COURSE_BATCH_SUCCESS_INVITE_ONLY_BATCH);
@@ -40,7 +45,7 @@ public class CourseBatchUtil {
     return inviteOnlyCourseBatchId;
   }
 
-  private static String getCourseBatchId(
+  public static String getCourseBatchId(
       BaseCitrusTestRunner runner, TestContext testContext, String testName) {
     runner.http(
         builder ->
