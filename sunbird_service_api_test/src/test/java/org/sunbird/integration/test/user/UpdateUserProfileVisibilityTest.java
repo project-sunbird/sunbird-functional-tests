@@ -43,46 +43,33 @@ public class UpdateUserProfileVisibilityTest extends BaseCitrusTestRunner {
       new Object[] {
         TEST_UPDATE_USER_PROFILE_VISIBILITY_FAILURE_WITHOUT_ACCESS_TOKEN,
         false,
-        HttpStatus.UNAUTHORIZED
+        HttpStatus.UNAUTHORIZED, false
       },
       new Object[] {
-        TEST_UPDATE_USER_PROFILE_VISIBILITY_FAILURE_WITH_INVALID_USERID, true, HttpStatus.NOT_FOUND
+        TEST_UPDATE_USER_PROFILE_VISIBILITY_FAILURE_WITH_INVALID_USERID, true, HttpStatus.BAD_REQUEST, false
       },
       new Object[] {
         TEST_UPDATE_USER_PROFILE_VISIBILITY_FAILURE_WITH_INVALID_COLUMN,
         true,
-        HttpStatus.BAD_REQUEST
+        HttpStatus.BAD_REQUEST, true
       },
       new Object[] {
         TEST_UPDATE_USER_PROFILE_VISIBILITY_FAILURE_WITH_SAME_COLUMN_IN_PRIVATE_AND_PUBLIC_ARRAY,
         true,
-        HttpStatus.BAD_REQUEST
+        HttpStatus.BAD_REQUEST, true
       },
     };
   }
 
-  @DataProvider(name = "updateUserProfileVisibilitySuccessDataProvider")
-  public Object[][] updateUserProfileVisibilitySuccessDataProvider() {
-    return new Object[][] {
-      new Object[] {
-        TEST_UPDATE_USER_PROFILE_VISIBILITY_SUCCESS_WITH_VALID_USERID, true, HttpStatus.OK
-      },
-      new Object[] {
-        TEST_UPDATE_USER_PROFILE_VISIBILITY_SUCCESS_WITH_ALREADY_PUBLIC_COLUMN, true, HttpStatus.OK
-      },
-      new Object[] {
-        TEST_UPDATE_USER_PROFILE_VISIBILITY_SUCCESS_WITH_ALREADY_PRIVATE_COLUMN, true, HttpStatus.OK
-      },
-    };
-  }
 
   @Test(dataProvider = "updateUserProfileVisibilityFailureDataProvider")
-  @CitrusParameters({"testName", "isAuthRequired", "httpStatusCode"})
+  @CitrusParameters({"testName", "isAuthRequired", "httpStatusCode", "isUserIdReq"})
   @CitrusTest
   public void testUpdateUserProfileVisibilityFailure(
-      String testName, boolean isAuthRequired, HttpStatus httpStatusCode) {
+      String testName, boolean isAuthRequired, HttpStatus httpStatusCode, boolean isUserIdReq) {
     getTestCase().setName(testName);
-    beforeTest(isAuthRequired);
+    getAuthToken(this, isAuthRequired);
+    beforeTest(isUserIdReq);
     performPostTest(
         this,
         TEMPLATE_DIR,
@@ -93,6 +80,22 @@ public class UpdateUserProfileVisibilityTest extends BaseCitrusTestRunner {
         isAuthRequired,
         httpStatusCode,
         RESPONSE_JSON);
+  }
+
+
+  @DataProvider(name = "updateUserProfileVisibilitySuccessDataProvider")
+  public Object[][] updateUserProfileVisibilitySuccessDataProvider() {
+    return new Object[][] {
+            new Object[] {
+                    TEST_UPDATE_USER_PROFILE_VISIBILITY_SUCCESS_WITH_VALID_USERID, true, HttpStatus.OK
+            },
+            new Object[] {
+                    TEST_UPDATE_USER_PROFILE_VISIBILITY_SUCCESS_WITH_ALREADY_PUBLIC_COLUMN, true, HttpStatus.OK
+            },
+            new Object[] {
+                    TEST_UPDATE_USER_PROFILE_VISIBILITY_SUCCESS_WITH_ALREADY_PRIVATE_COLUMN, true, HttpStatus.OK
+            },
+    };
   }
 
   @Test(dataProvider = "updateUserProfileVisibilitySuccessDataProvider")
@@ -101,7 +104,9 @@ public class UpdateUserProfileVisibilityTest extends BaseCitrusTestRunner {
   public void testUpdateUserProfileVisibilitySuccess(
       String testName, boolean isAuthRequired, HttpStatus httpStatusCode) {
     getTestCase().setName(testName);
-    beforeTest(isAuthRequired);
+    getAuthToken(this, true);
+    beforeTest(true);
+    variable("userId", testContext.getVariable("userId"));
     performPostTest(
         this,
         TEMPLATE_DIR,
@@ -114,9 +119,17 @@ public class UpdateUserProfileVisibilityTest extends BaseCitrusTestRunner {
         RESPONSE_JSON);
   }
 
-  private void beforeTest(boolean isAuthRequired) {
-    getAuthToken(this, isAuthRequired);
+  private void beforeTest(boolean isUserIdReq) {
+
+    if(isUserIdReq)
+    {
     UserUtil.getUserId(this, testContext);
-    variable("userId", TestActionUtil.getVariable(testContext, "userId"));
+    variable("userId", testContext.getVariable("userId"));
+    UserUtil.createUserAndGetToken(this, testContext);
+  }
+  else {
+      variable("userId", "Invalid");
+    }
+
   }
 }

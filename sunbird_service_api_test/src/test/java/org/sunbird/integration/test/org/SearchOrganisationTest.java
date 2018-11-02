@@ -24,7 +24,7 @@ public class SearchOrganisationTest extends BaseCitrusTestRunner {
   public Object[][] searchOrgFailureDataProvider() {
 
     return new Object[][] {
-      new Object[] {TEST_NAME_SEARCH_ORG_FAILURE_WITHOUT_FILTER, HttpStatus.INTERNAL_SERVER_ERROR},
+      new Object[] {TEST_NAME_SEARCH_ORG_FAILURE_WITHOUT_FILTER, HttpStatus.BAD_REQUEST},
     };
   }
 

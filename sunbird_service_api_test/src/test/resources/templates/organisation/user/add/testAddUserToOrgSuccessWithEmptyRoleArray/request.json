@@ -1,6 +1,6 @@
 {
   "request": {
-    "userId": "citrus:concat('user_',citrus:randomNumber(10))",
+    "userId":"${userId}",
     "roles": [],
     "organisationId": "ORG_001"
   }

@@ -71,7 +71,7 @@ public class GetUserByUserIdTest extends BaseCitrusTestRunner {
     afterTest();
   }
 
-  @Test(dependsOnMethods = {"testGetUserByUserIdSuccess"})
+  @Test()
   @CitrusTest
   public void testGetBlockUserByUserIdFailure() {
     getTestCase().setName("testGetUserByUserIdFailureWithBlockedUser");
@@ -92,7 +92,7 @@ public class GetUserByUserIdTest extends BaseCitrusTestRunner {
   }
 
   private void blockUser() {
-    UserUtil.blockUser(this, TEMPLATE_DIR_BLOCK, TEST_BA_BLOCK_USER_SUCCESS_WITH_VALID_USERID);
+    UserUtil.blockUser(this, TEMPLATE_DIR, "testGetUserByUserIdFailureWithBlockedUser");
   }
 
   private void beforeTest() {

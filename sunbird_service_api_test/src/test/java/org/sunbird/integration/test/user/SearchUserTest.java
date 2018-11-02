@@ -43,7 +43,7 @@ public class SearchUserTest extends BaseCitrusTestRunner {
       new Object[] {
         TEST_NAME_SEARCH_USER_FAILURE_WITHOUT_ACCESS_TOKEN, false, HttpStatus.UNAUTHORIZED
       },
-      new Object[] {TEST_SEARCH_EMPTY_BODY_FAILURE, true, HttpStatus.INTERNAL_SERVER_ERROR},
+      new Object[] {TEST_SEARCH_EMPTY_BODY_FAILURE, true, HttpStatus.BAD_REQUEST},
     };
   }
 

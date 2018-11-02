@@ -5,10 +5,10 @@
     "params": {
         "resmsgid": null,
         "msgid": "@ignore@",
-        "err": "USER_NOT_FOUND",
-        "status": "USER_NOT_FOUND",
-        "errmsg": "user not found."
+        "err": "INTERNAL_ERROR",
+        "status": "INTERNAL_ERROR",
+        "errmsg": "Process failed,please try again later."
     },
-    "responseCode": "RESOURCE_NOT_FOUND",
+    "responseCode": "SERVER_ERROR",
     "result": {}
 }

@@ -16,7 +16,7 @@ public class ContentStoreUtil {
   private static final String CONTENT_STORE_UPDATE_HIERARCHY_URL = "/content/v3/hierarchy/update";
   private static final String CONTENT_STORE_CONTENT_PUBLISH_URL = "/content/v3/publish/";
   private static final String CONTENT_STORE_RETIRE_CONTENT_URL = "/content/v3/retire/";
-  private static String courseId = "";
+  private static String courseId = null;
   private static final String courseUnitId = "SB_FT_COURSEUNIT_" + UUID.randomUUID().toString();
   private static final String resourceId = System.getenv("sunbird_content_id");
 

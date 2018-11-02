@@ -7,8 +7,8 @@
         "msgid": "@ignore@",
         "err": "INVALID_PARAMETER_VALUE",
         "status": "INVALID_PARAMETER_VALUE",
-        "errmsg": "@ignore@"
+        "errmsg": "Invalid value Invalid for parameter userId. Please provide a valid value."
     },
-    "responseCode": "RESOURCE_NOT_FOUND",
+    "responseCode": "CLIENT_ERROR",
     "result": {}
 }

@@ -1,6 +1,7 @@
 {
-    "request":{
-    "userId":"${userId}",
-    "public":["firstName"]
-}
+  "request": {
+    "userId": "${userId}",
+    "public": ["firstName"],
+    "private": []
+  }
 }

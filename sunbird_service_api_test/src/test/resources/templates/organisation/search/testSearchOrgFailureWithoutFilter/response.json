@@ -1,4 +1,15 @@
 {
+<<<<<<< HEAD
+    "id":"api.org.search",
+    "ver":"v1",
+    "ts":"@ignore@",
+    "params":{
+        "resmsgid":null,
+        "msgid":"@ignore@",
+        "err":"MANDATORY_PARAMETER_MISSING",
+        "status":"MANDATORY_PARAMETER_MISSING",
+        "errmsg":"Mandatory parameter filters is missing."
+=======
     "id": "api.org.search",
     "ver": "v1",
     "ts": "@ignore@",
@@ -8,7 +19,10 @@
         "err": "MANDATORY_PARAMETER_MISSING",
         "status": "MANDATORY_PARAMETER_MISSING",
         "errmsg": "Mandatory parameter filters is missing."
+>>>>>>> c3621f5a62d001acadee452ad074b4791f991fec
     },
-    "responseCode": "SERVER_ERROR",
-    "result": {}
+    "responseCode":"CLIENT_ERROR",
+    "result":{
+
+    }
 }

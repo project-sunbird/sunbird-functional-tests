@@ -32,7 +32,7 @@ public class BlockUserTest extends BaseCitrusTestRunner {
 
     return new Object[][] {
       new Object[] {TEST_BLOCK_USER_FAILURE_WITHOUT_ACCESS_TOKEN, false, HttpStatus.UNAUTHORIZED},
-      new Object[] {TEST_BLOCK_USER_FAILURE_WITH_INVALID_USERID, true, HttpStatus.NOT_FOUND},
+      new Object[] {TEST_BLOCK_USER_FAILURE_WITH_INVALID_USERID, true, HttpStatus.INTERNAL_SERVER_ERROR},
     };
   }
 

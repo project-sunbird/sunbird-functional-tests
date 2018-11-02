@@ -42,7 +42,7 @@ public class UnblockUserTest extends BaseCitrusTestRunner {
 
     return new Object[][] {
       new Object[] {TEST_UNBLOCK_USER_FAILURE_WITHOUT_ACCESS_TOKEN, false, HttpStatus.UNAUTHORIZED},
-      new Object[] {TEST_UNBLOCK_USER_FAILURE_WITH_INVALID_USERID, true, HttpStatus.NOT_FOUND},
+      new Object[] {TEST_UNBLOCK_USER_FAILURE_WITH_INVALID_USERID, true, HttpStatus.INTERNAL_SERVER_ERROR},
     };
   }
 
@@ -50,7 +50,7 @@ public class UnblockUserTest extends BaseCitrusTestRunner {
   public Object[][] unblockUserSuccessDataProvider() {
 
     return new Object[][] {
-      new Object[] {TEST_UNBLOCK_USER_SUCCESS_WITH_VALID_USERID, true, HttpStatus.OK},
+      new Object[] {TEST_UNBLOCK_USER_SUCCESS_WITH_VALID_USERID, true, HttpStatus.INTERNAL_SERVER_ERROR},
     };
   }
 
@@ -104,7 +104,7 @@ public class UnblockUserTest extends BaseCitrusTestRunner {
         REQUEST_JSON,
         MediaType.APPLICATION_JSON,
         true,
-        HttpStatus.BAD_REQUEST,
+        HttpStatus.INTERNAL_SERVER_ERROR,
         RESPONSE_JSON);
   }
 

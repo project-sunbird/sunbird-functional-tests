@@ -30,11 +30,6 @@ public class ReadUserNoteTest extends BaseCitrusTestRunner {
     };
   }
 
-  @DataProvider(name = "readUserNoteSuccessDataProvider")
-  public Object[][] readUserNoteSuccessDataProvider() {
-    return new Object[][] {new Object[] {TEST_READ_USER_NOTE_SUCCESS, true, HttpStatus.OK}};
-  }
-
   @Test(dataProvider = "readUserNoteFailureDataProvider")
   @CitrusParameters({"testName", "isAuthRequired", "httpStatusCode"})
   @CitrusTest
@@ -49,6 +44,11 @@ public class ReadUserNoteTest extends BaseCitrusTestRunner {
         isAuthRequired,
         httpStatusCode,
         RESPONSE_JSON);
+  }
+
+  @DataProvider(name = "readUserNoteSuccessDataProvider")
+  public Object[][] readUserNoteSuccessDataProvider() {
+    return new Object[][] {new Object[] {TEST_READ_USER_NOTE_SUCCESS, true, HttpStatus.OK}};
   }
 
   @Test(dataProvider = "readUserNoteSuccessDataProvider")
@@ -71,7 +71,7 @@ public class ReadUserNoteTest extends BaseCitrusTestRunner {
   @CitrusTest
   public void testReadUserNoteFailureWithInvalidNoteId() {
     getTestCase().setName(TEST_READ_USER_NOTE_FAILURE_WITH_INVALID_NOTEID);
-    beforeTest();
+    getAuthToken(this, true);
     performGetTest(
         this,
         TEST_READ_USER_NOTE_FAILURE_WITH_INVALID_NOTEID,

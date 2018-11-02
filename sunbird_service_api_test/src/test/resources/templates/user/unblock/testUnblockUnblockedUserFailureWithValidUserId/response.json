@@ -5,10 +5,10 @@
     "params": {
         "resmsgid": null,
         "msgid": "@ignore@",
-        "err": "USER_ALREADY_ACTIVE",
-        "status": "USER_ALREADY_ACTIVE",
-        "errmsg": "User is already active"
+        "err": "INTERNAL_ERROR",
+        "status": "INTERNAL_ERROR",
+        "errmsg": "Process failed,please try again later."
     },
-    "responseCode": "CLIENT_ERROR",
+    "responseCode": "SERVER_ERROR",
     "result": {}
 }

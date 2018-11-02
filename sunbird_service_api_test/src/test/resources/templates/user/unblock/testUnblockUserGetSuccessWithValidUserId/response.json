@@ -1,5 +1,5 @@
 {
-    "id": "api.user.read",
+    "id": "api.user.getuser",
     "ver": "v1",
     "ts": "@ignore@",
     "params": {
@@ -11,6 +11,135 @@
     },
     "responseCode": "OK",
     "result": {
-        "response": "@ignore@"
+        "response": {
+
+    "lastName":"@ignore@",
+    "webPages":[
+
+    ],
+    "tcStatus":null,
+    "education":[
+
+    ],
+    "gender":"male",
+    "subject":[
+
+    ],
+    "roles":[
+        "PUBLIC"
+    ],
+    "channel":"@ignore@",
+    "language":[
+
+    ],
+    "updatedDate":null,
+    "skills":[
+
+    ],
+    "badgeAssertions":[
+
+    ],
+    "isDeleted":false,
+    "organisations":[
+        {
+            "organisationId":"@ignore@",
+            "updatedBy":null,
+            "addedByName":null,
+            "addedBy":null,
+            "roles":[
+                "PUBLIC"
+            ],
+            "approvedBy":null,
+            "updatedDate":null,
+            "userId":"@ignore@",
+            "approvaldate":null,
+            "isDeleted":false,
+            "hashTagId":"@ignore@",
+            "isRejected":null,
+            "id":"@ignore@",
+            "position":null,
+            "isApproved":null,
+            "orgjoindate":"@ignore@",
+            "orgLeftDate":null
+        }
+    ],
+    "countryCode":null,
+    "id":"58a46699-e558-43bb-8546-36cfbbd5647d",
+    "tempPassword":null,
+    "email":"",
+    "phoneverified":null,
+    "rootOrg":{
+        "dateTime":null,
+        "preferredLanguage":"@ignore@",
+        "approvedBy":null,
+        "channel":"@ignore@",
+        "description":"@ignore@",
+        "updatedDate":null,
+        "addressId":null,
+        "orgType":null,
+        "provider":null,
+        "locationId":null,
+        "orgCode":"@ignore@",
+        "theme":null,
+        "id":"@ignore@",
+        "communityId":null,
+        "isApproved":null,
+        "slug":"@ignore@",
+        "identifier":"@ignore@",
+        "thumbnail":null,
+        "orgName":"@ignore@",
+        "updatedBy":null,
+        "address":{
+
+        },
+        "locationIds":[
+
+        ],
+        "externalId":null,
+        "isRootOrg":true,
+        "rootOrgId":"@ignore@",
+        "approvedDate":null,
+        "imgUrl":null,
+        "homeUrl":null,
+        "orgTypeId":null,
+        "isDefault":null,
+        "contactDetail":[
+
+        ],
+        "createdDate":"@ignore@",
+        "createdBy":null,
+        "parentOrgId":null,
+        "hashTagId":"@ignore@",
+        "noOfMembers":null,
+        "status":1
+    },
+    "identifier":"@ignore@",
+    "thumbnail":null,
+    "updatedBy":null,
+    "address":[
+
+    ],
+    "jobProfile":[
+
+    ],
+    "profileSummary":null,
+    "tcUpdatedDate":null,
+    "registryId":null,
+    "avatar":null,
+    "rootOrgId":"@ignore@",
+    "emailVerified":false,
+    "firstName":"@ignore@",
+    "lastLoginTime":null,
+    "createdDate":"@ignore@",
+    "createdBy":null,
+    "phone":null,
+    "dob":null,
+    "grade":[
+
+    ],
+    "currentLoginTime":null,
+    "location":null,
+    "status":1
+        }
     }
 }

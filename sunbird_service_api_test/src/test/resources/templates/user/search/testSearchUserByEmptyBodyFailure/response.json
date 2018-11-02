@@ -9,6 +9,6 @@
         "status": "MANDATORY_PARAMETER_MISSING",
         "errmsg": "Mandatory parameter filters is missing."
     },
-    "responseCode": "SERVER_ERROR",
+    "responseCode": "CLIENT_ERROR",
     "result": {}
 }

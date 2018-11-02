@@ -5,12 +5,10 @@
     "params": {
         "resmsgid": null,
         "msgid": "@ignore@",
-        "err": null,
-        "status": "success",
-        "errmsg": null
+        "err": "INTERNAL_ERROR",
+        "status": "INTERNAL_ERROR",
+        "errmsg": "Process failed,please try again later."
     },
-    "responseCode": "OK",
-    "result": {
-        "response": "SUCCESS"
-    }
+    "responseCode": "SERVER_ERROR",
+    "result": {}
 }
