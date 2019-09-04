@@ -1,0 +1,7 @@
+{
+    "request":{
+    "userId":"${userId}",
+    "public":["firstName"],
+    "private":[]
+}
+}

@@ -1,0 +1,11 @@
+{
+	"request": {
+		"content": {
+			"name": "for TOC Integration Test",
+			"code": "citrus:concat('SB_FT_COURSE_', citrus:currentDate('yyyyMMddhhmmss'))",
+			"mimeType": "application/pdf",
+			"contentType":"Resource",
+			"createdBy": "3d5778a6-0447-4bb1-acb2-51bcf4f587f3"
+		}
+	}
+}

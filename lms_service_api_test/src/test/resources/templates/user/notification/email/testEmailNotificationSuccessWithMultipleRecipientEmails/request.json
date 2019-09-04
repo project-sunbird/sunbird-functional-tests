@@ -1,0 +1,22 @@
+{
+  "params": {},
+  "request": {
+    "subject": "some subject",
+    "body": "some body",
+    "orgImgUrl": "some image url",
+    "actionName": "some action",
+    "actionUrl": "some url",
+    "orgName": "some organisation name",
+    "emailTemplateType": "welcome",
+    "fromEmail": "some_email_id@something.com",
+    "recipientEmails": [
+      "${emailId1}",
+      "${emailId2}"
+    ],
+    "recipientSearchQuery": {
+      "filters": {
+        "rootOrgId": "someRootOrgId"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "api.textbook.toc.upload",
+    "ver": "v1",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": null,
+        "msgid": "@ignore@",
+        "err": "BLANK_CSV_DATA",
+        "status": "BLANK_CSV_DATA",
+        "errmsg": "@ignore@"
+    },
+    "responseCode": "CLIENT_ERROR",
+    "result": {}
+}

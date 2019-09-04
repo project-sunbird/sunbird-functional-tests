@@ -1,0 +1,7 @@
+{
+    "request": {
+        "type" : "phone",
+        "otp" : "someOtp"
+	}
+}
+

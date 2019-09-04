@@ -1,0 +1,14 @@
+{
+    "id": "api.textbook.toc.download",
+    "ver": "v1",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": null,
+        "msgid": "@ignore@",
+        "err": "TEXTBOOK_CHILDREN_NOT_EXISTS",
+        "status": "TEXTBOOK_CHILDREN_NOT_EXISTS",
+        "errmsg": "No Children Exists for given TextBook."
+    },
+    "responseCode": "CLIENT_ERROR",
+    "result": {}
+}

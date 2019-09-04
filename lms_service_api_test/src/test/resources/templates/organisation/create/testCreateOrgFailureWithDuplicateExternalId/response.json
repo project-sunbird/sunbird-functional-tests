@@ -1,0 +1,16 @@
+{
+	"id": "api.org.create",
+	"ver": "v1",
+	"ts": "@ignore@",
+	"params": {
+		"resmsgid": null,
+		"msgid": "@ignore@",
+		"err": "ERROR_DUPLICATE_ENTRY",
+		"status": "ERROR_DUPLICATE_ENTRY",
+		"errmsg": "Value ${externalId} for externalId is already in use."
+	},
+	"responseCode": "CLIENT_ERROR",
+	"result": {
+		
+	}
+} 

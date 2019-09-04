@@ -1,0 +1,14 @@
+{
+    "id": "api.textbook.toc.upload",
+    "ver": "v1",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": null,
+        "msgid": "@ignore@",
+        "err": "MANDATORY_HEADER_MISSING",
+        "status": "MANDATORY_HEADER_MISSING",
+        "errmsg": "@ignore@"
+    },
+    "responseCode": "CLIENT_ERROR",
+    "result": {}
+}

@@ -1,0 +1,14 @@
+{
+    "id": "api.user.getByKey",
+    "ver": "v1",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": null,
+        "msgid": "@ignore@",
+        "err": "MANDATORY_PARAMETER_MISSING",
+        "status": "MANDATORY_PARAMETER_MISSING",
+        "errmsg": "Mandatory parameter value is missing."
+    },
+    "responseCode": "CLIENT_ERROR",
+    "result": {}
+}

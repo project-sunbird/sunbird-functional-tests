@@ -1,0 +1,51 @@
+{
+    "id": "api.dashboard.consumption.org",
+    "ver": "v1",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": null,
+        "msgid": "@ignore@",
+        "err": null,
+        "status": "success",
+        "errmsg": null
+    },
+    "responseCode": "OK",
+    "result": {
+        "period": "7d",
+        "org": {
+            "orgName": "@ignore@",
+            "orgId": "@ignore@"
+        },
+        "snapshot": {
+            "org.consumption.content.session.count": {
+                "name": "Number of visits by users",
+                "value": "@ignore@"
+            },
+            "org.consumption.content.time_spent.sum": {
+                "name": "Content consumption time",
+                "value": "@ignore@",
+                "time_unit": "seconds"
+            },
+            "org.consumption.content.time_spent.average": {
+                "name": "Average time spent by user per visit",
+                "value": "@ignore@",
+                "time_unit": "seconds"
+            }
+        },
+        "series": {
+            "org.consumption.content.users.count": {
+                "name": "Number of users per day",
+                "split": "content.users.count",
+                "group_id": "org.users.count",
+                "buckets": "@ignore@"
+            },
+            "org.consumption.content.time_spent.sum": {
+                "name": "Time spent by day",
+                "split": "content.time_spent.user.count",
+                "time_unit": "seconds",
+                "group_id": "org.timespent.sum",
+                "buckets": "@ignore@"
+            }
+        }
+    }
+}

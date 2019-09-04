@@ -1,0 +1,7 @@
+{
+  "request": {
+    "assertionId": "some_assertion_id",
+    "recipientType": "user",
+    "revocationReason": "some reason"
+  }
+}

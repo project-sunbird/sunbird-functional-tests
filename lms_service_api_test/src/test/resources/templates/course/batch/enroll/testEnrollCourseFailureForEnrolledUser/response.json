@@ -1,0 +1,14 @@
+{
+    "id": "@ignore@",
+    "ver": "v1",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": "@ignore@",
+        "msgid": "@ignore@",
+        "err": "USER_ALREADY_ENROLLED_COURSE",
+        "status": "USER_ALREADY_ENROLLED_COURSE",
+        "errmsg": "User has already Enrolled this course ."
+    },
+    "responseCode": "CLIENT_ERROR",
+    "result": {}
+}

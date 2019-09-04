@@ -1,0 +1,7 @@
+{
+  "request": {
+  	"courseId": "someCourseId",
+  	"userId" : "someUserId"
+  	
+  }
+}

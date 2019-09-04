@@ -1,0 +1,8 @@
+{
+  "request": {
+    "recipientId": "${userId}",
+    "recipientType": "user",
+    "issuerId": "invalidIssuerId",
+    "badgeId": "someBadgeId"
+  }
+}

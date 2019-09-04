@@ -1,0 +1,16 @@
+{
+    "params": { },
+    "request":{
+        "firstName": "Amit",
+        "lastName": "Kumar",
+        "password": "password",
+        "email": "${email}",
+        "phone": "${phone}",
+        "emailVerified": true,
+        "phoneVerified": true,
+        "userName":"${username}",
+        "gender": "male",
+        "channel":"${channel}"
+    }
+}
+

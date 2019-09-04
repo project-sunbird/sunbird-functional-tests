@@ -1,0 +1,11 @@
+{
+  "request": {
+    "rootOrgId": "${subOrganisationId}",
+    "data": [
+      {
+        "location": "someLocation",
+        "type": "someType"
+      }
+    ]
+  }
+}

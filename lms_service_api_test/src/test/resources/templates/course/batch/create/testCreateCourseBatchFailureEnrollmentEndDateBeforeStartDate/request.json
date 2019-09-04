@@ -1,0 +1,9 @@
+{
+  "request": {
+  	"name":"testCourseBatch",
+  	"courseId": "testcourseId",
+  	"enrollmentType":"open",
+	"startDate":"${startDate}",
+	  "enrollmentEndDate": "2019-01-01"
+  }
+}

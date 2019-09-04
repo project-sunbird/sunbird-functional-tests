@@ -1,0 +1,8 @@
+{
+  "request": {
+    "recipientId": "${courseId}",
+    "recipientType": "content",
+    "issuerId": "${issuerId}",
+    "badgeId": "${badgeId}"
+  }
+}

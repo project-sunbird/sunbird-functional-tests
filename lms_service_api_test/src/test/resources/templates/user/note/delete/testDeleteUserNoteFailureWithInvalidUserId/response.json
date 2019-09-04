@@ -1,0 +1,14 @@
+{
+    "id": "api.note.delete",
+    "ver": "v1",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": null,
+        "msgid": "@ignore@",
+        "err": "FORBIDDEN",
+        "status": "FORBIDDEN",
+        "errmsg": "You are forbidden from accessing specified resource."
+    },
+    "responseCode": "FORBIDDEN",
+    "result": {}
+}

@@ -1,0 +1,8 @@
+ 
+{
+    "request": {
+        "filters": {
+            "assertions": ["${assertionId}"]
+        }
+    }
+}

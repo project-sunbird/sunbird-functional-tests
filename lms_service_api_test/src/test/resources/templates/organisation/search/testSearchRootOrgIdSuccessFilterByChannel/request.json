@@ -1,0 +1,8 @@
+{
+  "request": {
+    "filters": {
+      "channel": "${channel}",
+      "isRootOrg" : true
+    }
+  }
+}

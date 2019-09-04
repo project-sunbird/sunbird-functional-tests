@@ -1,0 +1,9 @@
+issuerId=issuerId
+name=FT_badge_class
+description=FT badge description
+criteria=FT some criteria
+rootOrgId=organisationId
+type=user
+subtype=award
+roles=["INVALID"]
+file=image.png

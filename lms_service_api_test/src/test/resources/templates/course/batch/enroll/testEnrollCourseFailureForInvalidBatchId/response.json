@@ -1,0 +1,14 @@
+{
+    "id": "@ignore@",
+    "ver": "v1",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": "@ignore@",
+        "msgid": "@ignore@",
+        "err": "INVALID_COURSE_BATCH_ID",
+        "status": "INVALID_COURSE_BATCH_ID",
+        "errmsg": "Invalid course batch id "
+    },
+    "responseCode": "CLIENT_ERROR",
+    "result": {}
+}

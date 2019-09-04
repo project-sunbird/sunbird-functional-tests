@@ -1,0 +1,14 @@
+{
+    "id": "@ignore@",
+    "ver": "v1",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": "@ignore@",
+        "msgid": "@ignore@",
+        "err": "MANDATORY_PARAMETER_MISSING",
+        "status": "MANDATORY_PARAMETER_MISSING",
+        "errmsg": "Mandatory parameter courseId is missing."
+    },
+    "responseCode": "CLIENT_ERROR",
+    "result": {}
+}
