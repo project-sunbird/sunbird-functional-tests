@@ -1,0 +1,8 @@
+{
+  "request": {
+    "assertionId": "${assertionId}",
+    "recipientId": "${userId}",
+    "recipientType": "user",
+    "revocationReason": "some reason"
+  }
+}

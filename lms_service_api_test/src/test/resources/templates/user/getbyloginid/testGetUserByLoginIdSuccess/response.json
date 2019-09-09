@@ -1,0 +1,63 @@
+{
+	"id": "api.user.getuser",
+	"ver": "v1",
+	"ts": "@ignore@",
+	"params": {
+		"resmsgid": null,
+		"msgid": "@ignore@",
+		"err": null,
+		"status": "success",
+		"errmsg": null
+	},
+	"responseCode": "OK",
+	"result": {
+		"response": {
+			"lastName": "ft_lastName",
+			"webPages": [],
+			"tcStatus": null,
+			"education": [],
+			"gender": null,
+			"subject": [],
+			"roles": [
+				"PUBLIC"
+			],
+			"channel": "${channel}",
+			"language": [],
+			"updatedDate": null,
+			"skills": [],
+			"badgeAssertions": [],
+			"isDeleted": false,
+			"organisations": "@ignore@",
+			"countryCode": null,
+			"id": "@ignore@",
+			"tempPassword": null,
+			"email": "@ignore@",
+			"phoneverified": "@ignore@",
+			"rootOrg":"@ignore@",
+			"identifier": "@ignore@",
+			"thumbnail": null,
+			"updatedBy": null,
+			"address": [],
+			"jobProfile": [],
+			"profileSummary": null,
+			"tcUpdatedDate": null,
+			"registryId": "@ignore@",
+			"avatar": null,
+			"rootOrgId": "@ignore@",
+			"emailVerified": "@ignore@",
+			"firstName": "@ignore@",
+			"lastLoginTime": null,
+			"createdDate": "@ignore@",
+			"createdBy": "@ignore@",
+			"phone": null,
+			"dob": null,
+			"grade": [],
+			"currentLoginTime": null,
+			"location": null,
+			"status": 1,
+			"locationIds": "@ignore@",
+			"userType": "@ignore@",
+			"framework": "@ignore@"
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+  "id": "api.user.type.list",
+  "ver": "v1",
+  "ts": "@ignore@",
+  "params": {
+    "resmsgid": null,
+    "msgid": "@ignore@",
+    "err": null,
+    "status": "success",
+    "errmsg": null
+  },
+  "responseCode": "OK",
+  "result": {
+    "response": [
+      {
+        "name": "TEACHER",
+        "id": "TEACHER"
+      },
+      {
+        "name": "OTHER",
+        "id": "OTHER"
+      }
+    ]
+  }
+}

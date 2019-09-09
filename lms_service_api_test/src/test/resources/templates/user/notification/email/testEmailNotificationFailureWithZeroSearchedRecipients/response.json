@@ -1,0 +1,14 @@
+{
+  "id": "api.notification.email",
+  "ver": "v1",
+  "ts": "@ignore@",
+  "params": {
+    "resmsgid": null,
+    "msgid": "@ignore@",
+    "err": "NO_EMAIL_RECIPIENTS",
+    "status": "NO_EMAIL_RECIPIENTS",
+    "errmsg": "Email notification is not sent as the number of recipients is zero."
+  },
+  "responseCode": "CLIENT_ERROR",
+  "result": {}
+}

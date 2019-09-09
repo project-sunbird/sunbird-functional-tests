@@ -1,0 +1,14 @@
+{
+    "id": "api.course.batch.create",
+    "ver": "v1",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": null,
+        "msgid": "@ignore@",
+        "err": "USER_NOT_ASSOCIATED_TO_ROOT_ORG",
+        "status": "USER_NOT_ASSOCIATED_TO_ROOT_ORG",
+        "errmsg": "User (ID = 84780750-cca8-414f-a8eb-b9b8026a24bb) not associated to course batch creator root org."
+    },
+    "responseCode": "CLIENT_ERROR",
+    "result": {}
+}

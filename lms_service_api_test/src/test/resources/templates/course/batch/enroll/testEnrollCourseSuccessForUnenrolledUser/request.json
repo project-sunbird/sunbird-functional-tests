@@ -1,0 +1,7 @@
+{
+  "request": {
+  	"courseId": "${courseId}",
+  	"batchId" : "${batchId}",
+  	"userId" : "${userId}"
+  	 }
+}

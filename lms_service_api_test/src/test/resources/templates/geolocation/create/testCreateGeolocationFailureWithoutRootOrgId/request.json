@@ -1,0 +1,10 @@
+{
+  "request": {
+    "data": [
+      {
+        "location": "someLocation",
+        "type": "someType"
+      }
+    ]
+  }
+}

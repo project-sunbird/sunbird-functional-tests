@@ -1,0 +1,19 @@
+{
+  "id": "api.textbook.toc.download",
+  "ver": "v1",
+  "ts": "@ignore@",
+  "params": {
+    "resmsgid": null,
+    "msgid": "@ignore@",
+    "err": null,
+    "status": "success",
+    "errmsg": null
+  },
+  "responseCode": "OK",
+  "result": {
+    "textbook": {
+      "tocUrl": "@ignore@",
+      "ttl": "@ignore@"
+    }
+  }
+}

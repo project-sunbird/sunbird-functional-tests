@@ -1,0 +1,14 @@
+{
+    "id": "api.course.batch.create",
+    "ver": "v1",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": null,
+        "msgid": "@ignore@",
+        "err": "ENROLLMENT_END_DATE_START_ERROR",
+        "status": "ENROLLMENT_END_DATE_START_ERROR",
+        "errmsg": "Enrollment End date should be greater than course batch start date."
+    },
+    "responseCode": "CLIENT_ERROR",
+    "result": {}
+}

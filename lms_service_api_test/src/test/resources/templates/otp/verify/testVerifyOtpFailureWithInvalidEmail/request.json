@@ -1,0 +1,8 @@
+{
+    "request": {
+        "key" : "someInvalidEmail",
+        "type" : "email",
+        "otp" : "someOtp"
+	}
+}
+

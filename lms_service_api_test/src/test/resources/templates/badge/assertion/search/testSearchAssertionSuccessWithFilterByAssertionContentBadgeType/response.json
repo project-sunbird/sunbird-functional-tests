@@ -1,0 +1,41 @@
+{
+    "id": "api.issuer.badge.assertion.search",
+    "ver": "v1",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": null,
+        "msgid": "@ignore@",
+        "err": null,
+        "status": "success",
+        "errmsg": null
+    },
+    "responseCode": "OK",
+    "result": {
+        "assertions": [
+            {
+                "assertionDate": "@ignore@",
+                "assertionImageUrl": "@ignore@",
+                "badgeId": "${badgeId}",
+                "assertionIdUrl": "@ignore@",
+                "revoked": "@ignore@",
+                "issuerId": "${issuerId}",
+                "createdDate": "@ignore@",
+                "assertionId": "${assertionId}",
+                "issuerIdUrl": "@ignore@",
+                "recipient": {
+                    "salt": "@ignore@",
+                    "type": "@ignore@",
+                    "hashed": "@ignore@",
+                    "identity": "@ignore@"
+                },
+                "verify": {
+                    "url": "@ignore@",
+                    "type": "@ignore@"
+                },
+                "revocationReason": "@ignore@",
+                "recipientEmail": "@ignore@",
+                "badgeIdUrl": "@ignore@"
+            }
+        ]
+    }
+}

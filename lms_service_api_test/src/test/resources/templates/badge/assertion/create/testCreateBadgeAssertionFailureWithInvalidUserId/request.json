@@ -1,0 +1,11 @@
+ {
+    "request": {
+    
+     "recipientId":"invalidUserId",
+     "recipientType":"user",
+     "issuerId":"someIssuerId",
+     "badgeId":"someBadgeId"
+     
+   }
+  } 
+  

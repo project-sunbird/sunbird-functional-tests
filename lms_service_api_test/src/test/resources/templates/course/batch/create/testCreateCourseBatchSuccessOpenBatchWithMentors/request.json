@@ -1,0 +1,9 @@
+{
+  "request": {
+  	"name":"testCourseBatch",
+  	"courseId": "${courseId}",
+  	"enrollmentType":"open",
+	"startDate":"${startDate}",
+	"mentors":["${userId}"]
+  }
+}
