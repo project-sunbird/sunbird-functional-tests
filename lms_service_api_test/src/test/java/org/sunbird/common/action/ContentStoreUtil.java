@@ -43,7 +43,7 @@ public class ContentStoreUtil {
     return headers;
   }
 
-  private static void createLiveCourse(BaseCitrusTestRunner runner, TestContext testContext) {
+  public static String createLiveCourse(BaseCitrusTestRunner runner, TestContext testContext) {
     createCourse(runner, testContext);
 
     if (StringUtils.isNotBlank(courseId)) {
@@ -62,6 +62,7 @@ public class ContentStoreUtil {
                 }
               });
     }
+    return courseId;
   }
 
   private static void createCourse(BaseCitrusTestRunner runner, TestContext testContext) {

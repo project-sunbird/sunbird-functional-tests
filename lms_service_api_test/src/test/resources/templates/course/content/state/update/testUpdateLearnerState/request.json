@@ -1,0 +1,14 @@
+{
+  "request": {
+    "userId": "bacacc74-f828-403c-987a-333550c204db",
+    "contents": [
+      {
+        "contentId": "${contentId}",
+        "batchId": "${batchId}",
+        "status": "${status}",
+        "courseId": "${courseId}",
+        "lastAccessTime": "${lastAccessTime}"
+      }
+    ]
+  }
+}
