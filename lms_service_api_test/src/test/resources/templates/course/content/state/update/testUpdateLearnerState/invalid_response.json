@@ -1,0 +1,16 @@
+{
+  "id": "api.content.state.update",
+  "ver": "v1",
+  "ts": "@ignore@",
+  "params": {
+    "resmsgid": null,
+    "msgid": null,
+    "err": null,
+    "status": "success",
+    "errmsg": null
+  },
+  "responseCode": "OK",
+  "result": {
+    "NOT_A_ON_GOING_BATCH": "${batchId}"
+  }
+}
