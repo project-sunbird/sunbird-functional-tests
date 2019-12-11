@@ -1,6 +1,0 @@
-{
-  "request": {
-  	"courseId": "someCourseId",
-  	"batchId" : "$someBatchId"
-  }
-}

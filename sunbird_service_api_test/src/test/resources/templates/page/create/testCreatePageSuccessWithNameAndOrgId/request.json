@@ -1,6 +1,0 @@
-{
-  "request": {
-    "name": "citrus:concat('ft_page_',citrus:randomNumber(10))",
-    "organisationId": "${organisationId}"     
-  }
-}

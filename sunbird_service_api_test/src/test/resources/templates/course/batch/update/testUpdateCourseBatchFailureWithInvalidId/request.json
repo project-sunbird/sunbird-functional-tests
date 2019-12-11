@@ -1,6 +1,0 @@
-{
-  "request": {
-  	"id":"invalid",
-	"startDate":"${startDate}"
-  }
-}
