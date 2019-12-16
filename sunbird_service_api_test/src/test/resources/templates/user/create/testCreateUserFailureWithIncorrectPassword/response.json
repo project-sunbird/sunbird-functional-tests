@@ -1,0 +1,16 @@
+{
+	"id": "api.user.create",
+	"ver": "v1",
+	"ts": "@ignore@",
+	"params": {
+		"resmsgid": null,
+		"msgid": "@ignore@",
+		"err": "INVALID_PASSWORD",
+		"status": "INVALID_PASSWORD",
+		"errmsg": "Password must contain a minimum of 8 characters including numerals, lower and upper case alphabets and special characters"
+	},
+	"responseCode": "CLIENT_ERROR",
+	"result": {
+		
+	}
+}

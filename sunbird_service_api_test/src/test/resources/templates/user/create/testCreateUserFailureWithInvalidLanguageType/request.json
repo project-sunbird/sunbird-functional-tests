@@ -2,7 +2,7 @@
 	"request": {
 		"firstName": "ft_testName",
 		"lastName": "test",
-		"password": "password",
+		"password": "Password@12",
 		"userName": "manzarul109",
 		"email": "manzarul07+769@gmail.com",
 		"emailVerified": true,

@@ -2,7 +2,7 @@
     "request": {
         "firstName": "ft_testName",
         "lastName": "test",
-        "password": "password",
+        "password": "Password@1",
         "userName": "citrus:concat('ft_username',citrus:randomString(30, MIXED, true))",
         "email": "citrus:randomString(30, MIXED, true)@gmail.com",
         "emailVerified": true,
