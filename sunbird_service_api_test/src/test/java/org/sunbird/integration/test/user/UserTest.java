@@ -424,7 +424,7 @@ public class UserTest extends BaseCitrusTest {
     Map<String, Object> innerMap = new HashMap<>();
     innerMap.put(Constant.FIRST_NAME, "ft_first_Name_pw12401");
     innerMap.put(Constant.LAST_NAME, "ft_lastName");
-    innerMap.put(Constant.PASSWORD, "password");
+    innerMap.put(Constant.PASSWORD, "Password1@");
     innerMap.put(Constant.CHANNEL, testGlobalProperty.getSunbirdDefaultChannel());
     USER_NAME = Constant.USER_NAME_PREFIX + EndpointConfig.val;
     String email = Constant.USER_NAME_PREFIX + EndpointConfig.val + "@gmail.com";
