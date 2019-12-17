@@ -12,7 +12,6 @@
   "responseCode" : "OK",
   "result" : {
     "content" : {
-      "appId": "@ignore@",
       "ownershipType" : [ "createdBy" ],
       "downloadUrl" : "@ignore@",
       "channel" : "channel-01",
@@ -30,7 +29,6 @@
       "mimeType" : "application/vnd.ekstep.content-collection",
       "leafNodes" : "@ignore@",
       "objectType" : "Content",
-      "collections" : [ ],
       "children" : [ {
         "parent" : "@ignore@",
         "identifier" : "@ignore@",
@@ -45,6 +43,7 @@
         "depth" : 1,
         "children" : [ {
           "ownershipType" : [ "createdBy" ],
+          "parent": "@ignore@",
           "previewUrl" : "@ignore@",
           "downloadUrl" : "@ignore@",
           "channel" : "channel-01",
@@ -52,16 +51,6 @@
           "language" : [ "English" ],
           "variants" : "@ignore@",
           "mimeType" : "application/vnd.ekstep.ecml-archive",
-          "collections" : [ {
-            "identifier" : "@ignore@",
-            "name" : "KP Integration Test Collection Content",
-            "objectType" : "Content",
-            "relation" : "hasSequenceMember",
-            "description" : "KP Integration Test Collection Content",
-            "status" : "Live"
-          } ],
-          "children" : [ ],
-          "appId" : "@ignore@",
           "usesContent" : [ ],
           "artifactUrl" : "@ignore@",
           "contentEncoding" : "gzip",
@@ -158,6 +147,8 @@
       "framework" : "NCF",
       "leafNodesCount" : 1,
       "compatibilityLevel" : 1,
+      "collections": [
+      ],
       "usedByContent" : [ ]
     }
   }

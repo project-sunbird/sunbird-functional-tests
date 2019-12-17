@@ -19,8 +19,8 @@ import java.util.Map;
  *
  * @author Neha Verma
  *
- * Number of testcases for get : 6
- * Last Count Update: 13-12-2019
+ * Number of testcases for get : 16
+ * Last Count Update: 17-12-2019
  */
 public class getHierarchyTest extends BaseCitrusTestRunner {
 
