@@ -456,5 +456,13 @@ public class ContentV3Scenario {
     public static final String TEST_UPDATE_HIERARCHY_WITH_1RESOURCE_ONLY = "testUpdateHierarchyWith1ResourceOnly";
     public static final String TEST_UPDATE_HIERARCHY_WITH_MULTILEVEL_UNITS = "testUpdateHierarchyWithMultilevelUnitAnd1Resource";
     public static final String TEST_UPDATE_HIERARCHY_WITH_1UNIT_1COLLECTION = "testUpdateHierarchyWith1Unit1CollectionValidRequest";
+
+    //Get Hierarchy Scenarios
+    public static final String TEST_GET_HIERARCHY_WITH_VALID_IDENTIFIER = "testGetHierarchyWithValidIdentifier";
+    public static final String TEST_GET_HIERARCHY_WITH_INVALID_IDENTIFIER = "testGetHierarchyWithInvalidIdentifier";
+    public static final String TEST_GET_HIERARCHY_WITH_EDIT_MODE = "testGetHierarchyWithEditMode";
+    public static final String TEST_GET_HIERARCHY_WITH_NULL_MODE = "testGetHierarchyWithNullMode";
+    public static final String TEST_GET_HIERARCHY_WITH_INVALID_MODE = "testGetHierarchyWithInvalidMode";
+    public static final String TEST_GET_HIERARCHY_WITH_EMPTY_MODE = "testGetHierarchyWithEmptyMode";
 }
 

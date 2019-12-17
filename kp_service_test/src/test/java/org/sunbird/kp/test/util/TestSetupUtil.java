@@ -54,6 +54,7 @@ public class TestSetupUtil {
             try {
                 FileWriter fileWriter = new FileWriter(file.getPath() + "/" + fileName);
                 HttpResponse<String> jsonNode = Unirest.get(AppConfig.config.getString("kp_base_uri") + "/content/v3/read/" + contentId + "").asString();
+//                HttpResponse<String> jsonNode = Unirest.get(AppConfig.config.getString("kp_content_service_base_uri") + "/content/v3/hierarchy/" + contentId + "?mode=").asString();
                 Response response = objectMapper.readValue(jsonNode.getBody(), Response.class);
                 fileWriter.write(formGeneralAssertions(response));
                 fileWriter.close();
@@ -82,6 +83,19 @@ public class TestSetupUtil {
                     .replaceAll("\\s\\d+\\.\\d+","\"@isNumber()@\"")
                     .replaceAll("\\s\\d", "\"@isNumber()@\"")
                     .replaceAll("\"versionKey\"\\W?:\\W\"\\d+\"","\"versionKey\" : \"@ignore@\"");
+                    /*.replaceAll("\"pkgVersion\"\\W?:\\W\\d+\\.\\d+","\"pkgVersion\" : \"@isNumber()@\"")
+                    .replaceAll("\"parent\"\\W?:\\W\"[a-zA-Z://._0-9-]+\"","\"parent\" : \"@ignore@\"")
+                    .replaceAll("\"size\"\\W?:\\W\\d+\\.\\d+","\"size\" : \"@isNumber()@\"")
+                    .replaceAll("\"totalCompressedSize\"\\W?:\\W\\d+\\.\\d+","\"totalCompressedSize\" : \"@isNumber()@\"")
+                    .replaceAll("\"childNodes\"\\W?:\\W\\[[^\\[]*\\]+","\"childNodes\" : \"@ignore@\"")
+                    .replaceAll("\"toc_url\"\\W?:\\W\"[a-zA-Z://._0-9-]+\"","\"toc_url\" : \"@ignore@\"")
+                    .replaceAll("\"leafNodes\"\\W?:\\W\\[[^\\[]*\\]+","\"leafNodes\" : \"@ignore@\"")
+                    .replaceAll("\"version\"\\W?:\\W\\d+","\"version\" : \"@isNumber()@\"")
+                    .replaceAll("\"compatibilityLevel\"\\W?:\\W\\d+","\"compatibilityLevel\" : \"@isNumber()@\"")
+                    .replaceAll("\"leafNodesCount\"\\W?:\\W\\d+","\"leafNodesCount\" : \"@isNumber()@\"")
+                    .replaceAll("\"mimeTypesCount\"\\W?:\\W\\{([^}]+)\\}+","\"mimeTypesCount\" : \"@ignore@\"")
+                    .replaceAll("\"contentTypesCount\"\\W?:\\W\\{([^}]+)\\}+","\"contentTypesCount\" : \"@ignore@\"");
+*/
             return updatedString;
         } catch (Exception e) {
             e.printStackTrace();
