@@ -22,14 +22,14 @@ pipeline {
         sunbird_test_email_address_1 = "sunbirdtest101@gmail.com"
         sunbird_test_email_address_2 = "sunbirdtest102@gmail.com"
         sunbird_content_id = "do_112728688963133440110506"
-        sunbird_user_framework_board = "CBSE"
+        sunbird_user_framework_board = "NCERT"
         file_upload_max_size=2
-        sunbird_user_framework_grade_level = "KG"
+        sunbird_user_framework_grade_level = "Grade 1"
         sunbird_user_framework_medium = "English"
-        sunbird_user_framework_subject = "English"
+        sunbird_user_framework_subject = "Math"
         content_reviewer_user="ft_reviewer2@org.com"
         content_reviewer_password="password"
-        sunbird_user_framework_id="NCF"
+        sunbird_user_framework_id="NCFCOPY"
     }
 
     agent { label "build-slave" }
