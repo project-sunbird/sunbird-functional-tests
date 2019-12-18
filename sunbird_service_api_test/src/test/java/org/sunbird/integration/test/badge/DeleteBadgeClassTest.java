@@ -49,9 +49,9 @@ public class DeleteBadgeClassTest extends BaseCitrusTestRunner {
     };
   }
 
-  @Test(dataProvider = "deleteBadgeClassDataProviderSuccess")
+  //@Test(dataProvider = "deleteBadgeClassDataProviderSuccess")
   @CitrusParameters({"testName"})
-  @CitrusTest
+  //@CitrusTest
   public void testDeleteBadgeClassSuccess(String testName) {
     beforeTest();
     performDeleteTest(
@@ -68,9 +68,9 @@ public class DeleteBadgeClassTest extends BaseCitrusTestRunner {
     afterTest(true);
   }
 
-  @Test(dataProvider = "deleteBadgeClassDataProviderFailure")
+  //@Test(dataProvider = "deleteBadgeClassDataProviderFailure")
   @CitrusParameters({"testName", "badgeId", "responseJson"})
-  @CitrusTest
+  //@CitrusTest
   public void testDeleteBadgeClassFailure(String testName, String badgeId, String responseJson) {
     performDeleteTest(
         this,

@@ -54,9 +54,9 @@ public class GetBadgeAssertionTest extends BaseCitrusTestRunner {
     };
   }
 
-  @Test(dataProvider = "getBadgeAssertionDataProviderSuccess")
+  //@Test(dataProvider = "getBadgeAssertionDataProviderSuccess")
   @CitrusParameters({"testName"})
-  @CitrusTest
+  //@CitrusTest
   public void testGetBadgeAssertionSuccess(String testName) {
     beforeTest(testName);
     performGetTest(
@@ -69,9 +69,9 @@ public class GetBadgeAssertionTest extends BaseCitrusTestRunner {
         RESPONSE_JSON);
   }
 
-  @Test(dataProvider = "getBadgeAssertionDataProviderFailure")
+  //@Test(dataProvider = "getBadgeAssertionDataProviderFailure")
   @CitrusParameters({"testName", "pathParam"})
-  @CitrusTest
+  //@CitrusTest
   public void testGetBadgeAssertionFailure(String testName, String pathParam) {
     performGetTest(
         this,

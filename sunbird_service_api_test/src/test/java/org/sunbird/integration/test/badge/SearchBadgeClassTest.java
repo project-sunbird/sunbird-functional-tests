@@ -27,9 +27,9 @@ public class SearchBadgeClassTest extends BaseCitrusTestRunner {
     };
   }
 
-  @Test(dataProvider = "searchBadgeClassFailureDataProvider")
+  //@Test(dataProvider = "searchBadgeClassFailureDataProvider")
   @CitrusParameters({"testName", "httpStatusCode"})
-  @CitrusTest
+  //@CitrusTest
   public void testSearchBadgeClassFailure(String testName, HttpStatus httpStatusCode) {
 
     performPostTest(
