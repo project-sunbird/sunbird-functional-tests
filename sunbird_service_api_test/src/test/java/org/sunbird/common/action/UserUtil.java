@@ -8,9 +8,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.sunbird.common.util.Constant;
 import org.sunbird.integration.test.common.BaseCitrusTestRunner;
+import org.sunbird.integration.test.user.EndpointConfig;
+import org.sunbird.integration.test.user.EndpointConfig.TestGlobalProperty;
 
 public class UserUtil {
 
+	private static TestGlobalProperty testGlobalProperty = new EndpointConfig().initGlobalValues();
+	
   public static String getCreateUserUrl(BaseCitrusTestRunner runner) {
     return runner.getLmsApiUriPath("/api/user/v1/create", "/v1/user/create");
   }
@@ -114,7 +118,7 @@ public class UserUtil {
     String userName = Constant.USER_NAME_PREFIX + UUID.randomUUID().toString();
     testContext.setVariable("userName", userName);
     runner.variable("username", userName);
-    runner.variable("channel", System.getenv("sunbird_default_channel"));
+    runner.variable("channel", testGlobalProperty.getChannel());
     UserUtil.createUser(
         runner,
         testContext,
@@ -128,8 +132,8 @@ public class UserUtil {
     String userName = Constant.USER_NAME_PREFIX + UUID.randomUUID().toString();
     testContext.setVariable("userName", userName);
     runner.variable("username", userName);
-    runner.variable("channel", System.getenv("sunbird_default_channel"));
-    testContext.setVariable("channel", System.getenv("sunbird_default_channel"));
+    runner.variable("channel", testGlobalProperty.getChannel());
+    testContext.setVariable("channel", testGlobalProperty.getChannel());
     String email = Constant.USER_NAME_PREFIX + UUID.randomUUID().toString() + "@gmail.com";
     runner.variable("email", email);
     testContext.setVariable("email", email);

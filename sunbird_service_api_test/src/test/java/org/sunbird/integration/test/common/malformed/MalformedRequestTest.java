@@ -18,10 +18,6 @@ public class MalformedRequestTest extends BaseCitrusTestRunner {
 
   private static final String CREATE_ORG_SERVER_URI = "/api/org/v1/create";
   private static final String CREATE_ORG_LOCAL_URI = "/v1/org/create";
-  private static final String CREATE_COURSE_BATCH_SERVER_URI = "/api/course/v1/batch/create";
-  private static final String CREATE_COURSE_BATCH_LOCAL_URI = "/v1/course/batch/create";
-  private static final String CREATE_PAGE_SERVER_URI = "/api/data/v1/page/create";
-  private static final String CREATE_PAGE_LOCAL_URI = "/v1/page/create";
   private static final String CREATE_USER_NOTES_SERVER_URI = "/api/notes/v1/create";
   private static final String CREATE_USER_NOTES_LOCAL_URI = "/v1/note/create";
   public static final String TEMPLATE_DIR = "templates/common/malformed";
@@ -35,9 +31,6 @@ public class MalformedRequestTest extends BaseCitrusTestRunner {
         CREATE_USER_SERVER_URI, CREATE_USER_LOCAL_URI, "userCreateFailureWithoutContentType", null
       },
       new Object[] {
-        CREATE_PAGE_SERVER_URI, CREATE_PAGE_LOCAL_URI, "pageCreateFailureWithoutContentType", null
-      },
-      new Object[] {
         CREATE_USER_NOTES_SERVER_URI,
         CREATE_USER_NOTES_LOCAL_URI,
         "notesCreateFailureWithoutContentType",
@@ -47,21 +40,9 @@ public class MalformedRequestTest extends BaseCitrusTestRunner {
         CREATE_ORG_SERVER_URI, CREATE_ORG_LOCAL_URI, "orgCreateFailureWithoutContentType", null
       },
       new Object[] {
-        CREATE_COURSE_BATCH_SERVER_URI,
-        CREATE_COURSE_BATCH_LOCAL_URI,
-        "batchCreateFailureWithoutContentType",
-        null
-      },
-      new Object[] {
         CREATE_USER_SERVER_URI,
         CREATE_USER_LOCAL_URI,
         "userCreateFailureWithInvalidContentType",
-        Constant.CONTENT_TYPE_APPLICATION_JSON_LD
-      },
-      new Object[] {
-        CREATE_PAGE_SERVER_URI,
-        CREATE_PAGE_LOCAL_URI,
-        "pageCreateFailureWithInvalidContentType",
         Constant.CONTENT_TYPE_APPLICATION_JSON_LD
       },
       new Object[] {
@@ -74,12 +55,6 @@ public class MalformedRequestTest extends BaseCitrusTestRunner {
         CREATE_ORG_SERVER_URI,
         CREATE_ORG_LOCAL_URI,
         "orgCreateFailureWithInvalidContentType",
-        Constant.CONTENT_TYPE_APPLICATION_JSON_LD
-      },
-      new Object[] {
-        CREATE_COURSE_BATCH_SERVER_URI,
-        CREATE_COURSE_BATCH_LOCAL_URI,
-        "batchCreateFailureWithInvalidContentType",
         Constant.CONTENT_TYPE_APPLICATION_JSON_LD
       }
     };

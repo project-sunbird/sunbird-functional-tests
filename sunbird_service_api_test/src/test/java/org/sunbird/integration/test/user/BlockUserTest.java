@@ -19,8 +19,6 @@ public class BlockUserTest extends BaseCitrusTestRunner {
       "testBlockUserSuccessWithValidUserId";
 
   public static final String TEMPLATE_DIR = "templates/user/block";
-  private static final String GET_USER_BY_ID_SERVER_URI = "/api/user/v1/read/";
-  private static final String GET_USER_BY_ID_LOCAL_URI = "/v1/user/read/";
 
   private String getBlockUserUrl() {
 

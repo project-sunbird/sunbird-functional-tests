@@ -1,0 +1,10 @@
+{
+  "request": {
+    "email": "amit@gmail.com",
+    "emailVerified": true,
+    "firstName": "Amit",
+    "lastName": "Kumar",
+    "password": "Pass@1234"
+    
+  }
+}

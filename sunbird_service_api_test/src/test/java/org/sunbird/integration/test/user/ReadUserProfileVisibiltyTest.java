@@ -1,12 +1,13 @@
 package org.sunbird.integration.test.user;
 
-import com.consol.citrus.annotations.CitrusTest;
 import org.springframework.http.HttpStatus;
 import org.sunbird.common.action.TestActionUtil;
 import org.sunbird.common.action.UserUtil;
 import org.sunbird.common.util.Constant;
 import org.sunbird.integration.test.common.BaseCitrusTestRunner;
 import org.testng.annotations.Test;
+
+import com.consol.citrus.annotations.CitrusTest;
 
 public class ReadUserProfileVisibiltyTest extends BaseCitrusTestRunner {
   public static final String TEMPLATE_DIR = "templates/user/getbyuserid";
@@ -48,7 +49,7 @@ public class ReadUserProfileVisibiltyTest extends BaseCitrusTestRunner {
     variable("userId", testContext.getVariable("userId"));
     getAuthToken(
         this,
-        testContext.getVariable("userName"),
+        testContext.getVariable("userName").toLowerCase(),
         Constant.PASSWORD,
         testContext.getVariable("userId"),
         true);

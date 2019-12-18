@@ -21,21 +21,23 @@ import org.springframework.http.HttpStatus;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.sunbird.common.util.Constant;
+import org.sunbird.integration.test.user.EndpointConfig;
 import org.sunbird.integration.test.user.EndpointConfig.TestGlobalProperty;
 
 public class TestActionUtil {
 
+	private static TestGlobalProperty testGlobalProperty = new EndpointConfig().initGlobalValues();
   public static TestAction getTokenRequestTestAction(
       HttpActionBuilder builder, String endpointName) {
-    String userName = System.getenv("sunbird_username");
-    String password = System.getenv("sunbird_user_password");
+    String userName = testGlobalProperty.getKeycloakAdminUser();
+    String password = testGlobalProperty.getKeycloakAdminPass();
     return getTokenRequestTestAction(builder, endpointName, userName, password);
   }
 
   public static TestAction getTokenRequestTestAction(
       HttpActionBuilder builder, String endpointName, String userName, String password) {
     String urlPath =
-        "/realms/" + System.getenv("sunbird_sso_realm") + "/protocol/openid-connect/token";
+        "/realms/" + testGlobalProperty.getRelam() + "/protocol/openid-connect/token";
 
     return builder
         .client(endpointName)
@@ -44,7 +46,7 @@ public class TestActionUtil {
         .contentType("application/x-www-form-urlencoded")
         .payload(
             "client_id="
-                + System.getenv("sunbird_sso_client_id")
+                + testGlobalProperty.getClientId()
                 + "&username="
                 + userName
                 + "&password="
@@ -241,6 +243,7 @@ public class TestActionUtil {
             new JsonMappingValidationCallback<Map>(Map.class, mapper) {
               @Override
               public void validate(Map response, Map<String, Object> headers, TestContext context) {
+            	  System.out.println("create user response=============" + response);
                 String extractValue =
                     (String) context.getVariables().getOrDefault(extractVariable, extractVariable);
                 testContext.getVariables().put(extractVariable, extractValue);

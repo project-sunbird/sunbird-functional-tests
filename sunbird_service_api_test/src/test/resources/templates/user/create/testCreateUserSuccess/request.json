@@ -3,7 +3,7 @@
     "request":{
         "firstName": "Amit",
         "lastName": "Kumar",
-        "password": "password",
+        "password": "Password1@",
         "email": "citrus:randomString(10, MIXED, true)@gmail.com",
         "emailVerified": true,
         "userName":"${username}",

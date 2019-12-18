@@ -38,10 +38,12 @@ public class UserTest extends BaseCitrusTest {
   private static String admin_token = null;
   public static Map<String, List<String>> deletedRecordsMap = new HashMap<String, List<String>>();
   public static final String CREATE_USER_SERVER_URI = "/api/user/v1/create";
+  public static final String GET_USER_SERVER_URI = "/api/user/v1/read/";
   private static final String UPDATE_USER_SERVER_URI = "/api/user/v1/update";
   private static final String GET_USER_BY_ID_SERVER_URI = "/api/user/v1/profile/read";
   private static final String GET_USER_BY_ID_LOCAL_URI = "/v1/user/getuser";
   public static final String CREATE_USER_LOCAL_URI = "/v1/user/create";
+  public static final String GET_USER_LOCAL_URI = "/v1/user/read/";
   private static final String UPDATE_USER_LOCAL_URI = "/v1/user/update";
   public static final String TEMPLATE_DIR = "templates/user/create";
   private static volatile String USER_NAME = "userName";
@@ -244,7 +246,7 @@ public class UserTest extends BaseCitrusTest {
     http().client(keycloakTestClient).receive().response(HttpStatus.NO_CONTENT);
   }
 
-  @Test(dependsOnMethods = {"updateUserRequiredLoginActionTest"})
+  @Test(dependsOnMethods = {"testCreateUser"})
   @CitrusTest
   public void getAuthToken() {
     http()
@@ -257,7 +259,7 @@ public class UserTest extends BaseCitrusTest {
                 + initGlobalValues.getClientId()
                 + "&username="
                 + USER_NAME
-                + "&password=password&grant_type=password");
+                + "&password=Password1@&grant_type=password");
     http()
         .client(keycloakTestClient)
         .receive()
@@ -309,11 +311,14 @@ public class UserTest extends BaseCitrusTest {
     http()
         .client(restTestClient)
         .send()
-        .get("/api/user/v1/read/" + userId + "?Fields=completeness,missingFields,topic")
+        .get(getUserUrl() + userId + "?Fields=completeness,missingFields,topic")
         .accept(Constant.CONTENT_TYPE_APPLICATION_JSON)
         .header(Constant.AUTHORIZATION, Constant.BEARER + initGlobalValues.getApiKey())
         .contentType(Constant.CONTENT_TYPE_APPLICATION_JSON)
         .header(Constant.X_AUTHENTICATED_USER_TOKEN, user_auth_token);
+    System.out.println("user_id:::::::::::::::::::: "+userId);
+    System.out.println("user_auth_token:::::::::::::::::::: "+user_auth_token);
+   
     http()
         .client(restTestClient)
         .receive()
@@ -323,10 +328,12 @@ public class UserTest extends BaseCitrusTest {
               @Override
               public void validate(
                   Response response, Map<String, Object> headers, TestContext context) {
-                Assert.assertNotNull(response.getId());
-                Assert.assertEquals(response.getResponseCode(), ResponseCode.OK);
+            	  Assert.assertNotNull(response.getId());
+                  Assert.assertEquals(response.getResponseCode(), ResponseCode.OK);
+                  Assert.assertNotNull(response.getResult().get("response"));
               }
             });
+   
   }
 
   // @Test(dependsOnMethods = {"testCreateUser"})
@@ -427,6 +434,7 @@ public class UserTest extends BaseCitrusTest {
     innerMap.put(Constant.PASSWORD, "Password1@");
     innerMap.put(Constant.CHANNEL, testGlobalProperty.getSunbirdDefaultChannel());
     USER_NAME = Constant.USER_NAME_PREFIX + EndpointConfig.val;
+    System.out.println("username ::"+ USER_NAME);
     String email = Constant.USER_NAME_PREFIX + EndpointConfig.val + "@gmail.com";
     innerMap.put(Constant.USER_NAME, USER_NAME);
     innerMap.put(Constant.EMAIL, email);
@@ -503,6 +511,10 @@ public class UserTest extends BaseCitrusTest {
     return null;
   }
 
+  private String getUserUrl() {
+	    return getLmsApiUriPath(GET_USER_SERVER_URI, GET_USER_LOCAL_URI);
+	  }
+  
   private String getCreateUserUrl() {
     return getLmsApiUriPath(CREATE_USER_SERVER_URI, CREATE_USER_LOCAL_URI);
   }

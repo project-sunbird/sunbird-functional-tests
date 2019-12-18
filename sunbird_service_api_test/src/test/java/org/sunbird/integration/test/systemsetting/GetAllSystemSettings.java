@@ -10,9 +10,6 @@ import org.testng.annotations.Test;
 
 public class GetAllSystemSettings extends BaseCitrusTestRunner {
 
-  public static final String TEST_NAME_GET_ALL_SYSTEM_SETTINGS_FAILURE_WITHOUT_TOKEN =
-      "testGetAllSystemSettingsFailureWithoutAuthToken";
-
   public static final String TEST_NAME_GET_ALL_SYSTEM_SETTINGS_SUCCESS =
       "testGetAllSystemSettingsSuccess";
   public static final String TEMPLATE_DIR = "templates/systemsetting/list";
@@ -25,9 +22,6 @@ public class GetAllSystemSettings extends BaseCitrusTestRunner {
   public Object[][] getAllSystemSettingsDataProvider() {
 
     return new Object[][] {
-      new Object[] {
-        TEST_NAME_GET_ALL_SYSTEM_SETTINGS_FAILURE_WITHOUT_TOKEN, false, HttpStatus.UNAUTHORIZED
-      },
       new Object[] {TEST_NAME_GET_ALL_SYSTEM_SETTINGS_SUCCESS, true, HttpStatus.OK}
     };
   }

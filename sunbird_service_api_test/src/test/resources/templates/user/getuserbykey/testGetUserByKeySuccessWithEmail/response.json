@@ -1,5 +1,5 @@
 {
-    "id": "api.user.get.email",
+ "id": "api.user.get.email",
     "ver": "v1",
     "ts": "@ignore@",
     "params": {
@@ -10,30 +10,33 @@
         "errmsg": null
     },
     "responseCode": "OK",
-    "result": {
-        "response": {
-            "id": "@ignore@",
-            "createdDate": "@ignore@",
-            "emailVerified": true,
-            "firstName": "Amit",
-            "gender": "male",
-            "grade": [],
-            "language": [],
-            "lastName": "Kumar",
-            "phoneVerified": true,
-            "roles": "@ignore@",
-            "rootOrgId":"@ignore@",
-            "status": 1,
-            "subject": [],
-            "userName": "@ignore@",
-            "webPages": [],
-            "channel": "@ignore@",
-            "userType": "@ignore@",
-            "isDeleted": false,
-            "rootOrg": "@ignore@",
-            "tncLatestVersion": "@ignore@",
-            "promptTnC": "@ignore@",
-            "tncLatestVersionUrl": "@ignore@"
-        }
+  "result": {
+    "response": {
+      "id": "@ignore@",
+      "createdBy": "@ignore@",
+      "createdDate": "@ignore@",
+      "email": "@ignore@",
+      "firstName": "Amit",
+      "gender": "male",
+      "grade": "@ignore@",
+      "language": "@ignore@",
+      "lastName": "@ignore@",
+      "phone": "@ignore@",
+      "roles": "@ignore@",
+      "rootOrgId": "@ignore@",
+      "status": "@ignore@",
+      "subject": "@ignore@",
+      "userName": "@ignore@",
+      "webPages": "@ignore@",
+      "channel": "@ignore@",
+      "maskedEmail": "@ignore@",
+      "maskedPhone": "@ignore@",
+      "userType": "@ignore@",
+      "framework": "@ignore@",
+      "locationIds": "@ignore@",
+      "flagsValue": "@ignore@",
+      "isDeleted": "@ignore@",
+      "rootOrg": "@ignore@"
     }
+  }
 }

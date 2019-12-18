@@ -6,11 +6,13 @@ import javax.ws.rs.core.MediaType;
 import org.springframework.http.HttpStatus;
 import org.sunbird.common.action.UserUtil;
 import org.sunbird.integration.test.common.BaseCitrusTestRunner;
+import org.sunbird.integration.test.user.EndpointConfig.TestGlobalProperty;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class UpdateUserFrameworkTest extends BaseCitrusTestRunner {
 
+	private static TestGlobalProperty testGlobalProperty = new EndpointConfig().initGlobalValues();
   public static final String TEST_UPDATE_USER_FRAMEWORK_FAILURE_WITH_INVALID_USER_ID =
       "testUpdateUserFrameworkFailureWithInvalidUserId";
   public static final String TEST_UPDATE_USER_FRAMEWORK_FAILURE_WITH_EMPTY_USER_ID =
@@ -161,10 +163,10 @@ public class UpdateUserFrameworkTest extends BaseCitrusTestRunner {
   private void beforeTest() {
     UserUtil.createUserAndGetToken(this, testContext);
     variable("userId", testContext.getVariable("userId"));
-    variable("board", System.getenv("sunbird_user_framework_board"));
-    variable("gradeLevel", System.getenv("sunbird_user_framework_grade_level"));
-    variable("medium", System.getenv("sunbird_user_framework_medium"));
-    variable("subject", System.getenv("sunbird_user_framework_subject"));
-    variable("frameworkId", System.getenv("sunbird_user_framework_id"));
+    variable("board", testGlobalProperty.getBoard());
+    variable("gradeLevel", testGlobalProperty.getGradeLevel());
+    variable("medium", testGlobalProperty.getMedium());
+    variable("subject", testGlobalProperty.getSubject());
+    variable("frameworkId", testGlobalProperty.getFrameworkId());
   }
 }
