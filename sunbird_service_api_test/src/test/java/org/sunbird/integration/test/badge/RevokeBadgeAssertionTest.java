@@ -6,7 +6,6 @@ import javax.ws.rs.core.MediaType;
 import org.springframework.http.HttpStatus;
 import org.sunbird.common.action.BadgeAssertionUtil;
 import org.sunbird.common.action.BadgeClassUtil;
-import org.sunbird.common.action.ContentStoreUtil;
 import org.sunbird.common.action.IssuerUtil;
 import org.sunbird.common.action.OrgUtil;
 import org.sunbird.common.action.UserUtil;
@@ -167,13 +166,6 @@ public class RevokeBadgeAssertionTest extends BaseCitrusTestRunner {
     if (canCreateUser || canCreateCourse) getAuthToken(this, true);
 
     if (canCreateUser) UserUtil.getUserId(this, testContext);
-
-    if (canCreateCourse) {
-      variable("courseUnitId", ContentStoreUtil.getCourseUnitId());
-      variable("resourceId", ContentStoreUtil.getResourceId());
-      String courseId = ContentStoreUtil.getCourseId(this, testContext);
-      variable("courseId", courseId);
-    }
 
     if (canCreateIssuer) {
       IssuerUtil.createIssuer(

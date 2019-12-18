@@ -6,7 +6,6 @@ import javax.ws.rs.core.MediaType;
 import org.springframework.http.HttpStatus;
 import org.sunbird.common.action.BadgeAssertionUtil;
 import org.sunbird.common.action.BadgeClassUtil;
-import org.sunbird.common.action.ContentStoreUtil;
 import org.sunbird.common.action.IssuerUtil;
 import org.sunbird.common.action.OrgUtil;
 import org.sunbird.common.action.UserUtil;
@@ -132,12 +131,6 @@ public class SearchAssertionTest extends BaseCitrusTestRunner {
       UserUtil.getUserId(this, testContext);
     }
 
-    if (canCreateCourse) {
-      variable("courseUnitId", ContentStoreUtil.getCourseUnitId());
-      variable("resourceId", ContentStoreUtil.getResourceId());
-      String courseId = ContentStoreUtil.getCourseId(this, testContext);
-      variable("courseId", courseId);
-    }
 
     IssuerUtil.createIssuer(
         this,

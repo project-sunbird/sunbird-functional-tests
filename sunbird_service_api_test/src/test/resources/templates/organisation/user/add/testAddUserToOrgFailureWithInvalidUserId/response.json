@@ -5,9 +5,9 @@
   "params": {
     "resmsgid": "@ignore@",
     "msgid": "@ignore@",
-    "err": "INVALID_ORGANIZATION_DATA",
-    "status": "INVALID_ORGANIZATION_DATA",
-    "errmsg": "Given Organization Data doesn't exist in our records. Please provide a valid one"
+    "err": "INVALID_USER_DATA",
+    "status": "INVALID_USER_DATA",
+    "errmsg": "Given User Data doesn't exist in our records. Please provide a valid one"
   },
   "responseCode": "CLIENT_ERROR",
   "result": {}
