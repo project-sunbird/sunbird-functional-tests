@@ -3,11 +3,11 @@
   "ver": "v1",
   "ts": "@ignore@",
   "params": {
-    "resmsgid": null,
+    "resmsgid": "@ignore@",
     "msgid": "@ignore@",
-    "err": null,
+    "err": "@ignore@",
     "status": "success",
-    "errmsg": null
+    "errmsg": "@ignore@"
   },
   "responseCode": "OK",
   "result": {
@@ -43,6 +43,22 @@
         ],
         "name": "Content Reviewer",
         "id": "CONTENT_REVIEWER"
+      },
+      {
+        "actionGroups": [
+          {
+            "name": "System Administration",
+            "id": "SYSTEM_ADMINISTRATION",
+            "actions": []
+          },
+          {
+            "name": "Org Management",
+            "id": "ORG_MANAGEMENT",
+            "actions": []
+          }
+        ],
+        "name": "Admin",
+        "id": "ADMIN"
       },
       {
         "actionGroups": [
@@ -107,6 +123,28 @@
       {
         "actionGroups": [
           {
+            "name": "Course Creator",
+            "id": "COURSE_CREATOR",
+            "actions": []
+          }
+        ],
+        "name": "Course Creator",
+        "id": "COURSE_CREATOR"
+      },
+      {
+        "actionGroups": [
+          {
+            "name": "Course Admin",
+            "id": "COURSE_ADMIN",
+            "actions": []
+          }
+        ],
+        "name": "Course Admin",
+        "id": "COURSE_ADMIN"
+      },
+      {
+        "actionGroups": [
+          {
             "name": "Report Viewer",
             "id": "REPORT_VIEWER",
             "actions": []
@@ -114,6 +152,17 @@
         ],
         "name": "Report Viewer",
         "id": "REPORT_VIEWER"
+      },
+      {
+        "actionGroups": [
+          {
+            "name": "Membership Management",
+            "id": "MEMBERSHIP_MANAGEMENT",
+            "actions": []
+          }
+        ],
+        "name": "Org Moderator",
+        "id": "ORG_MODERATOR"
       },
       {
         "actionGroups": [

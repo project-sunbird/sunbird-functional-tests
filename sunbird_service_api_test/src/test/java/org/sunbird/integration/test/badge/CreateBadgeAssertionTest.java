@@ -201,13 +201,7 @@ public class CreateBadgeAssertionTest extends BaseCitrusTestRunner {
       UserUtil.getUserId(this, testContext);
     }
 
-    if (canCreateCourse) {
-      getAuthToken(this, true);
-      variable("courseUnitId", ContentStoreUtil.getCourseUnitId());
-      variable("resourceId", ContentStoreUtil.getResourceId());
-      String courseId = ContentStoreUtil.getCourseId(this, testContext);
-      variable("courseId", courseId);
-    }
+    
 
     if (canCreateIssuer) {
       IssuerUtil.createIssuer(
