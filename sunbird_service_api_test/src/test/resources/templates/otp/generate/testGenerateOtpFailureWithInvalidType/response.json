@@ -7,7 +7,7 @@
         "msgid": "@ignore@",
         "err": "INVALID_VALUE",
         "status": "INVALID_VALUE",
-        "errmsg": "Invalid type: userName. Valid values are: email, phone."
+        "errmsg": "Invalid type: userName. Valid values are: email, phone, prevUsedEmail, prevUsedPhone, recoveryEmail, recoveryPhone."
     },
     "responseCode": "CLIENT_ERROR",
     "result": {}

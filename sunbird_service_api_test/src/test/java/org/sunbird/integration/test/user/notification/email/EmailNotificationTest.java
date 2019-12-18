@@ -5,11 +5,13 @@ import com.consol.citrus.testng.CitrusParameters;
 import javax.ws.rs.core.MediaType;
 import org.springframework.http.HttpStatus;
 import org.sunbird.integration.test.common.BaseCitrusTestRunner;
+import org.sunbird.integration.test.user.EndpointConfig;
+import org.sunbird.integration.test.user.EndpointConfig.TestGlobalProperty;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class EmailNotificationTest extends BaseCitrusTestRunner {
-
+	private static TestGlobalProperty testGlobalProperty = new EndpointConfig().initGlobalValues();
   public static final String TEST_NAME_EMAIL_NOTIFICATION_FAILURE_WITHOUT_SUBJECT =
       "testEmailNotificationFailureWithoutSubject";
   public static final String TEST_NAME_EMAIL_NOTIFICATION_FAILURE_WITHOUT_BODY =
@@ -115,7 +117,7 @@ public class EmailNotificationTest extends BaseCitrusTestRunner {
   public void beforeTest(String testName) {
     getTestCase().setName(testName);
     getAuthToken(this, true);
-    variable("emailId1", System.getenv("sunbird_test_email_address_1"));
-    variable("emailId2", System.getenv("sunbird_test_email_address_2"));
+    variable("emailId1", testGlobalProperty.getTestEmailId1());
+    variable("emailId2", testGlobalProperty.getTestEmailId2());
   }
 }

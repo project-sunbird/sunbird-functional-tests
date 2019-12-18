@@ -9,7 +9,7 @@ public class Constant {
   public static final String CHANNEL = "channel";
   public static final String PROVIDER = "provider";
   public static final String EXTERNAL_ID = "externalId";
-  public static final String PASSWORD = "password";
+  public static final String PASSWORD = "Password1@";
   public static final String LAST_NAME = "lastName";
   public static final String FIRST_NAME = "firstName";
   public static final String USER_ID = "userId";

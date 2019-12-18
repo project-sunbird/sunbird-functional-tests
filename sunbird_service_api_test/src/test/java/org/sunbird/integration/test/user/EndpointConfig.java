@@ -53,6 +53,14 @@ public class EndpointConfig {
     property.setIndex(System.getenv("sunbird_es_index"));
     property.setSunbirdDefaultChannel(System.getenv("sunbird_default_channel"));
     property.setLmsUrl(System.getenv("sunbird_test_base_url"));
+    property.setChannel(System.getenv("sunbird_default_channel"));
+    property.setBoard(System.getenv("sunbird_user_framework_board"));
+    property.setGradeLevel(System.getenv("sunbird_user_framework_grade_level"));
+    property.setMedium(System.getenv("sunbird_user_framework_medium"));
+    property.setSubject(System.getenv("sunbird_user_framework_subject"));
+    property.setFrameworkId(System.getenv("sunbird_user_framework_id"));
+    property.setTestEmailId1(System.getenv("sunbird_test_email_address_1"));
+    property.setTestEmailId2(System.getenv("sunbird_test_email_address_2"));
     return property;
   }
 
@@ -79,8 +87,82 @@ public class EndpointConfig {
     private String sunbirdDefaultChannel;
     private String lmsUrl;
     private String cassandraPassword;
+    private String channel;
+    private String board;
+    private String gradeLevel;
+    private String medium;
+    private String subject;
+    private String frameworkId;
+    private String testEmailId1;
+    private String testEmailId2;
+    
+    
 
-    public String getApiKey() {
+    public String getTestEmailId1() {
+		return testEmailId1;
+	}
+
+	public void setTestEmailId1(String testEmailId1) {
+		this.testEmailId1 = testEmailId1;
+	}
+
+	public String getTestEmailId2() {
+		return testEmailId2;
+	}
+
+	public void setTestEmailId2(String testEmailId2) {
+		this.testEmailId2 = testEmailId2;
+	}
+
+	public String getBoard() {
+		return board;
+	}
+
+	public void setBoard(String board) {
+		this.board = board;
+	}
+
+	public String getGradeLevel() {
+		return gradeLevel;
+	}
+
+	public void setGradeLevel(String gradeLevel) {
+		this.gradeLevel = gradeLevel;
+	}
+
+	public String getMedium() {
+		return medium;
+	}
+
+	public void setMedium(String medium) {
+		this.medium = medium;
+	}
+
+	public String getSubject() {
+		return subject;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+
+	public String getFrameworkId() {
+		return frameworkId;
+	}
+
+	public void setFrameworkId(String frameworkId) {
+		this.frameworkId = frameworkId;
+	}
+
+	public String getChannel() {
+		return channel;
+	}
+
+	public void setChannel(String channel) {
+		this.channel = channel;
+	}
+
+	public String getApiKey() {
       return apiKey;
     }
 
@@ -228,6 +310,8 @@ public class EndpointConfig {
           + cassandraUserName
           + ", clientId="
           + clientId
+          + ", channel="
+          + channel
           + "]";
     }
   }
