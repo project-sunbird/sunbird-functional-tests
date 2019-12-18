@@ -72,9 +72,9 @@ public class CreateBadgeClassTest extends BaseCitrusTestRunner {
     };
   }
 
-  @Test(dataProvider = "createBadgeClassDataProviderSuccess")
+ // @Test(dataProvider = "createBadgeClassDataProviderSuccess")
   @CitrusParameters({"testName"})
-  @CitrusTest
+ // @CitrusTest
   public void testCreateBadgeClassSuccess(String testName) {
     beforeTest(true, true);
     performMultipartTest(
@@ -90,9 +90,9 @@ public class CreateBadgeClassTest extends BaseCitrusTestRunner {
     afterTest(true);
   }
 
-  @Test(dataProvider = "createBadgeClassDataProviderFailure")
+  //@Test(dataProvider = "createBadgeClassDataProviderFailure")
   @CitrusParameters({"testName", "canCreateOrg"})
-  @CitrusTest
+ // @CitrusTest
   public void testCreateBadgeClassFailure(String testName, Boolean canCreateOrg) {
     beforeTest(canCreateOrg, false);
     performMultipartTest(

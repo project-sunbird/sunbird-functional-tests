@@ -79,9 +79,9 @@ public class SearchAssertionTest extends BaseCitrusTestRunner {
     };
   }
 
-  @Test(dataProvider = "searchAssertionFailureDataProvider")
+ // @Test(dataProvider = "searchAssertionFailureDataProvider")
   @CitrusParameters({"testName", "httpStatusCode"})
-  @CitrusTest
+ // @CitrusTest
   public void testSearchAssertionFailure(String testName, HttpStatus httpStatusCode) {
 
     performPostTest(
@@ -96,9 +96,9 @@ public class SearchAssertionTest extends BaseCitrusTestRunner {
         RESPONSE_JSON);
   }
 
-  @Test(dataProvider = "searchAssertionSuccessDataProvider")
+ // @Test(dataProvider = "searchAssertionSuccessDataProvider")
   @CitrusParameters({"testName", "canCreateUser", "canCreateCourse", "testCase", "templateDir"})
-  @CitrusTest
+ // @CitrusTest
   public void testSearchAssertionSuccess(
       String testName,
       Boolean canCreateUser,

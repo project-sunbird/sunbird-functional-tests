@@ -42,9 +42,9 @@ public class GetIssuerTest extends BaseCitrusTestRunner {
     };
   }
 
-  @Test(dataProvider = "getIssuerDataProviderSuccess")
+  //@Test(dataProvider = "getIssuerDataProviderSuccess")
   @CitrusParameters({"testName"})
-  @CitrusTest
+  //@CitrusTest
   public void testGetIssuerSuccess(String testName) {
     beforeTest();
     performGetTest(
@@ -58,9 +58,9 @@ public class GetIssuerTest extends BaseCitrusTestRunner {
     afterTest();
   }
 
-  @Test(dataProvider = "getIssuerDataProviderFailure")
+ // @Test(dataProvider = "getIssuerDataProviderFailure")
   @CitrusParameters({"testName", "issuerId", "responseJson"})
-  @CitrusTest
+  //@CitrusTest
   public void testGetIssuerFailure(String testName, String issuerId, String responseJson) {
     performGetTest(
         this,

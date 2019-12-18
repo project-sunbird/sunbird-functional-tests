@@ -41,9 +41,9 @@ public class DeleteIssuerTest extends BaseCitrusTestRunner {
         };
     }
 
-    @Test(dataProvider = "getDeleteDataProviderSuccess")
+    //@Test(dataProvider = "getDeleteDataProviderSuccess")
     @CitrusParameters({"testName"})
-    @CitrusTest
+    //@CitrusTest
     public void testDeleteIssuerSuccess(String testName) {
         beforeTest();
         performDeleteTest(
@@ -58,9 +58,9 @@ public class DeleteIssuerTest extends BaseCitrusTestRunner {
                 RESPONSE_JSON);
     }
 
-    @Test(dataProvider = "getDeleteDataProviderFailure")
+    //@Test(dataProvider = "getDeleteDataProviderFailure")
     @CitrusParameters({"testName", "issuerId", "responseJson"})
-    @CitrusTest
+   // @CitrusTest
     public void testDeleteIssuerFailure(String testName, String issuerId, String responseJson) {
         performDeleteTest(
                 this,

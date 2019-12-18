@@ -141,9 +141,9 @@ public class CreateBadgeAssertionTest extends BaseCitrusTestRunner {
     };
   }
 
-  @Test(dataProvider = "createBadgeAssertionDataProviderSuccess")
+ // @Test(dataProvider = "createBadgeAssertionDataProviderSuccess")
   @CitrusParameters({"testName", "canCreateUser", "canCreateCourse"})
-  @CitrusTest
+ // @CitrusTest
   public void testCreateBadgeAssertionSuccess(
       String testName, Boolean canCreateUser, Boolean canCreateCourse) {
     beforeTest(testName, canCreateUser, canCreateCourse, true, true);
@@ -159,7 +159,7 @@ public class CreateBadgeAssertionTest extends BaseCitrusTestRunner {
         RESPONSE_JSON);
   }
 
-  @Test(dataProvider = "createBadgeAssertionDataProviderFailure")
+ // @Test(dataProvider = "createBadgeAssertionDataProviderFailure")
   @CitrusParameters({
     "testName",
     "httpStatus",
@@ -167,7 +167,7 @@ public class CreateBadgeAssertionTest extends BaseCitrusTestRunner {
     "canCreateIssuer",
     "canCreateBadgeClass"
   })
-  @CitrusTest
+ // @CitrusTest
   public void testCreateBadgeAssertionFailure(
       String testName,
       HttpStatus httpStatus,

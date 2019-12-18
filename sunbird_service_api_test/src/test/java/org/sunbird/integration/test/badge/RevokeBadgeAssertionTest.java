@@ -111,9 +111,9 @@ public class RevokeBadgeAssertionTest extends BaseCitrusTestRunner {
     };
   }
 
-  @Test(dataProvider = "revokeBadgeAssertionDataProviderSuccess")
+ // @Test(dataProvider = "revokeBadgeAssertionDataProviderSuccess")
   @CitrusParameters({"testName", "canCreateUser", "canCreateContent", "testCase", "templateDir"})
-  @CitrusTest
+  //@CitrusTest
   public void testRevokeBadgeAssertionSuccess(
       String testName,
       Boolean canCreateUser,
@@ -134,9 +134,9 @@ public class RevokeBadgeAssertionTest extends BaseCitrusTestRunner {
     afterTest(true, true);
   }
 
-  @Test(dataProvider = "revokeBadgeAssertionDataProviderFailure")
+  //@Test(dataProvider = "revokeBadgeAssertionDataProviderFailure")
   @CitrusParameters({"testName", "canCreateOrg", "httpStatus"})
-  @CitrusTest
+  //@CitrusTest
   public void testRevokeBadgeAssertionFailure(
       String testName, Boolean canCreateUser, HttpStatus httpStatus) {
     beforeTest(testName, canCreateUser, false, false, false, false, null, null);

@@ -26,9 +26,9 @@ public class ListIssuerTest extends BaseCitrusTestRunner {
     return new Object[][] {new Object[] {TEST_NAME_LIST_ISSUER_SUCCESS}};
   }
 
-  @Test(dataProvider = "listIssuerDataProviderSuccess")
+  //@Test(dataProvider = "listIssuerDataProviderSuccess")
   @CitrusParameters({"testName"})
-  @CitrusTest
+  //@CitrusTest
   public void testListIssuerSuccess(String testName) {
     beforeTest();
     performGetTest(

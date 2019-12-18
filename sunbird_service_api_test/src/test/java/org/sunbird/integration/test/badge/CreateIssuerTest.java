@@ -56,9 +56,9 @@ public class CreateIssuerTest extends BaseCitrusTestRunner {
     };
   }
 
-  @Test(dataProvider = "createIssuerDataProviderSuccess")
+ // @Test(dataProvider = "createIssuerDataProviderSuccess")
   @CitrusParameters({"testName"})
-  @CitrusTest
+ // @CitrusTest
   public void testCreateIssuerSuccess(String testName) {
     System.out.println("initGlobalValues = " + initGlobalValues);
     performMultipartTest(
@@ -73,9 +73,9 @@ public class CreateIssuerTest extends BaseCitrusTestRunner {
         RESPONSE_JSON);
   }
 
-  @Test(dataProvider = "createIssuerDataProviderFailure")
+ // @Test(dataProvider = "createIssuerDataProviderFailure")
   @CitrusParameters({"testName"})
-  @CitrusTest
+ // @CitrusTest
   public void testCreateIssuerFailure(String testName) {
     performMultipartTest(
         this,
