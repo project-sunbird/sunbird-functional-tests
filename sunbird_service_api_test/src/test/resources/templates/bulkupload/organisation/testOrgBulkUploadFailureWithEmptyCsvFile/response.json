@@ -5,9 +5,9 @@
   "params": {
     "resmsgid": null,
     "msgid": "@ignore@",
-    "err": "EMPTY_CSV_FILE",
-    "status": "EMPTY_CSV_FILE",
-    "errmsg": "CSV file is Empty."
+    "err": "MISSING_FILE_ATTACHMENT",
+    "status": "MISSING_FILE_ATTACHMENT",
+    "errmsg": "Missing file attachment."
   },
   "responseCode": "CLIENT_ERROR",
   "result": {}
