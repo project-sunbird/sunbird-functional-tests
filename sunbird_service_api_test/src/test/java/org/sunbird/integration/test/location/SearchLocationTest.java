@@ -29,8 +29,8 @@ public class SearchLocationTest extends BaseCitrusTestRunner {
   public Object[][] searchLocationFailureDataProvider() {
 
     return new Object[][] {
-      new Object[] {TEST_SEARCH_LOCATION_FAILURE_WITHOUT_FILTER, HttpStatus.BAD_REQUEST},
-      new Object[] {TEST_SEARCH_LOCATION_FAILURE_WITHOUT_REQUEST_BODY, HttpStatus.BAD_REQUEST}
+      new Object[] {TEST_SEARCH_LOCATION_FAILURE_WITHOUT_FILTER, HttpStatus.OK},
+      new Object[] {TEST_SEARCH_LOCATION_FAILURE_WITHOUT_REQUEST_BODY, HttpStatus.OK}
     };
   }
 
