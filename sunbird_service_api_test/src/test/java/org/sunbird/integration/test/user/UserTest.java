@@ -229,8 +229,8 @@ public class UserTest extends BaseCitrusTest {
             });
   }
 
-  @Test(dependsOnMethods = {"testCreateUser", "getAdminAuthToken"})
-  @CitrusTest
+ // @Test(dependsOnMethods = {"testCreateUser", "getAdminAuthToken"})
+ // @CitrusTest
   /**
    * This method will disable user required action change password under keyCloak. after disabling
    * that , we can generate newly created user auth token.
