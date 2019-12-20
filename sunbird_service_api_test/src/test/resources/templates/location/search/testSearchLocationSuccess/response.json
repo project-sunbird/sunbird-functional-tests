@@ -1,16 +1,17 @@
 {
-    "id": "api.location.search",
-    "ver": "v1",
-    "ts": "@ignore@",
-    "params": {
-        "resmsgid": null,
-        "msgid": "@ignore@",
-        "err": null,
-        "status": "success",
-        "errmsg": null
-    },
-    "responseCode": "OK",
-    "result": {
-        "response": "@ignore@"
-    }
+  "id": "api.location.search",
+  "ver": "v1",
+  "ts": "@ignore@",
+  "params": {
+    "resmsgid": "@ignore@",
+    "msgid": "@ignore@",
+    "err": "@ignore@",
+    "status": "success",
+    "errmsg": "@ignore@"
+  },
+  "responseCode": "OK",
+  "result": {
+    "response": "@ignore@",
+    "count": "@ignore@"
+  }
 }
