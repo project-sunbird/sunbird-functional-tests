@@ -474,5 +474,15 @@ public class ContentV3Scenario {
     public static final String TEST_GET_HIERARCHY_AFTER_DISCARD = "testGetHierarchyAfterDiscard";
     public static final String TEST_GET_HIERARCHY_AFTER_RETIRE = "testGetHierarchyAfterRetire";
     public static final String TEST_GET_HIERARCHY_AFTER_UPDATE_LIVE = "testGetHierarchyAfterRetire";
+    public static final String TEST_GET_HIERARCHY_BEFORE_UPDATE_WITH_MODE = "testGetHierarchyBeforeUpdateWithMode";
+    public static final String TEST_GET_HIERARCHY_AFTER_UPDATE_WITH_MODE = "testGetHierarchyAfterUpdateWithMode";
+    public static final String TEST_GET_HIERARCHY_AFTER_REVIEW_WITH_MODE = "testGetHierarchyAfterReviewWithMode";
+    public static final String TEST_GET_HIERARCHY_AFTER_REJECT_WITH_MODE = "testGetHierarchyAfterRejectWithMode";
+    public static final String TEST_GET_HIERARCHY_AFTER_FLAG_WITH_MODE = "testGetHierarchyAfterFlagWithMode";
+    public static final String TEST_GET_HIERARCHY_AFTER_FLAG_REJECT_WITH_MODE = "testGetHierarchyAfterFlagRejectWithMode";
+    public static final String TEST_GET_HIERARCHY_AFTER_FLAG_ACCEPT_WITH_MODE = "testGetHierarchyAfterFlagAcceptWithMode";
+    public static final String TEST_GET_HIERARCHY_AFTER_DISCARD_WITH_MODE = "testGetHierarchyAfterDiscardWithMode";
+    public static final String TEST_GET_HIERARCHY_AFTER_RETIRE_WITH_MODE = "testGetHierarchyAfterRetireWithMode";
+    public static final String TEST_GET_HIERARCHY_AFTER_UPDATE_LIVE_WITH_MODE = "testGetHierarchyAfterRetireWithMode";
 }
 
