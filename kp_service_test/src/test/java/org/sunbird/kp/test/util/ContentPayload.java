@@ -51,4 +51,17 @@ public class ContentPayload {
             "  }\n" +
             "}";
 
+
+    public static final String CREATE_RESOURCE_CONTENT_WITH_SUBJECT_MEDIUM = "{\n" +
+            "    \"request\": {\n" +
+            "        \"content\": {\n" +
+            "            \"name\": \"Course\",\n" +
+            "            \"contentType\": \"Resource\",\n" +
+            "            \"code\": \"citrusCode\",\n" +
+            "            \"mimeType\": \"application/pdf\",\n" +
+            "\t\t\t\"subject\": [\"English\"],\n" +
+            "\t\t\t\"medium\": [\"Hindi\"]\n" +
+            "        }\n" +
+            "    }\n" +
+            "}";
 }

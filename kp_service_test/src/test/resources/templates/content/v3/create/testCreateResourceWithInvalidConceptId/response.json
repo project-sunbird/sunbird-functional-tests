@@ -1,5 +1,5 @@
 {
-    "id": "ekstep.learning.content.create",
+    "id": "api.content.create",
     "ver": "3.0",
     "ts": "@matchesDatePattern('yyyy-MM-dd')@",
     "params": {

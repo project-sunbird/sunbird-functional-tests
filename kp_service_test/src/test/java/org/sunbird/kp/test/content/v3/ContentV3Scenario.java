@@ -143,6 +143,8 @@ public class ContentV3Scenario {
             "testReadPngContentInDraft";
     public static final String TEST_READ_PLUGIN_IN_DRAFT =
             "testReadPluginContentInDraft";
+    public static final String TEST_READ_CONTENT_WITH_SUBJECT_AND_MEDIUM =
+            "testReadContentWithSubjectAndMedium";
 
     // Scenario's for upload Content  API
     public static final String TEST_UPLOAD_CONTENT_IN_LIVE =
@@ -403,6 +405,8 @@ public class ContentV3Scenario {
             "testPublishWithResourceRetired";
     public static final String TEST_PUBLISH_COLLECTION_WITH_CONCEPT =
             "testPublishWithResourceRetired";
+    public static final String TEST_PUBLISH_FOR_INDEXING_IN_HIERACHY =
+            "testPublishForIndexingInHierarchy";
 
     //Accept Flag Scenarios
     public static final String TEST_ACCEPT_FLAG_VALID_ID_AND_VALID_STATUS =

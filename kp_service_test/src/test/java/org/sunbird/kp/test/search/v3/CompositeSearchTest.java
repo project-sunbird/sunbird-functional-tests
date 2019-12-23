@@ -3,14 +3,20 @@ package org.sunbird.kp.test.search.v3;
 import com.consol.citrus.annotations.CitrusTest;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.apache.commons.lang.StringUtils;
+import org.springframework.http.HttpStatus;
+import org.sunbird.kp.test.common.APIUrl;
 import org.sunbird.kp.test.common.BaseCitrusTestRunner;
 import org.sunbird.kp.test.common.Constant;
+import org.sunbird.kp.test.common.SearchCitrusTestRunner;
 import org.sunbird.kp.test.util.CompositeSearchUtil;
+import org.sunbird.kp.test.util.ContentPayload;
 import org.sunbird.kp.test.util.ContentUtil;
 import org.sunbird.kp.test.util.SearchPayload;
+import org.sunbird.kp.test.util.WorkflowConstants;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -20,9 +26,9 @@ import java.util.Map;
  *
  * @author Kumar Gauraw
  */
-public class CompositeSearchTest extends BaseCitrusTestRunner {
+public class CompositeSearchTest extends SearchCitrusTestRunner {
 
-	private static final String TEMPLATE_DIR = "templates/search/v3/search";
+	private static final String TEMPLATE_DIR = "templates/search/v3";
 
 	@Test
 	@CitrusTest
@@ -65,5 +71,21 @@ public class CompositeSearchTest extends BaseCitrusTestRunner {
 			}
 		}
 		Assert.assertTrue(found);
+	}
+
+	@Test
+	@CitrusTest
+	public void testSearchForRemovalContentTaggedPropertyBackwardSupport() throws JsonProcessingException {
+		String testName = SearchV3Scenarios.TEST_SEARCH_FOR_MEDIUM_SUBJECT;
+		this.getTestCase().setName(testName);
+		getAuthToken(this, Constant.CREATOR);
+		Map<String, Object> result = ContentUtil.prepareResourceContent(WorkflowConstants.CONTENT_IN_LIVE_STATE, this, ContentPayload.CREATE_RESOURCE_CONTENT_WITH_SUBJECT_MEDIUM
+				, "application/pdf", null);
+		delay(this, 10000);
+		//TODO: Get Board Using Framework API.
+		String identifier = (String) result.get("content_id");
+		this.variable("contentIdVal", identifier);
+		performPostTest(this, TEMPLATE_DIR, testName, APIUrl.COMPOSITE_SEARCH, null,
+				REQUEST_JSON, MediaType.APPLICATION_JSON, HttpStatus.OK, null, RESPONSE_JSON);
 	}
 }

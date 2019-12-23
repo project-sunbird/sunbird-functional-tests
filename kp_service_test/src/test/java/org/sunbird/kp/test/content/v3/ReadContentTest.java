@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.sunbird.kp.test.common.APIUrl;
 import org.sunbird.kp.test.common.BaseCitrusTestRunner;
 import org.sunbird.kp.test.common.Constant;
+import org.sunbird.kp.test.util.ContentPayload;
 import org.sunbird.kp.test.util.ContentUtil;
 import org.sunbird.kp.test.util.WorkflowConstants;
 import org.sunbird.kp.test.util.TestSetupUtil;
@@ -201,6 +202,28 @@ public class ReadContentTest extends BaseCitrusTestRunner {
                 httpStatusCode,
                 valParams,
                 responseJson
+        );
+    }
+
+    @Test
+    @CitrusTest
+    public void testReadResourceContentWithMediumAndSubject() {
+        String testName = ContentV3Scenario.TEST_READ_CONTENT_WITH_SUBJECT_AND_MEDIUM;
+        this.getTestCase().setName(testName);
+        getAuthToken(this, Constant.CREATOR);
+        Map<String, Object> result = ContentUtil.createResourceContent(this, ContentPayload.CREATE_RESOURCE_CONTENT_WITH_SUBJECT_MEDIUM, "application/pdf", null);
+        String contentId = (String) result.getOrDefault("content_id", "KP_TEST_000009999");
+        this.variable("contentIdVal", contentId);
+        this.variable("versionKeyVal", (String) result.getOrDefault("versionKey", "00000000000"));
+        performGetTest(
+                this,
+                TEMPLATE_DIR,
+                testName,
+                APIUrl.READ_CONTENT + contentId,
+                null,
+                HttpStatus.OK,
+                null,
+                RESPONSE_JSON
         );
     }
 

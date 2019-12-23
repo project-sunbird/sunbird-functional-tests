@@ -1,5 +1,5 @@
 {
-    "id": "ekstep.content.find",
+    "id": "api.content.read",
     "ver": "3.0",
     "ts": "@matchesDatePattern('yyyy-MM-dd')@",
     "params": {

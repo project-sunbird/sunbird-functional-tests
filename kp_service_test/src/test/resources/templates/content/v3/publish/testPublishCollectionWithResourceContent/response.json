@@ -3,7 +3,7 @@
   "ver": "3.0",
   "ts": "@ignore@",
   "params": {
-    "resmsgid": "@ignore",
+    "resmsgid": "@ignore@",
     "msgid": null,
     "err": null,
     "status": "successful",

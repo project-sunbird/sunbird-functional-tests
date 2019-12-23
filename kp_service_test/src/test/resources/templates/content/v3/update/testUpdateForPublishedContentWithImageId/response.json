@@ -1,5 +1,5 @@
 {
-  "id":"ekstep.learning.content.update",
+  "id":"api.content.update",
   "ver":"3.0",
   "ts":"@ignore@",
   "params":{
