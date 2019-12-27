@@ -40,7 +40,8 @@ public class WorkflowConstants {
             "\"collectionUnitsResourcesInDraft\":[\"CreateResources\", \"Update\"],\n" +
             "\"collectionCreate\":[\"Create\"],\n"+
             "\"collectionReview\":[\"Update\", \"Review\"],\n"+
-            "\"collectionRetire\":[\"Update\", \"Publish\", \"Retire\"]\n"+
+            "\"collectionRetire\":[\"Update\", \"Publish\", \"Retire\"],\n"+
+            "\"collectionInFlagged\":[\"Update\", \"Publish\", \"Flag\"]\n"+
             "}";
 }
 

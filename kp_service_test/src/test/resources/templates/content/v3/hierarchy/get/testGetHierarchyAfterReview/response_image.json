@@ -60,7 +60,7 @@
           "dialcodeRequired" : "No",
           "contentType" : "Resource",
           "lastUpdatedBy" : "KP_FT_PUBLISHER",
-          "identifier" : "${rootId}",
+          "identifier" : "@ignore@",
           "audience" : [ "Learner" ],
           "lastStatusChangedOn" : "@matchesDatePattern('yyyy-MM-dd')@",
           "os" : [ "All" ],

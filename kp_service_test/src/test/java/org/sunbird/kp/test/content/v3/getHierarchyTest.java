@@ -34,19 +34,16 @@ public class getHierarchyTest extends BaseCitrusTestRunner {
 //    @AfterClass
 //    public static void populateAssertionData() {
 //        TestSetupUtil.createDirectoriesForTestCases(dirIdMap, "response.json", TEMPLATE_DIR);
+////        TestSetupUtil.createDirectoriesForTestCases(dirIdMap, "response_image.json", TEMPLATE_DIR);
 //    }
 
     @Test(dataProvider = "getHierarchyWithValidRequest")
-    @CitrusParameters ({"testName", "workFlowStatus", "payload", "collectionType", "resourceCount", "publish"})
+    @CitrusParameters ({"testName", "workFlowStatus", "payload", "collectionType", "resourceCount"})
     @CitrusTest
-    public void getHierarchyWithValidRequest(String testName, String workFlowStatus, String payload, String collectionType, Integer resourceCount, Boolean publish) {
+    public void getHierarchyWithValidRequest(String testName, String workFlowStatus, String payload, String collectionType, Integer resourceCount) {
         Map<String, Object> collectionMap = CollectionUtil.prepareTestCollection(workFlowStatus, this, new HashMap<String,String>() {{put("updateHierarchy", payload);}}, collectionType, 0, resourceCount, "application/vnd.ekstep.ecml-archive");
         identifier = (String) collectionMap.get("content_id");
-        if(publish){
-            ContentUtil.publishContent(this, null, "public", identifier, null);
-        }
         this.variable("rootId", identifier);
-        //dirIdMap.put(testName, identifier);
         performGetTest(
                 this,
                 TEMPLATE_DIR,
@@ -66,7 +63,7 @@ public class getHierarchyTest extends BaseCitrusTestRunner {
         Map<String, Object> collectionMap = CollectionUtil.prepareTestCollection(workFlowStatus, this,
                 new HashMap<String,String>() {{put("updateHierarchy", payload);}}, collectionType, 0, resourceCount, "application/vnd.ekstep.ecml-archive");
         identifier = (String) collectionMap.get("content_id");
-        ContentUtil.publishContent(this, null, "public", identifier, null);
+        //ContentUtil.publishContent(this, null, "public", identifier, null);
         performGetTest(
                 this,
                 TEMPLATE_DIR,
@@ -100,11 +97,12 @@ public class getHierarchyTest extends BaseCitrusTestRunner {
         );
     }
 
-    @Test(dataProvider = "getHierarchyWithDifferentStatusWithoutMode")
+    @Test(dataProvider = "getHierarchyWithDifferentStatus")
     @CitrusParameters ({"testName", "workFlowStatus", "payload", "collectionType", "resourceCount"})
     @CitrusTest
-    public void getHierarchyWithDifferentStatusWithoutMode(String testName, String workFlowStatus, String payload, String collectionType, Integer resourceCount) {
-        Map<String, Object> collectionMap = CollectionUtil.prepareTestCollectionWithoutUpdateHierarchy(workFlowStatus, this,null, collectionType, 0, resourceCount, "application/vnd.ekstep.ecml-archive");
+    public void getHierarchyWithDifferentStatus(String testName, String workFlowStatus, String payload, String collectionType, Integer resourceCount) {
+        Map<String, Object> collectionMap = CollectionUtil.prepareTestCollection(workFlowStatus, this,
+                new HashMap<String,String>() {{put("updateHierarchy", payload);}}, collectionType, 0, resourceCount, "application/vnd.ekstep.ecml-archive");
         identifier = (String) collectionMap.get("content_id");
         this.variable("rootId", identifier);
         //dirIdMap.put(testName, identifier);
@@ -114,48 +112,58 @@ public class getHierarchyTest extends BaseCitrusTestRunner {
                 testName,
                 APIUrl.READ_CONTENT_HIERARCHY + identifier,
                 null,
-                HttpStatus.OK,
+                HttpStatus.NOT_FOUND,
                 null,
                 RESPONSE_JSON
         );
+//        performGetTest(
+//                this,
+//                TEMPLATE_DIR,
+//                testName,
+//                APIUrl.READ_CONTENT_HIERARCHY + identifier + MODE + "edit",
+//                null,
+//                HttpStatus.OK,
+//                null,
+//                RESPONSE_JSON_IMAGE
+//        );
     }
 
-    @Test(dataProvider = "getHierarchyWithDifferentStatusWithMode")
-    @CitrusParameters ({"testName", "workFlowStatus", "payload", "collectionType", "resourceCount", "mode"})
+    @Test
     @CitrusTest
-    public void getHierarchyWithDifferentStatusWithMode(String testName, String workFlowStatus, String payload, String collectionType, Integer resourceCount, String mode) {
-        Map<String, Object> collectionMap = CollectionUtil.prepareTestCollectionWithoutUpdateHierarchy(workFlowStatus, this,null, collectionType, 0, resourceCount, "application/vnd.ekstep.ecml-archive");
+    public void getHierarchyAfterReview(){
+        Map<String, Object> collectionMap = CollectionUtil.prepareTestCollection("collectionReview", this,
+                new HashMap<String,String>() {{put("updateHierarchy", CollectionUtilPayload.UPDATE_HIERARCHY_1_UNIT_1_RESOURCE);}}, "textBook", 0, 1, "application/vnd.ekstep.ecml-archive");
         identifier = (String) collectionMap.get("content_id");
         this.variable("rootId", identifier);
-        //dirIdMap.put(testName, identifier);
         performGetTest(
                 this,
                 TEMPLATE_DIR,
-                testName,
-                APIUrl.READ_CONTENT_HIERARCHY + identifier + MODE + mode,
+                ContentV3Scenario.TEST_GET_HIERARCHY_AFTER_REVIEW,
+                APIUrl.READ_CONTENT_HIERARCHY + identifier,
                 null,
-                HttpStatus.OK,
+                HttpStatus.NOT_FOUND,
                 null,
                 RESPONSE_JSON
         );
+        performGetTest(
+                this,
+                TEMPLATE_DIR,
+                ContentV3Scenario.TEST_GET_HIERARCHY_AFTER_REVIEW,
+                APIUrl.READ_CONTENT_HIERARCHY + identifier + MODE + "edit",
+                null,
+                HttpStatus.OK,
+                null,
+                RESPONSE_JSON_IMAGE
+        );
     }
+
 
     @DataProvider
     public static Object[][] getHierarchyWithValidRequest() {
         return new Object[][]{
                 new Object[]{
                         ContentV3Scenario.TEST_GET_HIERARCHY_WITH_VALID_IDENTIFIER, "collectionUnitsInLive", CollectionUtilPayload.UPDATE_HIERARCHY_1_UNIT_1_RESOURCE, "textBook", 1, true
-                },
-                new Object[]{
-                        ContentV3Scenario.TEST_GET_HIERARCHY_AFTER_UPDATE, "collectionUnitsInDraft", CollectionUtilPayload.UPDATE_HIERARCHY_1_UNIT_1_RESOURCE, "textBook", 1, true
-                },
-                new Object[]{
-                        ContentV3Scenario.TEST_GET_HIERARCHY_AFTER_REVIEW, "collectionReview", CollectionUtilPayload.UPDATE_HIERARCHY_1_UNIT_1_RESOURCE, "textBook", 1, false
-                },
-                new Object[]{
-                        ContentV3Scenario.TEST_GET_HIERARCHY_AFTER_RETIRE, "collectionRetire", CollectionUtilPayload.UPDATE_HIERARCHY_1_UNIT_1_RESOURCE, "textBook", 1, false
                 }
-
         };
     }
 
@@ -182,33 +190,24 @@ public class getHierarchyTest extends BaseCitrusTestRunner {
                 },
                 new Object[]{
                         ContentV3Scenario.TEST_GET_HIERARCHY_WITH_NULL_MODE, "collectionUnitsInLive", CollectionUtilPayload.UPDATE_HIERARCHY_1_UNIT_1_RESOURCE, "textBook", 1, null
-                },
-                new Object[]{
-                        ContentV3Scenario.TEST_GET_HIERARCHY_AFTER_UPDATE_WITH_MODE, "collectionUnitsInDraft", CollectionUtilPayload.UPDATE_HIERARCHY_1_UNIT_1_RESOURCE, "textBook", 1, "edit"
-                },
-                 new Object[]{
-                        ContentV3Scenario.TEST_GET_HIERARCHY_AFTER_REVIEW_WITH_MODE, "collectionReview", CollectionUtilPayload.UPDATE_HIERARCHY_1_UNIT_1_RESOURCE, "textBook", 1, "edit"
-                },
-                new Object[]{
-                        ContentV3Scenario.TEST_GET_HIERARCHY_AFTER_RETIRE_WITH_MODE, "collectionRetire", CollectionUtilPayload.UPDATE_HIERARCHY_1_UNIT_1_RESOURCE, "textBook", 1, "edit"
                 }
         };
     }
 
     @DataProvider
-    public static Object[][] getHierarchyWithDifferentStatusWithoutMode() {
+    public static Object[][] getHierarchyWithDifferentStatus() {
         return new Object[][]{
+//                new Object[]{
+//                        ContentV3Scenario.TEST_GET_HIERARCHY_AFTER_UPDATE, "collectionUnitsInDraft", CollectionUtilPayload.UPDATE_HIERARCHY_1_UNIT_1_RESOURCE, "textBook", 1
+//                },
+//                new Object[]{
+//                        ContentV3Scenario.TEST_GET_HIERARCHY_AFTER_RETIRE, "collectionRetire", CollectionUtilPayload.UPDATE_HIERARCHY_1_UNIT_1_RESOURCE, "textBook", 1
+//                },
+//                new Object[]{
+//                        ContentV3Scenario.TEST_GET_HIERARCHY_BEFORE_UPDATE, "collectionCreate", null, "textBook", 1
+//                },
                 new Object[]{
-                        ContentV3Scenario.TEST_GET_HIERARCHY_BEFORE_UPDATE, "collectionCreate", null, "textBook", 1
-                }
-        };
-    }
-
-    @DataProvider
-    public static Object[][] getHierarchyWithDifferentStatusWithMode() {
-        return new Object[][]{
-                new Object[]{
-                        ContentV3Scenario.TEST_GET_HIERARCHY_BEFORE_UPDATE_WITH_MODE, "collectionCreate", null, "textBook", 1, "edit"
+                        ContentV3Scenario.TEST_GET_HIERARCHY_AFTER_FLAG, "collectionInFlagged", CollectionUtilPayload.UPDATE_HIERARCHY_1_UNIT_1_RESOURCE, "textBook", 1
                 }
         };
     }
