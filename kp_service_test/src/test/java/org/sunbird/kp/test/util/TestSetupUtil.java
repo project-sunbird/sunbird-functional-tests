@@ -55,9 +55,11 @@ public class TestSetupUtil {
                 FileWriter fileWriter = new FileWriter(file.getPath() + "/" + fileName);
 //                HttpResponse<String> jsonNode = Unirest.get(AppConfig.config.getString("kp_base_uri") + "/content/v3/read/" + contentId + "").asString();
 
-                HttpResponse<String> jsonNode = Unirest.get(AppConfig.config.getString("kp_content_service_base_uri") + "/content/v3/hierarchy/" + contentId).asString();
+//               HttpResponse<String> jsonNode = Unirest.get(AppConfig.config.getString("kp_base_uri") + "/content/v3/hierarchy/" + contentId).asString();
 
-//                HttpResponse<String> jsonNode = Unirest.get(AppConfig.config.getString("kp_content_service_base_uri") + "/content/v3/hierarchy/" + contentId + "?mode=edit"").asString();
+                HttpResponse<String> jsonNode = Unirest.get(AppConfig.config.getString("kp_base_uri") + "/content/v3/hierarchy/" + contentId + "?mode=edit").asString();
+
+                //kp_content_service_base_uri
                 Response response = objectMapper.readValue(jsonNode.getBody(), Response.class);
                 fileWriter.write(formGeneralAssertions(response));
                 fileWriter.close();
