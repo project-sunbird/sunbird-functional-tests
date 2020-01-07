@@ -1,0 +1,9 @@
+{
+  "request": {
+    "content": {
+      "name": "KP-Updated-pdf",
+      "versionKey": "${versionKeyVal}",
+      "license": ["CC BY 4.0"]
+    }
+  }
+}

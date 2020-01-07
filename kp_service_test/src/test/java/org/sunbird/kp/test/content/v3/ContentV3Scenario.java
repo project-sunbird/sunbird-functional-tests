@@ -37,8 +37,6 @@ public class ContentV3Scenario {
             "testCreateResourceWithInvalidConceptId";
     public static final String TEST_CREATE_RESOURCE_CONTENT_WITH_ECML_BODY =
             "testCreateResourceWithEcmlBody";
-    public static final String TEST_CREATE_RESOURCE_CONTENT_WITH_INVALID_LICENSE_TYPE =
-            "testCreateResourceWithInvalidLicenseType";
     public static final String TEST_CREATE_RESOURCE_CONTENT_WITH_VALID_FRAMEWORK_INVALID_SUBJECT =
             "testCreateResourceWithValidFrameworkInvalidSubject";
     public static final String TEST_CREATE_RESOURCE_CONTENT_WITH_VALID_FRAMEWORK_INVALID_CATEGORY =
@@ -47,6 +45,17 @@ public class ContentV3Scenario {
             "testCreateResourceWithInvalidFramework";
     public static final String TEST_CREATE_RESOURCE_CONTENT_WITH_INVALID_RESOURCE_TYPE =
             "testCreateResourceWithInvalidResourceType";
+
+    //Content with license
+    public static final String TEST_CREATE_RESOURCE_CONTENT_WITH_VALID_LICENSE =
+            "testCreateResourceWithValidLicense";
+    public static final String TEST_CREATE_RESOURCE_CONTENT_WITHOUT_LICENSE =
+            "testCreateResourceWithoutLicense";
+    public static final String TEST_CREATE_RESOURCE_CONTENT_WITH_INVALID_LICENSE_VALUE =
+            "testCreateResourceWithInvalidLicenseValue";
+    public static final String TEST_CREATE_RESOURCE_CONTENT_WITH_INVALID_LICENSE_TYPE =
+            "testCreateResourceWithInvalidLicenseType";
+
     //Plugin
     public static final String TEST_CREATE_PLUGIN_CONTENT_WITH_VALID_REQUEST =
             "testCreatePluginContentWithValidRequest";
@@ -282,6 +291,14 @@ public class ContentV3Scenario {
     public static final String TEST_UPDATE_WITH_IMAGE_ID =
             "testUpdateWithImageId";
     //Get Content Should expect lastSubmittedOn if allowUpdate is true
+
+    //update content with license
+    public static final String TEST_UPDATE_CONTENT_WITH_VALID_LICENSE =
+            "testUpdateContentWithValidLicense";
+    public static final String TEST_UPDATE_CONTENT_WITH_INVALID_LICENSE_VALUE =
+            "testUpdateContentWithInvalidLicenseValue";
+    public static final String TEST_UPDATE_CONTENT_WITH_INVALID_LICENSE_TYPE =
+            "testUpdateContentWithInvalidLicenseType";
 
     public static final String TEST_UPDATE_WITH_SYSTEM_PROPERTY =
             "testUpdateContentWithSystemProperty";

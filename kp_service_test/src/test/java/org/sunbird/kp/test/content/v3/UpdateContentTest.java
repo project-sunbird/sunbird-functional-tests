@@ -169,6 +169,9 @@ public class UpdateContentTest extends BaseCitrusTestRunner {
                 new Object[]{
                         ContentV3Scenario.TEST_UPDATE_WITH_VALID_ECML_BODY, "application/pdf", "contentInDraft"
                 },
+                new Object[]{
+                        ContentV3Scenario.TEST_UPDATE_CONTENT_WITH_VALID_LICENSE, "application/pdf", "contentInDraft"
+                }
         };
     }
 
@@ -233,6 +236,12 @@ public class UpdateContentTest extends BaseCitrusTestRunner {
 //                new Object[]{
 //                        ContentV3Scenario.TEST_UPDATE_WITH_INVALID_ECML_BODY, "application/pdf", "contentInDraft"
 //                },
+                new Object[]{
+                        ContentV3Scenario.TEST_UPDATE_CONTENT_WITH_INVALID_LICENSE_TYPE, "application/pdf", "contentInDraft"
+                },
+                new Object[]{
+                        ContentV3Scenario.TEST_UPDATE_CONTENT_WITH_INVALID_LICENSE_VALUE, "application/pdf", "contentInDraft"
+                }
         };
     }
 
@@ -263,8 +272,7 @@ public class UpdateContentTest extends BaseCitrusTestRunner {
                 },
                 new Object[]{
                         ContentV3Scenario.TEST_UPDATE_CONTENT_IN_LIVE_WITH_IMAGE, "application/pdf", "contentInLiveImageDraft"
-                },
-
+                }
         };
     }
 
