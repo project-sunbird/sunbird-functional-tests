@@ -9,8 +9,8 @@ import org.testng.annotations.Test;
 
 public class ReadUserRoleTest extends BaseCitrusTestRunner {
 
-  public static final String TEST_READ_USER_ROLE_FAILURE_WITHOUT_ACCESS_TOKEN =
-      "testReadUserRoleFailureWithoutAccessToken";
+  public static final String TEST_READ_USER_ROLE_SUCCESS_WITHOUT_ACCESS_TOKEN =
+      "testReadUserRoleSuccessWithoutAccessToken";
 
   public static final String TEST_READ_USER_ROLE_SUCCESS_WITH_ACCESS_TOKEN =
       "testReadUserRoleSuccessWithAccessToken";
@@ -21,12 +21,12 @@ public class ReadUserRoleTest extends BaseCitrusTestRunner {
     return getLmsApiUriPath("/api/data/v1/role/read", "/v1/role/read");
   }
 
-  @DataProvider(name = "readUserRoleFailureDataProvider")
-  public Object[][] readUserRoleFailureDataProvider() {
+  @DataProvider(name = "readUserRoleSuccessWithoutUserTokenDataProvider")
+  public Object[][] readUserRoleSuccessWithoutUserTokenDataProvider() {
 
     return new Object[][] {
       new Object[] {
-        TEST_READ_USER_ROLE_FAILURE_WITHOUT_ACCESS_TOKEN, false, HttpStatus.UNAUTHORIZED
+        TEST_READ_USER_ROLE_SUCCESS_WITHOUT_ACCESS_TOKEN, false, HttpStatus.OK
       }
     };
   }
@@ -38,7 +38,7 @@ public class ReadUserRoleTest extends BaseCitrusTestRunner {
     };
   }
 
-  @Test(dataProvider = "readUserRoleFailureDataProvider")
+  @Test(dataProvider = "readUserRoleSuccessWithoutUserTokenDataProvider")
   @CitrusParameters({"testName", "isAuthRequired", "httpStatusCode"})
   @CitrusTest
   public void testReadUserRoleFailure(
