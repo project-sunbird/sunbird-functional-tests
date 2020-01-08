@@ -382,7 +382,7 @@ public class UserTest extends BaseCitrusTest {
     }
     return null;
   }
-
+  
   private String createUserWithInvalidChannel() {
     Map<String, Object> requestMap = new HashMap<>();
     Map<String, Object> innerMap = createUserInnerMap();
