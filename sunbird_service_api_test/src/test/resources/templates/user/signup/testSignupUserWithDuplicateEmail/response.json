@@ -1,0 +1,14 @@
+{
+    "id": "api.user.signup",
+    "ver": "v1",
+    "ts": "2020-01-08 11:26:07:689+0000",
+    "params": {
+        "resmsgid": null,
+        "msgid": null,
+        "err": "EMAIL_IN_USE",
+        "status": "EMAIL_IN_USE",
+        "errmsg": "Email already exists."
+    },
+    "responseCode": "CLIENT_ERROR",
+    "result": {}
+}

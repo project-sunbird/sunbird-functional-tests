@@ -63,8 +63,8 @@ public class UserSignupTest extends BaseCitrusTest {
       new Object[] {createUserMap(), "usersuccessresponse.json", "userSignUpSuccess"},
       new Object[] {
         createUserWithDuplicateEmail(),
-        Constant.USER_TEMPLATE_LOCATION + "user_duplicate_email_response.json",
-        "duplicateEmailTest" }
+        TEMPLATE_DIR + "/testSignupUserWithDuplicateEmail",
+        "duplicateEmailSignUpTest" }
     };
   }
 
@@ -173,7 +173,7 @@ public class UserSignupTest extends BaseCitrusTest {
   private static Map<String, Object> createUserInnerMap() {
     Map<String, Object> innerMap = new HashMap<>();
     innerMap.put(Constant.FIRST_NAME, "ft_first_Name");
-    innerMap.put(Constant.PASSWORD, "Password1@");
+    innerMap.put("password", "Password1@");
     String email = Constant.USER_NAME_PREFIX + EndpointConfig.val + "@gmail.com";
     innerMap.put(Constant.EMAIL, email);
     innerMap.put(Constant.EMAIL_VERIFIED, true);
