@@ -1,0 +1,11 @@
+{
+	"request": {
+		"firstName": "Tests",
+		"password": "Password@1",
+		"email": "ourse_org_380uu@gmail.com",
+		"emailVerified": true,
+		"phone": "96541234",
+		"phoneVerified": true
+	}
+}
+    
