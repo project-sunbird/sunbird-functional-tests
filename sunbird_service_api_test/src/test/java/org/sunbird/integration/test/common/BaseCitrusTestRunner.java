@@ -210,6 +210,32 @@ public class BaseCitrusTestRunner extends TestNGCitrusTestRunner {
             TestActionUtil.getResponseTestAction(
                 builder, LMS_ENDPOINT, templateDir, testName, responseCode, responseJson));
   }
+  
+  public void performGetTest(
+	      TestNGCitrusTestRunner runner,
+	      String templateDir,
+	      String testName,
+	      String requestUrl,
+	      String token,
+	      HttpStatus responseCode,
+	      String responseJson) {
+	    getTestCase().setName(testName);
+	    runner.http(
+	        builder ->
+	            TestActionUtil.performGetTest(
+	                builder,
+	                LMS_ENDPOINT,
+	                testName,
+	                requestUrl,
+	                TestActionUtil.getHeaders(token),
+	                config));
+	    runner.http(
+	        builder ->
+	            TestActionUtil.getResponseTestAction(
+	                builder, LMS_ENDPOINT, templateDir, testName, responseCode, responseJson));
+	  }
+  
+  
 
   public void performGetTest(
       TestNGCitrusTestRunner runner,

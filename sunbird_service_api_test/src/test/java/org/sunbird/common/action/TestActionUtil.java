@@ -262,6 +262,14 @@ public class TestActionUtil {
     return headers;
   }
 
+  public static Map<String, Object> getHeaders(String token) {
+	    Map<String, Object> headers = new HashMap<>();
+	      headers.put(Constant.X_AUTHENTICATED_USER_TOKEN, token);
+	    headers.put("X-Channel-Id", "channel");
+	    headers.put(Constant.AUTHORIZATION, Constant.BEARER + System.getenv("sunbird_api_key"));
+	    return headers;
+	  }
+  
   public static Map<String, Object> getHeaders(
       boolean isAuthRequired, Map<String, Object> additionalHeaders) {
     if (null == additionalHeaders) {
