@@ -1,0 +1,8 @@
+{
+    "request": {
+        "userId": "cd510a97-0933-4465-ae93-9a07af1942",
+        "action": "accept",
+        "feedId": "{{feed_id}}",
+        "userExtId": "userExtId"
+    }
+}

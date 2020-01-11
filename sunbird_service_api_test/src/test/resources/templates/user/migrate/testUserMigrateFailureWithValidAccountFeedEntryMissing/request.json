@@ -1,0 +1,7 @@
+{
+    "request": {
+        "userId": "${userId}",
+        "action": "reject",
+        "feedId": "{{feed_id}}"
+    }
+}
