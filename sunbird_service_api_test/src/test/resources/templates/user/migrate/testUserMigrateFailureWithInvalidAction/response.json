@@ -1,0 +1,14 @@
+{
+    "id": "api.user.migrate",
+    "ver": "v1",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": null,
+        "msgid": "@ignore@",
+        "err": "INVALID_ELEMENT_IN_LIST",
+        "status": "INVALID_ELEMENT_IN_LIST",
+        "errmsg": "Invalid value supplied for parameter action.Supported values are [accept, reject]"
+    },
+    "responseCode": "CLIENT_ERROR",
+    "result": {}
+}

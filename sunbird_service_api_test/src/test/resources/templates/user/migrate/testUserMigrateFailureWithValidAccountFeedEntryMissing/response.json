@@ -1,0 +1,14 @@
+{
+    "id": "api.user.migrate",
+    "ver": "v1",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": null,
+        "msgid": "@ignore@",
+        "err": "INVALID_USER_ID",
+        "status": "INVALID_USER_ID",
+        "errmsg": "User Id does not exists in our records"
+    },
+    "responseCode": "CLIENT_ERROR",
+    "result": {}
+}

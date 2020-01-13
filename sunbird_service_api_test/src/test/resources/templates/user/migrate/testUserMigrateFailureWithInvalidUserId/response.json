@@ -1,0 +1,14 @@
+{
+    "id": "api.user.migrate",
+    "ver": "v1",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": null,
+        "msgid": "@ignore@",
+        "err":"INVALID_PARAMETER_VALUE",
+        "status":"INVALID_PARAMETER_VALUE",
+        "errmsg":"Invalid value cd510a97-0933-4465-ae93-9a07af194277 for parameter userId. Please provide a valid value."
+    },
+    "responseCode": "CLIENT_ERROR",
+    "result": {}
+}

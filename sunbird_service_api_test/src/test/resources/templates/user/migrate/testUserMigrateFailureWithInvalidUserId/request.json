@@ -1,0 +1,7 @@
+{
+    "request": {
+        "userId": "cd510a97-0933-4465-ae93-9a07af194277",
+        "action": "reject",
+        "feedId": "{{feed_id}}"
+    }
+}

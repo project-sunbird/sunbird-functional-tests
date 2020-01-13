@@ -1,0 +1,7 @@
+{
+    "request": {
+        "userId": "d9928675-061e-46cac851e35ac5a5",
+        "action": "invalidAction",
+        "feedId": "{{feed_id}}"
+    }
+}

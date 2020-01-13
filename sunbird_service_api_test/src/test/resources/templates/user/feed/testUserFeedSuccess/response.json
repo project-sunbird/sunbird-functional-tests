@@ -1,0 +1,18 @@
+{
+    "id": "api.user.feed",
+    "ver": "v1",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": null,
+        "msgid": null,
+        "err": null,
+        "status": "success",
+        "errmsg": null
+    },
+    "responseCode": "OK",
+    "result": {
+        "response": {
+            "userFeed": []
+        }
+    }
+}
