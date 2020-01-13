@@ -46,7 +46,8 @@ pipeline {
                 '''
             }
             finally {
-                archiveArtifacts 'sunbird_service_api_test/target/target/citrus-reports/citrus-test-results.html'            
+                archiveArtifacts 'sunbird_service_api_test/target/target/citrus-reports/citrus-test-results.html'
+		    email_notify("${learner_team_email_group}")    
 	    }
         }
 }
