@@ -36,7 +36,7 @@ public class OtpVerificationTest extends BaseCitrusTestRunner {
 	      "testVerifyOtpFailreWithInvalidOtp";
 
   public static final String TEST_GENERATE_OTP_SUCCESS_WITH_PHONE =
-	      "testGenerateOtpSuccessWithPhone2";
+	      "testGenerateOtpSuccessWithPhoneForVerification";
   
 
   public static final String TEMPLATE_DIR = "templates/otp/verify";
