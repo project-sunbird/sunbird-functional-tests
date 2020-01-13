@@ -1,3 +1,4 @@
+@Library('deploy-conf')_
 pipeline {
     environment {
         sunbird_api_key = "${sunbird_api_keys}"
