@@ -1,0 +1,14 @@
+{
+    "id": "api.otp.verify",
+    "ver": "v1",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": null,
+        "msgid": null,
+        "err": "OTP_VERIFICATION_FAILED",
+        "status": "OTP_VERIFICATION_FAILED",
+        "errmsg": "@ignore@"
+    },
+    "responseCode": "CLIENT_ERROR",
+    "result": {}
+}
