@@ -63,8 +63,8 @@ public class UserSignupTest extends BaseCitrusTest {
       new Object[] {createUserMap(), "usersuccessresponse.json", "userSignUpSuccess"},
       new Object[] {
         createUserWithDuplicateEmail(),
-        TEMPLATE_DIR + "/testSignupUserWithDuplicateEmail",
-        "duplicateEmailSignUpTest" }
+        TEMPLATE_DIR + "/testSignupUserWithDuplicateEmail/response.json",
+        "duplicateEmailSignUpTest" },
     };
   }
 

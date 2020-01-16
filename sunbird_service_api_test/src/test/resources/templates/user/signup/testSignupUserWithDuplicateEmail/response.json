@@ -1,7 +1,7 @@
 {
     "id": "api.user.signup",
     "ver": "v1",
-    "ts": "2020-01-08 11:26:07:689+0000",
+    "ts": "@ignore@",
     "params": {
         "resmsgid": null,
         "msgid": null,
