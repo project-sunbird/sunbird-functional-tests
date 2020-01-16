@@ -174,8 +174,8 @@ public class UserSignupTest extends BaseCitrusTest {
     Map<String, Object> innerMap = new HashMap<>();
     innerMap.put(Constant.FIRST_NAME, "ft_first_Name");
     innerMap.put("password", "Password1@");
-    String email = Constant.USER_NAME_PREFIX + EndpointConfig.val + "@gmail.com";
-    innerMap.put(Constant.EMAIL, email);
+    String email = Constant.USER_NAME_PREFIX + EndpointConfig.val ;
+    innerMap.put(Constant.EMAIL, email+"1"+ "@gmail.com");
     innerMap.put(Constant.EMAIL_VERIFIED, true);
     return innerMap;
   }
