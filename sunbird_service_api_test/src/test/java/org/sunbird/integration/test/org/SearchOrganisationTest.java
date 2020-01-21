@@ -12,7 +12,7 @@ public class SearchOrganisationTest extends BaseCitrusTestRunner {
 
   public static final String TEST_NAME_SEARCH_ORG_FAILURE_WITHOUT_FILTER =
       "testSearchOrgFailureWithoutFilter";
-
+  
   public static final String TEMPLATE_DIR = "templates/organisation/search";
 
   private String getSearchOrgUrl() {
@@ -25,6 +25,8 @@ public class SearchOrganisationTest extends BaseCitrusTestRunner {
 
     return new Object[][] {
       new Object[] {TEST_NAME_SEARCH_ORG_FAILURE_WITHOUT_FILTER, HttpStatus.BAD_REQUEST},
+      new Object [] {"testSearchOrgSuccessWithFilterByChannel",HttpStatus.OK},
+      new Object [] {"testSearchRootOrgIdSuccessFilterByChannel",HttpStatus.OK}
     };
   }
 
