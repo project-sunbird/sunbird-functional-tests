@@ -1,4 +1,4 @@
-![alt text](https://sunbirddev.blob.core.windows.net/user/certificate/File-0129472421462999043.png "Logo Title Text 1")
+![alt_text](https://sunbirddev.blob.core.windows.net/user/certificate/File-0129472421462999043.png)
 
 ## Func-Test Report
 ### Release Version
