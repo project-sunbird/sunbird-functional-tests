@@ -1,4 +1,5 @@
 ![Sunbird](https://lh3.googleusercontent.com/BSgZ9CMWOo8KJXq12W5J8ztNLfAo9JhIXAWzj1tNGnmcr-kgbcWVrn_BjvJ1AFxRDe8h0Ql2PzLHaL4WyZGgu-FaoYzgYLDenc-DyXm1g_XKhrxlAZNXUiW7_Kl7TukHB1AckhCC)
+
 ## Func-Test Report
 ### Release Version
 #### 2.8.0
@@ -16,7 +17,7 @@
 - v1/bulk/org/upload  - MODIFIED
 - v1/location/search - MODIFIED
 - v1/user/update - MODIFIED
-- v1/user/create - MODIFIED
+- v1/user/create - MODIFIED\
 - enabled functional tests\
   Total tests = 211\
   Results = https://sunbirddev.blob.core.windows.net/user/certificate/File-0129471445840691200.zip
