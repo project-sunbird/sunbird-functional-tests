@@ -1,3 +1,4 @@
+![Sunbird](http://docs.sunbird.org/img/sunbird-logo.png)
 ## Func-Test Report
 ### Release Version
 #### 2.8.0
