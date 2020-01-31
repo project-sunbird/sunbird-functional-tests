@@ -10,7 +10,7 @@ release-2.8.0
 
 <u>Total tests = 225</u>
 
-Results = <URL within this repo - results.zip | public URL>
+Results = https://sunbirddev.blob.core.windows.net/user/certificate/File-0129471445840691200.zip
 
 release-2.7.0
 ------------
@@ -28,4 +28,4 @@ release-2.7.0
 
 <u>Total tests = 211</u>
 
-Results = <URL within this repo - results.zip | public URL> <br>
+Results = https://sunbirddev.blob.core.windows.net/user/certificate/File-0129471445840691200.zip
