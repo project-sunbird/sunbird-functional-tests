@@ -17,7 +17,7 @@
 - v1/bulk/org/upload  - MODIFIED
 - v1/location/search - MODIFIED
 - v1/user/update - MODIFIED
-- v1/user/create - MODIFIED\
+- v1/user/create - MODIFIED
 - enabled functional tests\
-  Total tests = 211\
+  Total tests = 211
   Results = https://github.com/anmol2302/sunbird-functional-tests/blob/reportPub/sunbird_service_api_test/test-report/learner-service-testR2.8.0.zip
