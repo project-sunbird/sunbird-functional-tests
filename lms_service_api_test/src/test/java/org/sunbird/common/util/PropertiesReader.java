@@ -55,6 +55,10 @@ public class PropertiesReader {
         return configProp.getProperty(key) != null ? configProp.getProperty(key) : key;
     }
 
+    public String getPropertyFromFile(String key) {
+        return configProp.getProperty(key) != null ? configProp.getProperty(key) : key;
+    }
+
     private void loadWeighted() {
         String key = configProp.getProperty("user.profile.attribute");
         String value = configProp.getProperty("user.profile.weighted");

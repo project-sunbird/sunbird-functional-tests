@@ -6,9 +6,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 import javax.ws.rs.core.MediaType;
+
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.HttpStatus;
 import org.sunbird.common.action.ContentStoreUtil;
 import org.sunbird.common.action.CourseBatchUtil;
+import org.sunbird.common.util.PropertiesReader;
 import org.sunbird.integration.test.common.BaseCitrusTestRunner;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -107,7 +110,9 @@ public class AddUserToCourseBatch extends BaseCitrusTestRunner {
       variable("courseUnitId", ContentStoreUtil.getCourseUnitId());
       variable("resourceId", ContentStoreUtil.getResourceId());
       variable("startDate", TODAY_DATE);
-      String courseId = ContentStoreUtil.getCourseId(this, testContext);
+      String courseId = System.getenv("sunbird_course_id");
+      if (StringUtils.isBlank(courseId))
+          courseId= PropertiesReader.getInstance().getProperty("sunbird_course_id");
       variable("courseId", courseId);
       if (isOpenBatch) {
         courseBatchId = courseBatchUtil.getOpenCourseBatchId(this, testContext);

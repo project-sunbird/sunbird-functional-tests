@@ -2,6 +2,9 @@ package org.sunbird.integration.test.course.batch;
 
 import com.consol.citrus.annotations.CitrusTest;
 import com.consol.citrus.testng.CitrusParameters;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.UUID;
 
 import org.apache.commons.lang3.StringUtils;
@@ -26,6 +29,7 @@ public class GetCourseBatchTest extends BaseCitrusTestRunner {
       "testGetCourseBatchFailureWithoutAuthToken";
   private static String courseBatchId = null;
   public static final String TEMPLATE_DIR = "templates/course/batch/read";
+  SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
   private String getGetCourseBatchUrl(String courseBatchId) {
     return getLmsApiUriPath("/api/course/v1/batch/read", "/v1/course/batch/read", courseBatchId);
@@ -85,15 +89,23 @@ public class GetCourseBatchTest extends BaseCitrusTestRunner {
     variable("courseUnitId", ContentStoreUtil.getCourseUnitId());
     variable("resourceId", ContentStoreUtil.getResourceId());
     variable("startDate", CreateCourseBatchTest.TODAY_DATE);
+    variable("endDate",calculateDate(4));
     String courseId = System.getenv("sunbird_course_id");
     if (StringUtils.isBlank(courseId))
-      courseId= PropertiesReader.getInstance().getProperty("sunbird_course_id");
+      courseId = PropertiesReader.getInstance().getProperty("sunbird_course_id");
     variable("courseId", courseId);
-    System.out.println("niharika"+ courseId);
+    System.out.println("niharika" + courseId);
     if (isOpen) {
       courseBatchId = courseBatchUtil.getOpenCourseBatchId(this, testContext);
     } else {
       courseBatchId = courseBatchUtil.getInviteOnlyCourseBatchId(this, testContext);
     }
   }
+
+    private String calculateDate(int dayOffset) {
+      Calendar calender = Calendar.getInstance();
+      calender.add(Calendar.DAY_OF_MONTH, dayOffset);
+      return format.format(calender.getTime());
+    }
+
 }

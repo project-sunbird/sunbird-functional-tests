@@ -244,7 +244,7 @@ public class BaseCitrusTestRunner extends TestNGCitrusTestRunner {
       }
     }
 
-    return config.getLmsUrl().contains("localhost")
+    return (config.getLmsUrl().contains("localhost") || config.getLmsUrl().contains("11.2.0.9"))
         ? localUriPath + pathParams
         : apiGatewayUriPath + pathParams;
   }

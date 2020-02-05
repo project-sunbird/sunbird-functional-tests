@@ -4,14 +4,18 @@ import com.consol.citrus.annotations.CitrusTest;
 import com.consol.citrus.testng.CitrusParameters;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
+import java.util.Calendar;
 import java.util.Date;
 import javax.ws.rs.core.MediaType;
+
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.HttpStatus;
 import org.sunbird.common.action.ContentStoreUtil;
 import org.sunbird.common.action.CourseBatchUtil;
 import org.sunbird.common.action.CourseEnrollmentUtil;
 import org.sunbird.common.action.UserUtil;
 import org.sunbird.common.util.Constant;
+import org.sunbird.common.util.PropertiesReader;
 import org.sunbird.integration.test.common.BaseCitrusTestRunner;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -42,6 +46,7 @@ public class EnrollCourseTest extends BaseCitrusTestRunner {
   public static final String TEMPLATE_DIR = "templates/course/batch/enroll";
   private static String courseBatchId = "FT_Course_Batch_Id" + Instant.now().getEpochSecond();
   private static final String TODAY_DATE = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+  SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
   private String getEnrollCourseBatchUrl() {
     return getLmsApiUriPath("/api/course/v1/enrol", "/v1/course/enroll");
@@ -188,7 +193,10 @@ public class EnrollCourseTest extends BaseCitrusTestRunner {
       variable("courseUnitId", ContentStoreUtil.getCourseUnitId());
       variable("resourceId", ContentStoreUtil.getResourceId());
       variable("startDate", TODAY_DATE);
-      String courseId = ContentStoreUtil.getCourseId(this, testContext);
+      variable("endDate",calculateDate(4));
+      String courseId = System.getenv("sunbird_course_id");
+      if (StringUtils.isBlank(courseId))
+        courseId= PropertiesReader.getInstance().getProperty("sunbird_course_id");
       variable("courseId", courseId);
       if (isOpenBatch) {
         courseBatchId = courseBatchUtil.getOpenCourseBatchId(this, testContext);
@@ -198,8 +206,10 @@ public class EnrollCourseTest extends BaseCitrusTestRunner {
       variable("batchId", courseBatchId);
     }
     if (canCreateUser) {
-      testContext.setVariable(Constant.USER_ID, "");
-      UserUtil.createUserAndGetToken(this, testContext);
+      String userId = System.getenv("sunbird_user_id");
+      if (StringUtils.isBlank(userId))
+        userId= PropertiesReader.getInstance().getProperty("sunbird_user_id");
+      variable("userId", userId);
     }
     if (canEnroll) {
       CourseEnrollmentUtil.enrollCourse(this, testContext, config);
@@ -208,5 +218,12 @@ public class EnrollCourseTest extends BaseCitrusTestRunner {
     if (canUnenroll) {
       CourseEnrollmentUtil.unenrollCourse(this, testContext, config);
     }
+  }
+
+  private String calculateDate(int dayOffset) {
+
+    Calendar calender = Calendar.getInstance();
+    calender.add(Calendar.DAY_OF_MONTH, dayOffset);
+    return format.format(calender.getTime());
   }
 }
