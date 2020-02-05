@@ -5,6 +5,7 @@ import com.consol.citrus.http.client.HttpClient;
 import java.util.UUID;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.sunbird.common.util.PropertiesReader;
 
 /**
  * This class will do the initialization of all global variable.
@@ -14,17 +15,18 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class EndpointConfig {
 
+
   @Bean
   public HttpClient restTestClient() {
     return CitrusEndpoints.http()
         .client()
-        .requestUrl(System.getenv("sunbird_test_base_url"))
+        .requestUrl(PropertiesReader.getInstance().getPropertyFromFile("sunbird_lms_base_url"))
         .build();
   }
 
   @Bean
   public HttpClient keycloakTestClient() {
-    return CitrusEndpoints.http().client().requestUrl(System.getenv("sunbird_sso_url")).build();
+    return CitrusEndpoints.http().client().requestUrl(PropertiesReader.getInstance().getProperty("sunbird_sso_url")).build();
   }
 
   @Bean
@@ -35,26 +37,26 @@ public class EndpointConfig {
         .build();
   }
 
-  @Bean
-  public TestGlobalProperty initGlobalValues() {
-    TestGlobalProperty property = new TestGlobalProperty();
-    property.setApiKey(System.getenv("sunbird_api_key"));
-    property.setCassandraiP(System.getenv("sunbird_cassandra_host"));
-    property.setCassandraPort(System.getenv("sunbird_cassandra_port"));
-    property.setCassandraUserName(System.getenv("sunbird_cassandra_username"));
-    property.setKeySpace(System.getenv("sunbird_cassandra_keyspace"));
-    property.setKeycloakAdminUser(System.getenv("sunbird_sso_username"));
-    property.setKeycloakAdminPass(System.getenv("sunbird_sso_password"));
-    property.setRelam(System.getenv("sunbird_sso_realm"));
-    property.setClientId(System.getenv("sunbird_sso_client_id"));
-    property.setEsHost(System.getenv("sunbird_es_host"));
-    property.setEsPort(System.getenv("sunbird_es_port"));
-    property.setIndexType(System.getenv("sunbird_es_index_type"));
-    property.setIndex(System.getenv("sunbird_es_index"));
-    property.setSunbirdDefaultChannel(System.getenv("sunbird_default_channel"));
-    property.setLmsUrl(System.getenv("sunbird_test_base_url"));
-    return property;
-  }
+    @Bean
+    public TestGlobalProperty initGlobalValues() {
+        TestGlobalProperty property = new TestGlobalProperty();
+        property.setApiKey(PropertiesReader.getInstance().getPropertyFromFile("sunbird_api_key"));
+        property.setCassandraiP(PropertiesReader.getInstance().getPropertyFromFile("sunbird_cassandra_host"));
+        property.setCassandraPort(PropertiesReader.getInstance().getPropertyFromFile("sunbird_cassandra_port"));
+        property.setCassandraUserName(PropertiesReader.getInstance().getPropertyFromFile("sunbird_cassandra_username"));
+        property.setKeySpace(PropertiesReader.getInstance().getPropertyFromFile("sunbird_cassandra_keyspace"));
+        property.setKeycloakAdminUser(PropertiesReader.getInstance().getPropertyFromFile("sunbird_sso_username"));
+        property.setKeycloakAdminPass(PropertiesReader.getInstance().getPropertyFromFile("sunbird_sso_password"));
+        property.setRelam(PropertiesReader.getInstance().getPropertyFromFile("sunbird_sso_realm"));
+        property.setClientId(PropertiesReader.getInstance().getPropertyFromFile("sunbird_sso_client_id"));
+        property.setEsHost(PropertiesReader.getInstance().getPropertyFromFile("sunbird_es_host"));
+        property.setEsPort(PropertiesReader.getInstance().getPropertyFromFile("sunbird_es_port"));
+        property.setIndexType(PropertiesReader.getInstance().getPropertyFromFile("sunbird_es_index_type"));
+        property.setIndex(PropertiesReader.getInstance().getPropertyFromFile("sunbird_es_index"));
+        property.setSunbirdDefaultChannel(PropertiesReader.getInstance().getPropertyFromFile("sunbird_default_channel"));
+        property.setLmsUrl(PropertiesReader.getInstance().getPropertyFromFile("sunbird_lms_base_url"));
+        return property;
+    }
 
   /**
    * a class to hold all the variable details.

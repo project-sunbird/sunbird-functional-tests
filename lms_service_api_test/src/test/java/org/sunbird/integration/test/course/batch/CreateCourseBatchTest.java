@@ -3,6 +3,7 @@ package org.sunbird.integration.test.course.batch;
 import com.consol.citrus.annotations.CitrusTest;
 import com.consol.citrus.testng.CitrusParameters;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import javax.ws.rs.core.MediaType;
 
@@ -62,9 +63,9 @@ public class CreateCourseBatchTest extends BaseCitrusTestRunner {
 
   public static final String TEMPLATE_DIR = "templates/course/batch/create";
   public static final String TODAY_DATE = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-
+  SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
   private String getCreateCourseBatchUrl() {
-    return getLmsApiUriPath("/api/course/v1/batch/create", "/v1/course/batch/create");
+    return getLmsApiUriPath("/learner/course/v1/batch/create", "/v1/course/batch/create");
   }
 
   @DataProvider(name = "createCourseBatchFailureDataProvider")
@@ -192,7 +193,7 @@ public class CreateCourseBatchTest extends BaseCitrusTestRunner {
       boolean isUserIdRequired,
       HttpStatus httpStatusCode) {
     beforeTest(isCourseIdRequired, isOrganisationRequired, isUserIdRequired);
-    performPostTest(
+     performPostTest(
         this,
         TEMPLATE_DIR,
         testName,
@@ -262,6 +263,7 @@ public class CreateCourseBatchTest extends BaseCitrusTestRunner {
       variable("organisationId",orgId);
     }
     variable("startDate", TODAY_DATE);
+    variable("endDate",calculateDate(4));
     if (isCourseIdRequired) {
       // courseUnitId/resourceId is needed to be updated in context for creating course
       variable("courseUnitId", ContentStoreUtil.getCourseUnitId());
@@ -272,5 +274,12 @@ public class CreateCourseBatchTest extends BaseCitrusTestRunner {
     if (isUsrIdRequired) {
       variable("userId",userId);
     }
+  }
+
+  private String calculateDate(int dayOffset) {
+
+    Calendar calender = Calendar.getInstance();
+    calender.add(Calendar.DAY_OF_MONTH, dayOffset);
+    return format.format(calender.getTime());
   }
 }

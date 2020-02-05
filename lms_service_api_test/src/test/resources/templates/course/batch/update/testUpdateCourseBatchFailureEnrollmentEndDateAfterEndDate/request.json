@@ -2,7 +2,8 @@
   "request": {
 	  "courseId": "${courseId}",
 	  "id":"${batchId}",
-	"startDate":"${futureStartDate}",
-    "enrollmentEndDate":"2019-09-10"
+	"startDate":"${startDate}",
+    "enrollmentEndDate":"2020-09-10",
+    "endDate": "${endDate}"
   }
 }

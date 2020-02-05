@@ -21,6 +21,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.sunbird.common.util.Constant;
+import org.sunbird.common.util.PropertiesReader;
 import org.sunbird.integration.test.user.EndpointConfig.TestGlobalProperty;
 
 public class TestActionUtil {
@@ -255,7 +256,7 @@ public class TestActionUtil {
       headers.put(Constant.X_AUTHENTICATED_USER_TOKEN, "${accessToken}");
     }
     headers.put("X-Channel-Id", "channel");
-    headers.put(Constant.AUTHORIZATION, Constant.BEARER + System.getenv("sunbird_api_key"));
+    headers.put(Constant.AUTHORIZATION, Constant.BEARER + PropertiesReader.getInstance().getPropertyFromFile("sunbird_api_key"));
     return headers;
   }
 
