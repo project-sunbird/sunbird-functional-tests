@@ -27,13 +27,13 @@ node() {
         }
 
         stage('Build') {
-             {
+
             sh """
                  cd lms_service_api_test
                  ls
                  mvn -X clean verify
               """
-            }
+
         }
 
 
