@@ -194,9 +194,7 @@ public class EnrollCourseTest extends BaseCitrusTestRunner {
       variable("resourceId", ContentStoreUtil.getResourceId());
       variable("startDate", TODAY_DATE);
       variable("endDate",calculateDate(4));
-      String courseId = System.getenv("sunbird_course_id");
-      if (StringUtils.isBlank(courseId))
-        courseId= PropertiesReader.getInstance().getProperty("sunbird_course_id");
+      String courseId = PropertiesReader.getInstance().getPropertyFromFile("sunbird_course_id");
       variable("courseId", courseId);
       if (isOpenBatch) {
         courseBatchId = courseBatchUtil.getOpenCourseBatchId(this, testContext);
@@ -206,9 +204,7 @@ public class EnrollCourseTest extends BaseCitrusTestRunner {
       variable("batchId", courseBatchId);
     }
     if (canCreateUser) {
-      String userId = System.getenv("sunbird_user_id");
-      if (StringUtils.isBlank(userId))
-        userId= PropertiesReader.getInstance().getProperty("sunbird_user_id");
+      String userId = PropertiesReader.getInstance().getPropertyFromFile("sunbird_user_id");
       variable("userId", userId);
     }
     if (canEnroll) {

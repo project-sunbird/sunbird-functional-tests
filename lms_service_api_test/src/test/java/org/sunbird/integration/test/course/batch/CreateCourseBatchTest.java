@@ -249,15 +249,9 @@ public class CreateCourseBatchTest extends BaseCitrusTestRunner {
   public void beforeTest(
       boolean isCourseIdRequired, boolean isOrgIdRequired, boolean isUsrIdRequired) {
     getAuthToken(this, true);
-    String orgId= System.getenv("sunbird_org_id");
-    String userId = System.getenv("sunbird_user_id");
-    String courseId = System.getenv("sunbird_course_id");
-    if (StringUtils.isBlank(orgId))
-        orgId= PropertiesReader.getInstance().getProperty("sunbird_org_id");
-    if (StringUtils.isBlank(userId))
-      userId= PropertiesReader.getInstance().getProperty("sunbird_user_id");
-    if (StringUtils.isBlank(courseId))
-      courseId= PropertiesReader.getInstance().getProperty("sunbird_course_id");
+      String orgId= PropertiesReader.getInstance().getPropertyFromFile("sunbird_org_id");
+      String courseId = PropertiesReader.getInstance().getPropertyFromFile("sunbird_course_id");
+      String userId = PropertiesReader.getInstance().getPropertyFromFile("sunbird_user_id");
 
     if (isOrgIdRequired) {
       variable("organisationId",orgId);

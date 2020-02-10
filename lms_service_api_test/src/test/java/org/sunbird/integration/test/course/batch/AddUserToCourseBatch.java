@@ -110,9 +110,7 @@ public class AddUserToCourseBatch extends BaseCitrusTestRunner {
       variable("courseUnitId", ContentStoreUtil.getCourseUnitId());
       variable("resourceId", ContentStoreUtil.getResourceId());
       variable("startDate", TODAY_DATE);
-      String courseId = System.getenv("sunbird_course_id");
-      if (StringUtils.isBlank(courseId))
-          courseId= PropertiesReader.getInstance().getProperty("sunbird_course_id");
+      String courseId = PropertiesReader.getInstance().getPropertyFromFile("sunbird_course_id");
       variable("courseId", courseId);
       if (isOpenBatch) {
         courseBatchId = courseBatchUtil.getOpenCourseBatchId(this, testContext);
