@@ -18,26 +18,27 @@ import org.springframework.http.HttpStatus;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.sunbird.common.util.Constant;
+import org.sunbird.common.util.PropertiesReader;
 import org.sunbird.integration.test.user.EndpointConfig.TestGlobalProperty;
 
 public class TestActionUtil {
   public static TestAction getTokenRequestTestAction(HttpClientActionBuilder builder) {
-    String userName = System.getenv("sunbird_username");
-    String password = System.getenv("sunbird_user_password");
+    String userName = PropertiesReader.getInstance().getPropertyFromFile("sunbird_sso_username");
+    String password = PropertiesReader.getInstance().getPropertyFromFile("sunbird_sso_password");
     return getTokenRequestTestAction(builder, userName, password);
   }
 
   public static TestAction getTokenRequestTestAction(
       HttpClientActionBuilder builder, String userName, String password) {
     String urlPath =
-        "/realms/" + System.getenv("sunbird_sso_realm") + "/protocol/openid-connect/token";
+        "/realms/" + PropertiesReader.getInstance().getPropertyFromFile("sunbird_sso_url") + "/protocol/openid-connect/token";
     return builder
         .send()
         .post(urlPath)
         .contentType("application/x-www-form-urlencoded")
         .payload(
             "client_id="
-                + System.getenv("sunbird_sso_client_id")
+                + PropertiesReader.getInstance().getPropertyFromFile("sunbird_sso_client_id")
                 + "&username="
                 + userName
                 + "&password="

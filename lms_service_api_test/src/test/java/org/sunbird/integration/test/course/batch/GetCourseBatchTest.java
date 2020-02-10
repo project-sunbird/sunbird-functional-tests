@@ -90,11 +90,8 @@ public class GetCourseBatchTest extends BaseCitrusTestRunner {
     variable("resourceId", ContentStoreUtil.getResourceId());
     variable("startDate", CreateCourseBatchTest.TODAY_DATE);
     variable("endDate",calculateDate(4));
-    String courseId = System.getenv("sunbird_course_id");
-    if (StringUtils.isBlank(courseId))
-      courseId = PropertiesReader.getInstance().getProperty("sunbird_course_id");
+    String courseId = PropertiesReader.getInstance().getPropertyFromFile("sunbird_course_id");
     variable("courseId", courseId);
-    System.out.println("niharika" + courseId);
     if (isOpen) {
       courseBatchId = courseBatchUtil.getOpenCourseBatchId(this, testContext);
     } else {

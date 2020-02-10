@@ -26,7 +26,7 @@ public class EndpointConfig {
 
   @Bean
   public HttpClient keycloakTestClient() {
-    return CitrusEndpoints.http().client().requestUrl(PropertiesReader.getInstance().getProperty("sunbird_sso_url")).build();
+    return CitrusEndpoints.http().client().requestUrl(PropertiesReader.getInstance().getPropertyFromFile("sunbird_sso_url")).build();
   }
 
   @Bean

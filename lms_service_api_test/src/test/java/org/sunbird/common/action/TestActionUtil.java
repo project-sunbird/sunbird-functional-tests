@@ -28,15 +28,15 @@ public class TestActionUtil {
 
   public static TestAction getTokenRequestTestAction(
       HttpActionBuilder builder, String endpointName) {
-    String userName = System.getenv("sunbird_username");
-    String password = System.getenv("sunbird_user_password");
+    String userName = PropertiesReader.getInstance().getPropertyFromFile("sunbird_sso_username");
+    String password = PropertiesReader.getInstance().getPropertyFromFile("sunbird_sso_password");
     return getTokenRequestTestAction(builder, endpointName, userName, password);
   }
 
   public static TestAction getTokenRequestTestAction(
       HttpActionBuilder builder, String endpointName, String userName, String password) {
     String urlPath =
-        "/realms/" + System.getenv("sunbird_sso_realm") + "/protocol/openid-connect/token";
+        "/realms/" + PropertiesReader.getInstance().getPropertyFromFile("sunbird_sso_realm") + "/protocol/openid-connect/token";
 
     return builder
         .client(endpointName)
@@ -45,7 +45,7 @@ public class TestActionUtil {
         .contentType("application/x-www-form-urlencoded")
         .payload(
             "client_id="
-                + System.getenv("sunbird_sso_client_id")
+                + PropertiesReader.getInstance().getPropertyFromFile("sunbird_sso_client_id")
                 + "&username="
                 + userName
                 + "&password="
