@@ -10,5 +10,8 @@
         "errmsg": "@ignore@"
     },
     "responseCode": "CLIENT_ERROR",
-    "result": {}
+    "result": {
+        "remainingAttempt": "@ignore@",
+        "maxAllowedAttempt": "@ignore@"
+    }
 }
