@@ -5,7 +5,7 @@
 
 #### 2.10.0
 
-  No changes
+- No new functional tests added, no changes done to existing test cases\
   Total Tests = 225\
 
 
