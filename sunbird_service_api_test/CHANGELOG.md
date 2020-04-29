@@ -3,6 +3,12 @@
 ## Func-Test Report
 ### Release Version
 
+#### 2.10.0
+
+  No changes
+  Total Tests = 225\
+
+
 #### 2.9.0
 
 - v1/otp/verify - MODIFIED\
