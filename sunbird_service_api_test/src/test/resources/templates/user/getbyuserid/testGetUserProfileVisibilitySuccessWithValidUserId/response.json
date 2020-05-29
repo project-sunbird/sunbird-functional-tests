@@ -57,7 +57,9 @@
       "currentLoginTime": "@ignore@",
       "userType": "@ignore@",
       "tncAcceptedVersion": "@ignore@",
-      "status": "@ignore@"
+      "status": "@ignore@",
+      "managedBy": "@ignore@",
+      "accessCode": "@ignore@"
     }
   }
 }
