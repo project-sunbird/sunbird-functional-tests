@@ -207,7 +207,18 @@
         ],
         "name": "Flag Reviewer",
         "id": "FLAG_REVIEWER"
-      }
+      },
+      {
+        "actionGroups": [
+          {
+            "name":"Report Admin",
+            "id":"REPORT_ADMIN",
+            "actions":[]
+          }
+         ],
+         "name":"Report Admin",
+         "id":"REPORT_ADMIN"
+       }
     ]
   }
 }
