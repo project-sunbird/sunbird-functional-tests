@@ -72,7 +72,7 @@ public class AcceptFlagTest extends BaseCitrusTestRunner {
                 break;
             }
             case ContentV3Scenario.TEST_ACCEPT_FLAG_INVALID_ID : {
-                performPostTest(this, TEMPLATE_DIR, testName, APIUrl.ACCEPT_FLAG_CONTENT + "invalidId", null, REQUEST_JSON, MediaType.APPLICATION_JSON, httpStatusCode, valParams, RESPONSE_JSON);
+                performPostTest(this, TEMPLATE_DIR, testName, APIUrl.ACCEPT_FLAG_CONTENT + "KP_FT_123456", null, REQUEST_JSON, MediaType.APPLICATION_JSON, httpStatusCode, valParams, RESPONSE_JSON);
                 break;
             }
 
