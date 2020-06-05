@@ -11,8 +11,6 @@
   },
   "responseCode": "CLIENT_ERROR",
   "result": {
-    "messages": [
-      "Metadata contentType should be one of: [Resource, Collection, TextBook, LessonPlan, Course, Template, Asset, Plugin, LessonPlanUnit, CourseUnit, TextBookUnit, TeachingMethod, PedagogyFlow, FocusSpot, LearningOutcomeDefinition, PracticeQuestionSet, CuriosityQuestionSet, MarkingSchemeRubric, ExplanationResource, ExperientialResource, ConceptMap, SelfAssess]"
-    ]
+    "messages": "@ignore@"
   }
 }
