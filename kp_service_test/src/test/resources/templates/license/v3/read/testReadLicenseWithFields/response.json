@@ -12,7 +12,9 @@
   "responseCode": "OK",
   "result": {
     "license": {
-      "name" : "@startsWith('KP_FT_')@"
-    }
+      "name" : "@startsWith('KP_FT_')@",
+      "identifier":"${identifier}",
+      "languageCode":[]
+      }
   }
 }

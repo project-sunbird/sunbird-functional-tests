@@ -11,8 +11,8 @@
   },
   "responseCode": "OK",
   "result": {
-    "identifier": "@ignore@",
-    "node_id": "@ignore@",
+    "node_id": "${contentIdVal}",
+    "identifier": "${contentIdVal}",
     "versionKey": "@ignore@"
   }
 }

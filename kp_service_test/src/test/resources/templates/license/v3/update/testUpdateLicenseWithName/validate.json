@@ -20,7 +20,9 @@
       "createdOn" : "@matchesDatePattern('yyyy-MM-dd')@",
       "url" : "www.kp-test.in",
       "status" : "Live",
-      "versionKey" : "@isNumber()@"
+      "versionKey" : "@isNumber()@",
+      "objectType":"License",
+      "languageCode":[]
     }
   }
 }

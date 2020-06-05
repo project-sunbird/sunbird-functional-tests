@@ -24,6 +24,8 @@
       "url" : "www.kp-test.in",
       "status" : "Live",
       "versionKey" : "@isNumber()@",
+      "objectType":"License",
+      "languageCode":[]
     }
   }
 }

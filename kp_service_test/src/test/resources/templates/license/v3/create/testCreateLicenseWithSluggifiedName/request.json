@@ -1,7 +1,7 @@
 {
   "request": {
     "license": {
-      "name": "@+${identifier}",
+      "name": "${identifier}",
       "url": "www.url.com"
     }
   }

@@ -30,13 +30,13 @@ public class CreateLicenseTest extends BaseCitrusTestRunner {
     @CitrusParameters("testName")
     @CitrusTest
     public void testCreateLicenseWithValidRequest(String testName) {
-        identifier = "kp_ft_license_" + generateRandomDigits(9);
+        identifier = "kp_ft_" + generateRandomDigits(9);
         this.variable("identifier", identifier);
         getAuthToken(this, Constant.CREATOR);
         performPostTest(this, TEMPLATE_DIR, testName, APIUrl.CREATE_LICENSE, null,
                 REQUEST_JSON, MediaType.APPLICATION_JSON, HttpStatus.OK, null, RESPONSE_JSON);
         //Read The Content And Validate
-        performGetTest(this, TEMPLATE_DIR, testName, APIUrl.READ_CONTENT + identifier, null,
+        performGetTest(this, TEMPLATE_DIR, testName, APIUrl.READ_LICENSE + identifier, null,
                 HttpStatus.OK, null, VALIDATE_JSON);
     }
 
@@ -44,7 +44,7 @@ public class CreateLicenseTest extends BaseCitrusTestRunner {
     @CitrusParameters("testName")
     @CitrusTest
     public void createLicenseWithInvalidRequest(String testName) {
-        identifier = "kp_ft_license_" + generateRandomDigits(9);
+        identifier = "kp_ft_" + generateRandomDigits(9);
         this.variable("identifier", identifier);
         getAuthToken(this, Constant.CREATOR);
         performPostTest(this, TEMPLATE_DIR, testName, APIUrl.CREATE_LICENSE, null, REQUEST_JSON,
@@ -55,13 +55,13 @@ public class CreateLicenseTest extends BaseCitrusTestRunner {
     @CitrusParameters("testName")
     @CitrusTest
     public void createLicenseWithSluggifiedName(String testName) {
-        identifier = "kp_ft_license_" + generateRandomDigits(9);
+        identifier = "kp_ft_" + generateRandomDigits(9);
         this.variable("identifier", identifier);
         getAuthToken(this, Constant.CREATOR);
         performPostTest(this, TEMPLATE_DIR, testName, APIUrl.CREATE_LICENSE, null, REQUEST_JSON,
                 MediaType.APPLICATION_JSON, HttpStatus.OK, null, RESPONSE_JSON);
         //Read The Content And Validate
-        performGetTest(this, TEMPLATE_DIR, testName, APIUrl.READ_CONTENT + identifier, null,
+        performGetTest(this, TEMPLATE_DIR, testName, APIUrl.READ_LICENSE + identifier, null,
                 HttpStatus.OK, null, VALIDATE_JSON);
     }
 
@@ -84,7 +84,10 @@ public class CreateLicenseTest extends BaseCitrusTestRunner {
                 },
                 new Object[]{
                         LicenseV3Scenario.TEST_CREATE_LICENSE_WITH_NEW_METADATA
-                }
+                },
+                new Object[]{
+                        LicenseV3Scenario.TEST_CREATE_LICENSE_WITHOUT_URL
+                },
         };
     }
 
@@ -93,9 +96,6 @@ public class CreateLicenseTest extends BaseCitrusTestRunner {
         return new Object[][]{
                 new Object[]{
                         LicenseV3Scenario.TEST_CREATE_LICENSE_WITHOUT_NAME
-                },
-                new Object[]{
-                        LicenseV3Scenario.TEST_CREATE_LICENSE_WITHOUT_URL
                 },
                 new Object[]{
                         LicenseV3Scenario.TEST_CREATE_LICENSE_WITH_METADATA_NAME_CASE_MISMATCH

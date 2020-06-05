@@ -11,6 +11,9 @@
   },
   "responseCode": "OK",
   "result": {
-    "license": {}
+    "license": {
+    "identifier":"${identifier}",
+    "languageCode":[]
+    }
   }
 }

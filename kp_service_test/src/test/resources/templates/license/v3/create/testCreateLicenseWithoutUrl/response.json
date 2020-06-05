@@ -5,12 +5,13 @@
   "params": {
     "resmsgid": "@ignore@",
     "msgid": null,
-    "err": "CLIENT_ERROR",
-    "status": "failed",
-    "errmsg": "Validation Errors"
+    "err": null,
+    "status": "successful",
+    "errmsg": null
   },
-  "responseCode": "CLIENT_ERROR",
+  "responseCode": "OK",
   "result": {
-    "messages": "@ignore@"
+    "node_id": "@startsWith('kp_ft_')@",
+    "identifier": "@startsWith('kp_ft_')@"
   }
 }

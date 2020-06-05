@@ -11,6 +11,7 @@
   },
   "responseCode": "CLIENT_ERROR",
   "result": {
-    "node_id": "${contentIdVal}"
+    "node_id": "${contentIdVal}",
+    "identifier": "${contentIdVal}",
   }
 }

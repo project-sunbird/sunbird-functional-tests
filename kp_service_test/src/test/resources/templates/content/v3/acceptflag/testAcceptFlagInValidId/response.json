@@ -5,11 +5,12 @@
   "params": {
     "resmsgid": "@ignore@",
     "msgid": "@ignore@",
-    "err": "ERR_INVALID_CONTENT",
+    "err": "NOT_FOUND",
     "status": "failed",
     "errmsg": "@ignore@"
   },
-  "responseCode": "CLIENT_ERROR",
-    "result": {}
+  "responseCode": "RESOURCE_NOT_FOUND",
+    "result": {
+    "messages":null
+    }
 }
-
