@@ -11,8 +11,6 @@
     },
     "responseCode": "CLIENT_ERROR",
     "result": {
-        "messages": [
-            "[1,279][/url] The value must be of string type, but actual type is integer."
-        ]
+        "messages":["Metadata url should be a/an String value"]
     }
 }

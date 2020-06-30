@@ -1,5 +1,5 @@
 {
-    "id": "ekstep.composite-search.search",
+    "id": "api.search-service.search",
     "ver": "3.0",
     "ts": "@matchesDatePattern('yyyy-MM-dd')@",
     "params": {
@@ -15,12 +15,8 @@
         "content": [
             {
                 "identifier": "${contentIdVal}",
-                "subject": [
-                    "English"
-                ],
-                "medium": [
-                    "Hindi"
-                ],
+                "subject": "English",
+                "medium": "Hindi",
                 "objectType": "Content"
             }
         ]

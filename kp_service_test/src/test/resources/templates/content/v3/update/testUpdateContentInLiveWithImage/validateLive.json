@@ -33,12 +33,11 @@
       "mimeType": "application/pdf",
       "idealScreenSize": "normal",
       "createdOn": "@matchesDatePattern('yyyy-MM-dd')@",
-      "appId": "@ignore@",
       "contentDisposition": "inline",
       "artifactUrl": "@ignore@",
       "contentEncoding": "identity",
       "lastUpdatedOn": "@matchesDatePattern('yyyy-MM-dd')@",
-      "SYS_INTERNAL_LAST_UPDATED_ON": "@matchesDatePattern('yyyy-MM-dd')@",
+      "sYS_INTERNAL_LAST_UPDATED_ON": "@matchesDatePattern('yyyy-MM-dd')@",
       "contentType": "Resource",
       "dialcodeRequired": "No",
       "identifier": "@ignore@",
@@ -70,7 +69,10 @@
       "compatibilityLevel": "@isNumber()@",
       "name": "KP Integration Test Content",
       "status": "Live",
-      "languageCode": ["en"]
+      "languageCode": ["en"],
+      "objectType": "Content",
+      "cloudStorageKey": "@ignore@",
+      "prevStatus": "Processing"
     }
   }
 }

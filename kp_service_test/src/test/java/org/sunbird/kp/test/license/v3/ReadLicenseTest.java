@@ -52,7 +52,7 @@ public class ReadLicenseTest extends BaseCitrusTestRunner {
         if (shouldRetire) {
             LicenseUtil.retireLicense(this, identifier, null);
             performGetTest(this, TEMPLATE_DIR, testName, APIUrl.READ_LICENSE + identifier, null,
-                    HttpStatus.NOT_FOUND, null, RESPONSE_JSON);
+                    HttpStatus.OK, null, RESPONSE_JSON);
         } else
             performGetTest(this, TEMPLATE_DIR, testName, APIUrl.READ_LICENSE + "invalid123", null,
                     HttpStatus.NOT_FOUND, null, RESPONSE_JSON);

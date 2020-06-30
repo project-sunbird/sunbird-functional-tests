@@ -28,7 +28,7 @@ public class FlagTest extends BaseCitrusTestRunner {
     private static final String TEMPLATE_DIR = "templates/content/v3/flag";
 
     private String flagContent(String testName, String mimeType, HttpStatus httpStatusCode, Map<String, Object> valParams, String workFlowStatus, boolean withValidId) {
-        String contentId = "invalidId";
+        String contentId = "KP_FT_9990000009990";
         String versionKey = "invalidVersionKey";
         if(withValidId) {
             Map<String, Object> resourceMap = ContentUtil.prepareResourceContent(workFlowStatus, this, null, mimeType, null);

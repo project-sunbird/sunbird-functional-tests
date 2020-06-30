@@ -30,7 +30,7 @@ public class RetireLicenseTest extends BaseCitrusTestRunner {
         performDeleteTest(this, TEMPLATE_DIR, testName, APIUrl.RETIRE_LICENSE + identifier,
                 null, REQUEST_JSON, MediaType.APPLICATION_JSON, HttpStatus.OK, null, RESPONSE_JSON);
         performGetTest(this, TEMPLATE_DIR, testName, APIUrl.READ_LICENSE + identifier, null,
-                HttpStatus.NOT_FOUND, null, VALIDATE_JSON);
+                HttpStatus.OK, null, VALIDATE_JSON);
 
     }
 

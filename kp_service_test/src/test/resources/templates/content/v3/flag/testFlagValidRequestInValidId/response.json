@@ -5,10 +5,12 @@
     "params": {
         "resmsgid": "@ignore@",
         "msgid": null,
-        "err": "ERR_GRAPH_SEARCH_UNKNOWN_ERROR",
+        "err": "NOT_FOUND",
         "status": "failed",
         "errmsg": "Error! Node(s) doesn't Exists. | [Invalid Node Id.]: ${contentIdVal}"
     },
     "responseCode": "RESOURCE_NOT_FOUND",
-    "result": {}
+    "result": {
+      "messages":null
+    }
 }

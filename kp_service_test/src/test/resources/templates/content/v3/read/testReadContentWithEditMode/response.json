@@ -12,7 +12,6 @@
   "responseCode" : "OK",
   "result" : {
     "content" : {
-      "appId": "@ignore@",
       "ownershipType" : [ "createdBy" ],
       "code" : "kp.ft.resource.ecml",
       "previewUrl" : "@ignore@",
@@ -34,7 +33,7 @@
       "contentEncoding" : "gzip",
       "lastUpdatedOn" : "@matchesDatePattern('yyyy-MM-dd')@",
       "artifactUrl" : "@ignore@",
-      "SYS_INTERNAL_LAST_UPDATED_ON" : "@matchesDatePattern('yyyy-MM-dd')@",
+      "sYS_INTERNAL_LAST_UPDATED_ON" : "@matchesDatePattern('yyyy-MM-dd')@",
       "contentType" : "Resource",
       "dialcodeRequired" : "No",
       "identifier" : "${contentIdVal}",
@@ -52,14 +51,17 @@
       "versionKey" : "@ignore@",
       "license" : "CC BY 4.0",
       "idealScreenDensity" : "hdpi",
-      "prevState" : "Draft",
+      "prevStatus": "Live",
       "s3Key" : "@ignore@",
       "framework" : "NCF",
       "size" :"@isNumber()@",
       "lastPublishedOn" : "@matchesDatePattern('yyyy-MM-dd')@",
       "compatibilityLevel" :"@isNumber()@",
       "name" : "KP-Updated-Name",
-      "status" : "Draft"
+      "status" : "Draft",
+      "cloudStorageKey": "@ignore@",
+      "objectType": "ContentImage",
+      "prevState": "Draft"
     }
   }
 }

@@ -50,7 +50,8 @@
       "framework": "NCF",
       "compatibilityLevel":  "@isNumber()@",
       "name": "KP-Updated-pdf",
-      "status": "Draft"
+      "status": "Draft",
+      "objectType": "Content"
     }
   }
 }

@@ -12,7 +12,6 @@
   "responseCode" : "OK",
   "result" : {
     "content" : {
-      "appId": "@ignore@",
       "ownershipType" : [ "createdBy" ],
       "code" : "kp.ft.resource.pdf",
       "channel" : "channel-01",
@@ -45,7 +44,9 @@
       "size" :"@isNumber()@",
       "compatibilityLevel" :"@isNumber()@",
       "name" : "KP Integration Test Content",
-      "status" : "Draft"
+      "status" : "Draft",
+      "objectType": "Content",
+      "cloudStorageKey": "@ignore@"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "id": "content.hierarchy.update",
+  "id": "api.content.hierarchy.update",
   "ver": "3.0",
   "ts": "@ignore@",
   "params": {
@@ -10,5 +10,7 @@
     "errmsg": "Content not found with identifier: 2cb4d698-dc19-4f0c-9990-96f49daff753"
   },
   "responseCode": "RESOURCE_NOT_FOUND",
-  "result": {}
+  "result": {
+    "messages":null
+  }
 }

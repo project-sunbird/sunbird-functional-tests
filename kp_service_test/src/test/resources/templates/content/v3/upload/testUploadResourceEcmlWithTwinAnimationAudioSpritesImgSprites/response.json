@@ -1,5 +1,5 @@
 {
-  "id": "ekstep.learning.content.upload",
+  "id": "api.content.upload",
   "ver": "3.0",
   "ts": "@ignore@",
   "params": {
@@ -13,6 +13,8 @@
   "result": {
     "content_url": "@ignore@",
     "node_id": "${contentIdVal}",
-    "versionKey": "@ignore@"
+    "versionKey": "@ignore@",
+    "identifier": "${contentIdVal}",
+    "artifactUrl": "@ignore@"
   }
 }

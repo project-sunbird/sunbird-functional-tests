@@ -39,12 +39,18 @@
         "All"
       ],
       "consumerId": "@ignore@",
-      "contentCredits": "[{\"id\":\"12345\",\"name\":\"user1\",\"type\":\"user\"}]",
+      "contentCredits": [
+        {
+          "id": "12345",
+          "name": "user1",
+          "type": "user"
+        }
+      ],
       "mediaType": "content",
       "osId": "org.ekstep.quiz.app",
       "version": "@isNumber()@",
       "versionKey": "@ignore@",
-      "languageCodes": [
+      "languageCode": [
         "en"
       ],
       "idealScreenDensity": "hdpi",
@@ -52,7 +58,8 @@
       "framework": "NCF",
       "compatibilityLevel": "@isNumber()@",
       "name": "KP-Updated-pdf",
-      "status": "Draft"
+      "status": "Draft",
+      "objectType": "Content"
     }
   }
 }

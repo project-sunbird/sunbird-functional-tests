@@ -47,7 +47,7 @@
       "osId": "org.ekstep.quiz.app",
       "version": "@isNumber()@",
       "versionKey": "@ignore@",
-      "languageCodes": [
+      "languageCode": [
         "en"
       ],
       "idealScreenDensity": "hdpi",
@@ -55,7 +55,8 @@
       "framework": "NCF",
       "compatibilityLevel": "@isNumber()@",
       "name": "KP-Updated-pdf",
-      "status": "Draft"
+      "status": "Draft",
+      "objectType": "Content"
     }
   }
 }

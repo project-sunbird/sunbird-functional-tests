@@ -68,7 +68,7 @@
       "createdOn": "@matchesDatePattern('yyyy-MM-dd')@",
       "contentDisposition": "inline",
       "lastUpdatedOn": "@matchesDatePattern('yyyy-MM-dd')@",
-      "SYS_INTERNAL_LAST_UPDATED_ON": "@ignore@",
+      "sYS_INTERNAL_LAST_UPDATED_ON": "@ignore@",
       "dialcodeRequired": "No",
       "lastStatusChangedOn": "@matchesDatePattern('yyyy-MM-dd')@",
       "flagReasons": [
@@ -82,7 +82,10 @@
       "idealScreenDensity": "hdpi",
       "s3Key": "@ignore@",
       "framework": "NCF",
-      "compatibilityLevel": "@isNumber()@"
+      "compatibilityLevel": "@isNumber()@",
+      "cloudStorageKey": "@ignore@",
+      "objectType": "Content",
+      "prevStatus": "Processing"
     }
   }
 }

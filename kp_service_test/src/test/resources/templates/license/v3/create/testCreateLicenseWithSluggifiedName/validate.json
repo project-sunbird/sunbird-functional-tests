@@ -1,9 +1,9 @@
 {
-  "id" : "org.sunbird.content.read",
+  "id" : "api.license.read",
   "ver" : "3.0",
    "ts": "@matchesDatePattern('yyyy-MM-dd')@",
   "params" : {
-    "resmsgid" : null,
+    "resmsgid" : "@ignore@",
     "msgid" : null,
     "err" : null,
     "status" : "successful",
@@ -11,12 +11,15 @@
   },
   "responseCode" : "OK",
   "result" : {
-    "content" : {
+    "license" : {
       "identifier" : "${identifier}",
       "lastStatusChangedOn" : "@matchesDatePattern('yyyy-MM-dd')@",
       "consumerId":"@ignore@",
-      "appId":"app-01",
-      "name" : "@+${identifier}",
+      "appId":"@ignore@",
+      "name" : "${identifier}",
+      "languageCode": [
+      ],
+      "objectType": "License",
       "channel":"channel-01",
       "lastUpdatedOn" : "@matchesDatePattern('yyyy-MM-dd')@",
       "createdOn" : "@matchesDatePattern('yyyy-MM-dd')@",

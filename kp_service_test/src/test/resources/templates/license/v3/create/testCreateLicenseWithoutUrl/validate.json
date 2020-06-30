@@ -1,10 +1,10 @@
 {
   "id" : "api.license.read",
   "ver" : "3.0",
-  "ts": "@matchesDatePattern('yyyy-MM-dd')@",
+   "ts": "@matchesDatePattern('yyyy-MM-dd')@",
   "params" : {
     "resmsgid" : "@ignore@",
-"msgid" : null,
+    "msgid" : null,
     "err" : null,
     "status" : "successful",
     "errmsg" : null
@@ -14,18 +14,17 @@
     "license" : {
       "identifier" : "${identifier}",
       "lastStatusChangedOn" : "@matchesDatePattern('yyyy-MM-dd')@",
-      "consumerId" : "@ignore@",
-      "channel" : "channel-01",
-      "description" : "some description",
-      "createdOn" : "@matchesDatePattern('yyyy-MM-dd')@",
-      "url" : "www.kp-test.in",
-      "versionKey" : "@isNumber()@",
-      "appId" : "@ignore@",
-      "name" : "KP_FT_${idVal}",
+      "consumerId":"@ignore@",
+      "appId":"@ignore@",
+      "name" : "${identifier}",
+      "channel":"channel-01",
       "lastUpdatedOn" : "@matchesDatePattern('yyyy-MM-dd')@",
+      "createdOn" : "@matchesDatePattern('yyyy-MM-dd')@",
+      "languageCode": [
+      ],
+      "objectType": "License",
       "status" : "Live",
-      "objectType":"License",
-      "languageCode":[]
+      "versionKey" : "@isNumber()@"
     }
   }
 }

@@ -7,7 +7,7 @@
         "msgid": null,
         "err": "ERR_INVALID_NODE",
         "status": "failed",
-        "errmsg": "Node Not Found With Identifier [LO5322]"
+        "errmsg": "Node Not Found With Identifier List(LO5322)"
     },
     "responseCode": "RESOURCE_NOT_FOUND",
     "result": {

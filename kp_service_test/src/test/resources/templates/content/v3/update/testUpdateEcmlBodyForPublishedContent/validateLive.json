@@ -33,12 +33,11 @@
       "mimeType": "application/vnd.ekstep.ecml-archive",
       "idealScreenSize": "normal",
       "createdOn": "@matchesDatePattern('yyyy-MM-dd')@",
-      "appId": "@ignore@",
       "contentDisposition": "inline",
       "artifactUrl": "@ignore@",
       "contentEncoding": "gzip",
       "lastUpdatedOn": "@matchesDatePattern('yyyy-MM-dd')@",
-      "SYS_INTERNAL_LAST_UPDATED_ON": "@ignore@",
+      "sYS_INTERNAL_LAST_UPDATED_ON": "@ignore@",
       "contentType": "Resource",
       "dialcodeRequired": "No",
       "identifier": "@ignore@",
@@ -67,7 +66,10 @@
       "compatibilityLevel": "@isNumber()@",
       "name": "KP Integration Test Content",
       "status": "Live",
-      "languageCode": ["en"]
+      "languageCode": ["en"],
+      "objectType": "Content",
+      "cloudStorageKey": "@ignore@",
+      "prevStatus": "Processing"
     }
   }
 }

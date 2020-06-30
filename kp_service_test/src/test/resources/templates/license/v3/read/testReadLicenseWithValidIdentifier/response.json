@@ -3,7 +3,7 @@
   "ver" : "3.0",
    "ts": "@matchesDatePattern('yyyy-MM-dd')@",
   "params" : {
-    "resmsgid" : null,
+    "resmsgid" :"@ignore@",
     "msgid" : null,
     "err" : null,
     "status" : "successful",
@@ -20,7 +20,9 @@
       "createdOn" : "@matchesDatePattern('yyyy-MM-dd')@",
       "url" : "www.kp-test.in",
       "status" : "Live",
-      "versionKey" : "@isNumber()@"
+      "versionKey" : "@isNumber()@",
+      "languageCode": [],
+      "objectType": "License"
     }
   }
 }

@@ -41,7 +41,8 @@
       "framework" : "NCF",
       "compatibilityLevel" :"@isNumber()@",
       "name" : "KP-Updated-Name",
-      "status" : "Draft"
+      "status" : "Draft",
+      "objectType": "Content"
     }
   }
 }

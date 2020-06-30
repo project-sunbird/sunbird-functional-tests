@@ -13,6 +13,7 @@ import org.sunbird.kp.test.common.Constant;
 import org.sunbird.kp.test.common.TestActionUtil;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -21,6 +22,7 @@ public class LicenseUtil {
     private static final String API_KEY = AppConfig.config.getString("kp_api_key");
     private static final Boolean IS_USER_AUTH_REQUIRED = AppConfig.config.getBoolean("user_auth_enable");
     private static ObjectMapper objectMapper = new ObjectMapper();
+    private static List<String> CS_API_LIST = AppConfig.config.getStringList("cs_api_list");
 
     private static final String LICENSE_PAYLOAD_DIR = "templates/payload/license";
 
@@ -42,7 +44,7 @@ public class LicenseUtil {
                     builder ->
                             TestActionUtil.processPostRequest(
                                     builder,
-                                    Constant.KP_ENDPOINT,
+                                    getEndPoint(APIUrl.CREATE_LICENSE),
                                     LICENSE_PAYLOAD_DIR,
                                     updatedTestName,
                                     APIUrl.CREATE_LICENSE,
@@ -55,7 +57,7 @@ public class LicenseUtil {
                         TestActionUtil.getExtractFromResponseTestAction(
                                 runner.testContext,
                                 builder,
-                                Constant.KP_ENDPOINT,
+                                getEndPoint(APIUrl.CREATE_LICENSE),
                                 HttpStatus.OK,
                                 "$.result",
                                 "result"));
@@ -78,7 +80,7 @@ public class LicenseUtil {
                     builder ->
                             TestActionUtil.processPatchRequest(
                                     builder,
-                                    Constant.KP_ENDPOINT,
+                                    getEndPoint(APIUrl.UPDATE_LICENSE),
                                     LICENSE_PAYLOAD_DIR,
                                     updatedTestName,
                                     url,
@@ -92,7 +94,7 @@ public class LicenseUtil {
                         TestActionUtil.getExtractFromResponseTestAction(
                                 testContext,
                                 builder,
-                                Constant.KP_ENDPOINT,
+                                getEndPoint(APIUrl.UPDATE_LICENSE),
                                 HttpStatus.OK,
                                 "$.result",
                                 "result"));
@@ -113,7 +115,7 @@ public class LicenseUtil {
                     builder ->
                             TestActionUtil.processGetRequest(
                                     builder,
-                                    Constant.KP_ENDPOINT,
+                                    getEndPoint(APIUrl.READ_LICENSE),
                                     READ_LICENSE_EXPECT_200,
                                     reqUrl,
                                     getHeaders(null)
@@ -123,7 +125,7 @@ public class LicenseUtil {
                             TestActionUtil.getExtractFromResponseTestAction(
                                     runner.testContext,
                                     builder,
-                                    Constant.KP_ENDPOINT,
+                                    getEndPoint(APIUrl.READ_LICENSE),
                                     HttpStatus.OK,
                                     "$.result",
                                     "result"));
@@ -139,7 +141,7 @@ public class LicenseUtil {
                 builder ->
                         TestActionUtil.processDeleteRequest(
                                 builder,
-                                Constant.KP_ENDPOINT,
+                                getEndPoint(APIUrl.RETIRE_LICENSE),
                                 LICENSE_PAYLOAD_DIR,
                                 RETIRE_LICENSE_EXPECT_200,
                                 url,
@@ -151,7 +153,7 @@ public class LicenseUtil {
         runner.http(
                 builder ->
                         TestActionUtil.getResponse(builder,
-                                Constant.KP_ENDPOINT,
+                                getEndPoint(APIUrl.RETIRE_LICENSE),
                                 LICENSE_PAYLOAD_DIR,
                                 RETIRE_LICENSE_EXPECT_200,
                                 HttpStatus.OK,
@@ -190,5 +192,9 @@ public class LicenseUtil {
             System.out.println("Exception Occurred While parsing context variable : " + e);
         }
         return result;
+    }
+
+    private static String getEndPoint(String reqUrl) {
+        return CS_API_LIST.contains(reqUrl) ? Constant.KP_CONTENT_SERVICE_ENDPOINT : Constant.KP_ENDPOINT;
     }
 }

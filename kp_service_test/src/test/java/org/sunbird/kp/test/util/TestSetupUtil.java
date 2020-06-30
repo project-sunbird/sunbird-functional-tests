@@ -83,7 +83,8 @@ public class TestSetupUtil {
                     .replaceAll("kp_ft_license_\\d+", "\\${identifier}")
                     .replaceAll("\\s\\d+\\.\\d+","\"@isNumber()@\"")
                     .replaceAll("\\s\\d", "\"@isNumber()@\"")
-                    .replaceAll("\"versionKey\"\\W?:\\W\"\\d+\"","\"versionKey\" : \"@isNumber()@\"");
+                    .replaceAll("\"versionKey\"\\W?:\\W\"\\d+\"","\"versionKey\" : \"@isNumber()@\"")
+                    .replaceAll("\"cloudStorageKey\"\\W?:\\W\"[a-zA-Z://._0-9-]+\"","\"cloudStorageKey\" : \"@ignore@\"");
             return updatedString;
         } catch (Exception e) {
             e.printStackTrace();

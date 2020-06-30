@@ -11,6 +11,7 @@
   },
   "responseCode": "OK",
   "result": {
+    "identifier": "@startsWith('kp_ft_')@",
     "node_id": "@startsWith('kp_ft_')@"
   }
 }

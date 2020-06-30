@@ -1,14 +1,28 @@
 {
-  "id" : "api.license.read",
-  "ver" : "3.0",
-   "ts": "@matchesDatePattern('yyyy-MM-dd')@",
-  "params" : {
-    "resmsgid" : null,
-    "msgid" : null,
-    "err" : "RESOURCE_NOT_FOUND",
-    "status" : "failed",
-    "errmsg" : "License not found with identifier: ${identifier}"
-  },
-  "responseCode" : "RESOURCE_NOT_FOUND",
-  "result" : { }
+    "id": "api.license.read",
+    "ver": "3.0",
+    "ts": "@matchesDatePattern('yyyy-MM-dd')@",
+    "params": {
+        "resmsgid": "@ignore@",
+        "msgid": null,
+        "err": null,
+        "status": "successful",
+        "errmsg": null
+    },
+    "responseCode": "OK",
+    "result": {
+        "license": {
+                "identifier":"${identifier}",
+                "lastStatusChangedOn":"@matchesDatePattern('yyyy-MM-dd')@",
+                "consumerId":"@ignore@",
+                "name":"@startsWith('KP_FT_')@",
+                "lastUpdatedOn":"@matchesDatePattern('yyyy-MM-dd')@",
+                "languageCode":[],
+                "createdOn":"@matchesDatePattern('yyyy-MM-dd')@",
+                "url":"www.kp-test.in",
+                "objectType":"License",
+                "versionKey":"@isNumber()@",
+                "status":"Retired"
+        }
+    }
 }

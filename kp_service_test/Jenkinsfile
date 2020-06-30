@@ -1,3 +1,4 @@
+@Library('deploy-conf')_
 node() {
     try {
         String ANSI_GREEN = "\u001B[32m"
@@ -48,6 +49,7 @@ node() {
 
     finally {
              archiveArtifacts 'kp_service_test/target/target/citrus-reports/citrus-test-results.html'
+             email_notify("${kp_team_email_group}")
     	    }
 
 }

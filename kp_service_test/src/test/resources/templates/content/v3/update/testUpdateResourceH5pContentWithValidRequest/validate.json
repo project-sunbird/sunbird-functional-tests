@@ -50,7 +50,8 @@
       "framework": "NCF",
       "compatibilityLevel": "@isNumber()@",
       "name": "KP-Updated-H5p",
-      "status": "Draft"
+      "status": "Draft",
+      "objectType": "Content"
     }
   }
 }

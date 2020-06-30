@@ -24,7 +24,6 @@
       "mimeType": "application/vnd.ekstep.ecml-archive",
       "idealScreenSize": "normal",
       "createdOn": "@matchesDatePattern('yyyy-MM-dd')@",
-      "appId": "@ignore@",
       "contentDisposition": "inline",
       "artifactUrl": "@ignore@",
       "contentEncoding": "gzip",
@@ -52,7 +51,9 @@
       "framework": "NCF",
       "compatibilityLevel": "@isNumber()@",
       "name": "KP Integration Test Content",
-      "status": "Draft"
+      "status": "Draft",
+      "objectType": "Content",
+      "cloudStorageKey": "@ignore@"
     }
   }
 }

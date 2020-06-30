@@ -3,7 +3,7 @@
     "ver": "3.0",
     "ts": "@matchesDatePattern('yyyy-MM-dd')@",
     "params": {
-        "resmsgid": "@ignore@"
+        "resmsgid": "@ignore@",
         "msgid": null,
         "err": null,
         "status": "successful",
@@ -11,6 +11,7 @@
     },
     "responseCode": "OK",
     "result": {
-        "node_id": "${identifier}"
+        "node_id": "${identifier}",
+        "identifier": "${identifier}"
     }
 }

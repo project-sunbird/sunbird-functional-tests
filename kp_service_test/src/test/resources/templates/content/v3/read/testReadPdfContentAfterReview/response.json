@@ -46,7 +46,10 @@
       "size" :"@isNumber()@",
       "compatibilityLevel" :"@isNumber()@",
       "name" : "KP Integration Test Content",
-      "status" : "Review"
+      "status" : "Review",
+      "objectType": "Content",
+      "cloudStorageKey": "@ignore@",
+      "prevStatus": "Draft"
     }
   }
 }
