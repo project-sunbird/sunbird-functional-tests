@@ -1,0 +1,32 @@
+{
+  "id" : "api.license.read",
+  "ver" : "3.0",
+   "ts": "@matchesDatePattern('yyyy-MM-dd')@",
+  "params" : {
+    "resmsgid" : "@ignore@",
+    "msgid" : null,
+    "err" : null,
+    "status" : "successful",
+    "errmsg" : null
+  },
+  "responseCode" : "OK",
+  "result" : {
+    "license" : {
+      "identifier" : "${identifier}",
+      "lastStatusChangedOn" : "@matchesDatePattern('yyyy-MM-dd')@",
+      "consumerId":"@ignore@",
+      "appId":"@ignore@",
+      "name" : "${identifier}",
+      "languageCode": [
+      ],
+      "objectType": "License",
+      "channel":"channel-01",
+      "lastUpdatedOn" : "@matchesDatePattern('yyyy-MM-dd')@",
+      "newprop" : "prop",
+      "createdOn" : "@matchesDatePattern('yyyy-MM-dd')@",
+      "url" : "www.url.com",
+      "status" : "Live",
+      "versionKey" : "@isNumber()@"
+    }
+  }
+}

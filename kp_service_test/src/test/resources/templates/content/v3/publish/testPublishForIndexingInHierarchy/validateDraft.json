@@ -32,7 +32,6 @@
       },
       "mimeType": "application/vnd.ekstep.content-collection",
       "leafNodes": "@ignore@",
-      "collections": [],
       "children": [
         {
           "parent": "${collectionIdVal}",

@@ -13,7 +13,8 @@
   "result": {
     "content": {
       "identifier":"${contentIdVal}",
-      "status": "Draft"
+      "status": "Draft",
+      "languageCode":["en"]
     }
   }
 }

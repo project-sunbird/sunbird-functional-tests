@@ -54,7 +54,7 @@ public class CompositeSearchTest extends SearchCitrusTestRunner {
 		ContentUtil.publishContent(this, null, "public", consumableTextbookId, null);
 		delay(this, 60000);
 		//search content and validate
-		String searchPayload = SearchPayload.SEARCH_CONTENT_WITH_BOARD.replace("boardVal", board);
+		String searchPayload = SearchPayload.SEARCH_CONTENT_WITH_BOARD.replace("boardVal", board).replace("consumableTextbookId", consumableTextbookId);
 		System.out.println("searchPayload : " + searchPayload);
 		Map<String, Object> searchResult = CompositeSearchUtil.searchContent(this, searchPayload, testName, null);
 		System.out.println("count : "+searchResult.get("count"));

@@ -1,5 +1,5 @@
 {
-  "id": "ekstep.learning.content.upload",
+  "id": "api.content.upload",
   "ver": "3.0",
   "ts": "@ignore@",
   "params": {
@@ -10,5 +10,7 @@
     "errmsg": "Error! Content exceeds the file size limit. | [Content Package file size is too large]"
   },
   "responseCode": "CLIENT_ERROR",
-  "result": {}
+  "result": {
+    "messages": null
+  }
 }

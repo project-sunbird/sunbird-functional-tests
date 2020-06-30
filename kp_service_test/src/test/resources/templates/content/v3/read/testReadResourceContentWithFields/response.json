@@ -14,7 +14,8 @@
     "content": {
       "name": "KP Integration Test Content",
       "status": "Live",
-      "identifier":"${contentIdVal}"
+      "identifier":"${contentIdVal}",
+      "languageCode":["en"]
     }
   }
 }

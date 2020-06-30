@@ -10,5 +10,7 @@
         "errmsg": "Unpublished Content KP_FT_1564131521758 cannot be flagged"
     },
     "responseCode": "CLIENT_ERROR",
-    "result": {}
+    "result": {
+        "messages":null
+    }
 }

@@ -38,7 +38,7 @@
       "contentEncoding": "identity",
       "lastUpdatedOn":  "@ignore@",
       "artifactUrl":  "@ignore@",
-      "SYS_INTERNAL_LAST_UPDATED_ON":  "@ignore@",
+      "sYS_INTERNAL_LAST_UPDATED_ON":  "@ignore@",
       "contentType": "Resource",
       "dialcodeRequired": "No",
       "identifier":  "@ignore@",
@@ -70,7 +70,10 @@
       "lastPublishedOn":  "@ignore@",
       "compatibilityLevel": "@isNumber()@",
       "name": "KP-Updated-pdf",
-      "status": "Draft"
+      "status": "Draft",
+      "prevStatus": "Live",
+      "objectType": "ContentImage",
+      "cloudStorageKey": "@ignore@"
     }
   }
 }

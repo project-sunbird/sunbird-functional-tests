@@ -41,7 +41,8 @@
       "framework" : "NCF",
       "compatibilityLevel" :"@isNumber()@",
       "name" : "KP Integration Test Asset",
-      "status" : "Draft"
+      "status" : "Draft",
+      "objectType": "Content"
     }
   }
 }

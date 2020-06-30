@@ -37,6 +37,13 @@ public class APIUrl {
     public static final String GENERATE_DIALCODE = "/dialcode/v3/generate";
     public static final String SEARCH_DIALCODE = "/dialcode/v3/search";
 
+    // License API's
+    public static final String CREATE_LICENSE = "/license/v3/create";
+    public static final String READ_LICENSE = "/license/v3/read/";
+    public static final String UPDATE_LICENSE = "/license/v3/update/";
+    public static final String RETIRE_LICENSE = "/license/v3/retire/";
+
+
     //System Update API
     public static final String SYSTEM_UPDATE = "/system/v3/content/update/";
 

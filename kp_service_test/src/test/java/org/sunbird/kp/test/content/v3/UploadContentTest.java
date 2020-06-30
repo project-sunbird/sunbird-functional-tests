@@ -92,6 +92,7 @@ public class UploadContentTest extends BaseCitrusTestRunner {
             String testName, String requestUrl, HttpStatus httpStatusCode, String userType, Map<String, Object> valParams, String mimeType, String extension) {
         getAuthToken(this, userType);
         String contentId = (String) ContentUtil.createResourceContent(this, null, mimeType, null).get("content_id");
+        this.variable("contentIdVal",contentId);
         System.out.println("created contentId = " + contentId);
         setContext(this, contentId, mimeType, extension, null, FILE_URL);
         performMultipartTest(
@@ -291,7 +292,7 @@ public class UploadContentTest extends BaseCitrusTestRunner {
     public Object[][] uploadResourceContentWithFileInvalidId() {
         return new Object[][]{
                 //specific negetive test scenarios
-                new Object[]{ContentV3Scenario.TEST_UPLOAD_RESOURCE_PDF_WITH_FILE_INVALID_IDENTIFIER, APIUrl.UPLOAD_CONTENT, HttpStatus.BAD_REQUEST, Constant.CREATOR, null, "application/pdf" , null, "sample.pdf"
+                new Object[]{ContentV3Scenario.TEST_UPLOAD_RESOURCE_PDF_WITH_FILE_INVALID_IDENTIFIER, APIUrl.UPLOAD_CONTENT, HttpStatus.NOT_FOUND, Constant.CREATOR, null, "application/pdf" , null, "sample.pdf"
                 }
         };
     }

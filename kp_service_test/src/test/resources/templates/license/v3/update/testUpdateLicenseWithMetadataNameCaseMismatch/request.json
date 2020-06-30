@@ -1,0 +1,8 @@
+{
+  "request": {
+    "license": {
+      "Name": "updated name",
+      "description" : "some description"
+    }
+  }
+}

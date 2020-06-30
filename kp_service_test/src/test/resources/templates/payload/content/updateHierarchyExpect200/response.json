@@ -1,5 +1,5 @@
 {
-    "id": "content.hierarchy.update",
+    "id": "api.content.hierarchy.update",
     "ver": "3.0",
     "ts": "@ignore@",
     "params": {

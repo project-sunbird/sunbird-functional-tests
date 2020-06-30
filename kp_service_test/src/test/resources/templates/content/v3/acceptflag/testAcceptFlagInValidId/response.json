@@ -1,15 +1,16 @@
 {
-  "id": "ekstep.content.accept.flag",
+  "id": "api.content.flag.accept",
   "ver": "3.0",
   "ts": "@ignore@",
   "params": {
     "resmsgid": "@ignore@",
     "msgid": "@ignore@",
-    "err": "ERR_TAXONOMY_INVALID_CONTENT",
+    "err": "NOT_FOUND",
     "status": "failed",
     "errmsg": "@ignore@"
   },
-  "responseCode": "CLIENT_ERROR",
-    "result": {}
+  "responseCode": "RESOURCE_NOT_FOUND",
+    "result": {
+    "messages":null
+    }
 }
-

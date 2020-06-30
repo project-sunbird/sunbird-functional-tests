@@ -12,7 +12,6 @@
   "responseCode" : "OK",
   "result" : {
     "content" : {
-      "appId": "@ignore@",
       "ownershipType" : [ "createdBy" ],
       "previewUrl" : "@ignore@",
       "downloadUrl" : "@ignore@",
@@ -55,7 +54,7 @@
       "createdOn" : "@matchesDatePattern('yyyy-MM-dd')@",
       "contentDisposition" : "inline",
       "lastUpdatedOn" : "@matchesDatePattern('yyyy-MM-dd')@",
-      "SYS_INTERNAL_LAST_UPDATED_ON" : "@matchesDatePattern('yyyy-MM-dd')@",
+      "sYS_INTERNAL_LAST_UPDATED_ON" : "@matchesDatePattern('yyyy-MM-dd')@",
       "dialcodeRequired" : "No",
       "lastStatusChangedOn" : "@matchesDatePattern('yyyy-MM-dd')@",
       "flagReasons" : [ "Copyright Violation" ],
@@ -65,7 +64,10 @@
       "idealScreenDensity" : "hdpi",
       "s3Key" : "@ignore@",
       "framework" : "NCF",
-      "compatibilityLevel" :"@isNumber()@"
+      "compatibilityLevel" :"@isNumber()@",
+      "objectType": "Content",
+      "cloudStorageKey": "@ignore@",
+      "prevStatus": "Processing"
     }
   }
 }

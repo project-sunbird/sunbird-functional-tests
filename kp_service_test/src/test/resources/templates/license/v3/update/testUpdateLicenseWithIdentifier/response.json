@@ -1,0 +1,16 @@
+{
+    "id": "api.license.update",
+    "ver": "3.0",
+    "ts": "@matchesDatePattern('yyyy-MM-dd')@",
+    "params": {
+        "resmsgid": "@ignore@",
+        "msgid": null,
+        "err": "ERROR_RESTRICTED_PROP",
+        "status": "failed",
+        "errmsg": "Properties in list [status, identifier, name] are not allowed in request"
+    },
+    "responseCode": "CLIENT_ERROR",
+    "result": {
+        "messages": null
+    }
+}

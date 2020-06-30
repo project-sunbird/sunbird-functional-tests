@@ -56,7 +56,8 @@
             "framework": "NCF",
             "compatibilityLevel": "@isNumber()@",
             "name": "Course",
-            "status": "Draft"
+            "status": "Draft",
+            "objectType": "Content"
         }
     }
 }

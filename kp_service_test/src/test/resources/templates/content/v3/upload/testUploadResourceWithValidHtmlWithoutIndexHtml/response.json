@@ -1,14 +1,16 @@
 {
-  "id": "ekstep.learning.content.upload",
+  "id": "api.content.upload",
   "ver": "3.0",
   "ts": "@ignore@",
   "params": {
     "resmsgid": "@ignore@",
     "msgid": null,
-    "err": "ERR_CONTENT_UPLOAD_FILE",
+    "err": "ERR_INVALID_FILE",
     "status": "failed",
-    "errmsg": "Zip file doesn't have required files."
+    "errmsg": "Please Provide Valid File!"
   },
   "responseCode": "CLIENT_ERROR",
-  "result": {}
+  "result": {
+    "messages": null
+  }
 }

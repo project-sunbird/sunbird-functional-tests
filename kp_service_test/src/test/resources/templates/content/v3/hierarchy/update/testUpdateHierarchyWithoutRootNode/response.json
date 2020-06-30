@@ -1,5 +1,5 @@
 {
-  "id": "content.hierarchy.update",
+  "id": "api.content.hierarchy.update",
   "ver": "3.0",
   "ts": "@ignore@",
   "params": {
@@ -10,5 +10,5 @@
     "errmsg": "Please Provide Valid Root Node Identifier"
   },
   "responseCode": "CLIENT_ERROR",
-  "result": {}
+  "result": {"messages":null}
 }

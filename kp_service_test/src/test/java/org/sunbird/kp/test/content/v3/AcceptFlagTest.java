@@ -25,6 +25,7 @@ public class AcceptFlagTest extends BaseCitrusTestRunner {
 
     private String doFlagAccept(String testName, String mimeType, HttpStatus httpStatusCode, Map<String, Object> valParams, String workFlowType){
         String contentId = (String)ContentUtil.prepareResourceContent(workFlowType,this, null, mimeType, null).get("content_id");
+        this.variable("contentIdVal",contentId);
         performPostTest(
                 this,
                 TEMPLATE_DIR,
@@ -72,7 +73,7 @@ public class AcceptFlagTest extends BaseCitrusTestRunner {
                 break;
             }
             case ContentV3Scenario.TEST_ACCEPT_FLAG_INVALID_ID : {
-                performPostTest(this, TEMPLATE_DIR, testName, APIUrl.ACCEPT_FLAG_CONTENT + "invalidId", null, REQUEST_JSON, MediaType.APPLICATION_JSON, httpStatusCode, valParams, RESPONSE_JSON);
+                performPostTest(this, TEMPLATE_DIR, testName, APIUrl.ACCEPT_FLAG_CONTENT + "KP_FT_9909090090090", null, REQUEST_JSON, MediaType.APPLICATION_JSON, httpStatusCode, valParams, RESPONSE_JSON);
                 break;
             }
 
@@ -88,7 +89,7 @@ public class AcceptFlagTest extends BaseCitrusTestRunner {
                 // accept flag for invalid scenarios
                 new Object[]{ContentV3Scenario.TEST_ACCEPT_FLAG_VALID_ID_AND_INVALID_STATUS, Constant.CREATOR, "application/pdf", HttpStatus.BAD_REQUEST, null},
                 new Object[]{ContentV3Scenario.TEST_REACCEPT_FLAG_VALID_ID_AND_VALID_STATUS, Constant.CREATOR, "application/pdf", HttpStatus.BAD_REQUEST, null},
-                new Object[]{ContentV3Scenario.TEST_ACCEPT_FLAG_INVALID_ID, Constant.CREATOR, "application/pdf", HttpStatus.BAD_REQUEST, null},
+                new Object[]{ContentV3Scenario.TEST_ACCEPT_FLAG_INVALID_ID, Constant.CREATOR, "application/pdf", HttpStatus.NOT_FOUND, null},
 
         };
     }

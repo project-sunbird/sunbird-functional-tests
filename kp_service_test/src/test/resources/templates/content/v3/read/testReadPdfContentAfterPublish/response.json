@@ -12,7 +12,6 @@
   "responseCode" : "OK",
   "result" : {
     "content" : {
-      "appId": "@ignore@",
       "ownershipType" : [ "createdBy" ],
       "previewUrl" : "@ignore@",
       "code" : "kp.ft.resource.pdf",
@@ -34,7 +33,7 @@
       "artifactUrl" : "@ignore@",
       "contentEncoding" : "identity",
       "lastUpdatedOn" : "@matchesDatePattern('yyyy-MM-dd')@",
-      "SYS_INTERNAL_LAST_UPDATED_ON" : "@matchesDatePattern('yyyy-MM-dd')@",
+      "sYS_INTERNAL_LAST_UPDATED_ON" : "@matchesDatePattern('yyyy-MM-dd')@",
       "contentType" : "Resource",
       "dialcodeRequired" : "No",
       "identifier" : "${contentIdVal}",
@@ -62,7 +61,10 @@
       "status" : "Live",
       "languageCode": [
         "en"
-      ]
+      ],
+      "objectType": "Content",
+      "cloudStorageKey": "@ignore@",
+      "prevStatus": "Processing"
     }
   }
 }

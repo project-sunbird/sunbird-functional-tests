@@ -106,6 +106,38 @@ public class UpdateContentTest extends BaseCitrusTestRunner {
                 null, HttpStatus.OK, null, "validateFields.json");
     }
 
+    @Test
+    @CitrusTest
+    public void testUpdateContentHavingMetadataResources() throws Exception {
+        String CREATE_RESOURCE_CONTENT_WITH_RESOURCES = "{\n" + "\"request\": {\n" + "\"content\": {\n" + "\"identifier\": \"KP_FT_"+System.currentTimeMillis()+"\",\n" + "\"name\": \"KP Integration Test Content\",\n" + "\"code\": \"kp.ft.resource.pdf\",\n" + "\"mimeType\": \"application/pdf\",\n" + "\"contentType\": \"Resource\",\n" + "\"resources\": [\n" + "\"Speaker\",\n" + "\"Microphone\"\n" + "]\n" + "}\n" + "}\n" +"}";
+        getAuthToken(this, null);
+        Map<String, Object> map = ContentUtil.createResourceContent(this, CREATE_RESOURCE_CONTENT_WITH_RESOURCES, null, null);
+        String contentId = (String) map.get("content_id");
+        String versionKey = (String) map.get("versionKey");
+        this.variable("versionKeyVal", versionKey);
+        this.variable("contentIdVal", contentId);
+        performPatchTest(this, TEMPLATE_DIR, ContentV3Scenario.TEST_UPDATE_CONTENT_WITH_RESOURCES, APIUrl.UPDATE_CONTENT + contentId, null,
+                REQUEST_JSON, MediaType.APPLICATION_JSON, HttpStatus.OK, null, RESPONSE_JSON);
+        performGetTest(this, TEMPLATE_DIR, ContentV3Scenario.TEST_UPDATE_CONTENT_WITH_RESOURCES, APIUrl.READ_CONTENT + contentId,
+                null, HttpStatus.OK, null, VALIDATE_JSON);
+    }
+
+    @Test
+    @CitrusTest
+    public void testUpdateContentHavingMetadataContentCredits() throws Exception {
+        String CREATE_RESOURCE_CONTENT_WITH_CONTENTCREDITS = "{\n" + "\"request\": {\n" + "\"content\": {\n" + "\"identifier\": \"KP_FT_"+System.currentTimeMillis()+"\",\n" + "\"name\": \"KP Integration Test Content\",\n" + "\"code\": \"kp.ft.resource.pdf\",\n" + "\"mimeType\": \"application/pdf\",\n" + "\"contentType\": \"Resource\",\n" + "\"contentCredits\": [\n" + "{\n" + "\"id\": \"12345\",\n" + "\"name\": \"user1\",\n" + "\"type\": \"user\"\n" + "}\n" + "]\n" + "}\n" + "}\n" +"}";
+        getAuthToken(this, null);
+        Map<String, Object> map = ContentUtil.createResourceContent(this, CREATE_RESOURCE_CONTENT_WITH_CONTENTCREDITS, null, null);
+        String contentId = (String) map.get("content_id");
+        String versionKey = (String) map.get("versionKey");
+        this.variable("versionKeyVal", versionKey);
+        this.variable("contentIdVal", contentId);
+        performPatchTest(this, TEMPLATE_DIR, ContentV3Scenario.TEST_UPDATE_CONTENT_WITH_CONTENTCREDITS, APIUrl.UPDATE_CONTENT + contentId, null,
+                REQUEST_JSON, MediaType.APPLICATION_JSON, HttpStatus.OK, null, RESPONSE_JSON);
+        performGetTest(this, TEMPLATE_DIR, ContentV3Scenario.TEST_UPDATE_CONTENT_WITH_CONTENTCREDITS, APIUrl.READ_CONTENT + contentId,
+                null, HttpStatus.OK, null, VALIDATE_JSON);
+    }
+
     @DataProvider(name = "updateValidResourceContent")
     public Object[][] updateValidResourceContent() {
         return new Object[][]{

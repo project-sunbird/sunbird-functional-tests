@@ -32,7 +32,7 @@
       "os" : [ "All" ],
       "consumerId" : "@ignore@",
       "mediaType" : "content",
-      "osId" : "org.ekstep.quiz.app",
+      "osId" : "org.ekstep.launcher",
       "languageCode": ["en"],
       "version" :"@isNumber()@",
       "versionKey" : "@ignore@",
@@ -41,7 +41,8 @@
       "framework" : "NCF",
       "compatibilityLevel" :"@isNumber()@",
       "name" : "KP Integration Test Content",
-      "status" : "Draft"
+      "status" : "Draft",
+      "objectType": "Content"
     }
   }
 }

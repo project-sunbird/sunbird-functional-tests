@@ -1,5 +1,5 @@
 {
-  "id": "ekstep.learning.content.discard",
+  "id": "api.content.discard",
   "ver": "3.0",
   "ts": "@ignore@",
   "params": {
@@ -12,6 +12,7 @@
   "responseCode": "OK",
   "result": {
     "node_id" : "${contentIdVal}",
+    "identifier" : "${contentIdVal}",
     "message":"Draft version of the content with id : ${contentIdVal} is discarded"
   }
 }

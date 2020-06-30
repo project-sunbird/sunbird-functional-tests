@@ -12,7 +12,8 @@
   "responseCode": "OK",
   "result": {
     "content": {
-    "identifier": "${contentIdVal}"
+    "identifier": "${contentIdVal}",
+    "languageCode":["en"]
     }
   }
 }

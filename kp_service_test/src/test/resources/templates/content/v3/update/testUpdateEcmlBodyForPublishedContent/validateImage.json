@@ -37,7 +37,7 @@
       "contentDisposition": "inline",
       "contentEncoding": "gzip",
       "lastUpdatedOn": "@matchesDatePattern('yyyy-MM-dd')@",
-      "SYS_INTERNAL_LAST_UPDATED_ON": "@ignore@",
+      "sYS_INTERNAL_LAST_UPDATED_ON": "@ignore@",
       "contentType": "Resource",
       "dialcodeRequired": "No",
       "identifier": "@ignore@",
@@ -66,7 +66,10 @@
       "lastPublishedOn": "@matchesDatePattern('yyyy-MM-dd')@",
       "compatibilityLevel": "@isNumber()@",
       "name": "KP-Updated-ecml",
-      "status": "Draft"
+      "status": "Draft",
+      "objectType": "ContentImage",
+      "prevStatus": "Live",
+      "cloudStorageKey": "@ignore@"
     }
   }
 }

@@ -6,8 +6,9 @@ public class SearchPayload {
 			"    \"request\": {\n" +
 			"        \"filters\": {\n" +
 			"            \"objectType\": \"Content\",\n" +
-			"            \"board\": \"boardVal\",\n" +
-			"            \"status\": []\n" +
+			"            \"relatedBoards\": \"boardVal\",\n" +
+			"            \"status\": [],\n" +
+			"            \"identifier\": \"consumableTextbookId\"\n" +
 			"        }\n" +
 			"    }\n" +
 			"}";
