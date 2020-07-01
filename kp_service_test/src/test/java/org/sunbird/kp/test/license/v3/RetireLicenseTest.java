@@ -43,8 +43,6 @@ public class RetireLicenseTest extends BaseCitrusTestRunner {
         dirIdMap.put(testName, identifier);
         performDeleteTest(this, TEMPLATE_DIR, testName, APIUrl.RETIRE_LICENSE + "invalid123",
                 null, REQUEST_JSON, MediaType.APPLICATION_JSON, HttpStatus.NOT_FOUND, null, RESPONSE_JSON);
-        performGetTest(this, TEMPLATE_DIR, testName, APIUrl.READ_LICENSE + identifier, null,
-                HttpStatus.OK, null, VALIDATE_JSON);
     }
 
 
