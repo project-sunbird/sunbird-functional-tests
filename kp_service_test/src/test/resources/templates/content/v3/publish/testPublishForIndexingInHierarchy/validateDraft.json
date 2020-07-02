@@ -168,7 +168,12 @@
           "status" : "Live",
           "index" : "@isNumber()@",
           "depth" : "@isNumber()@",
-          "parent" : "@ignore@"
+          "parent" : "@ignore@",
+          "languageCode" : [
+            "en"
+          ],
+          "objectType" : "Content",
+          "sYS_INTERNAL_LAST_UPDATED_ON" : "@matchesDatePattern('yyyy-MM-dd')@"
         }, {
           "ownershipType" : [ "createdBy" ],
           "previewUrl" : "@ignore@",
@@ -221,7 +226,12 @@
           "status" : "Live",
           "index" : "@isNumber()@",
           "depth" : "@isNumber()@",
-          "parent" : "@ignore@"
+          "parent" : "@ignore@",
+          "languageCode" : [
+            "en"
+          ],
+          "objectType" : "Content",
+          "sYS_INTERNAL_LAST_UPDATED_ON" : "@matchesDatePattern('yyyy-MM-dd')@"
         }, {
           "ownershipType" : [ "createdBy" ],
           "previewUrl" : "@ignore@",
@@ -274,7 +284,12 @@
           "status" : "Live",
           "index" : "@isNumber()@",
           "depth" : "@isNumber()@",
-          "parent" : "@ignore@"
+          "parent" : "@ignore@",
+          "languageCode" : [
+            "en"
+          ],
+          "objectType" : "Content",
+          "sYS_INTERNAL_LAST_UPDATED_ON" : "@matchesDatePattern('yyyy-MM-dd')@"
         } ],
         "contentDisposition" : "inline",
         "lastUpdatedOn" : "@matchesDatePattern('yyyy-MM-dd')@",

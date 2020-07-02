@@ -34,6 +34,7 @@ public class PublishCollectionContentTest extends BaseCitrusTestRunner {
         Map<String, Object> collectionMap = CollectionUtil.prepareTestCollection("collectionUnitsInDraft", this,
                 new HashMap<String,String>() {{put("updateHierarchy", CollectionUtilPayload.UPDATE_HIERARCHY_WITH_1_UNIT_2SUB3RESOURCES);}}, "textBook", 0, 3, "application/pdf");
         String textbookId = (String) collectionMap.get("content_id");
+        this.variable("rootId", textbookId);
         ContentUtil.publishContent(this, null, "public", textbookId, null);
         delay(this, 10000);
         performGetTest(
