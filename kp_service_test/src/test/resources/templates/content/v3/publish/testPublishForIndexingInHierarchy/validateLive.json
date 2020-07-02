@@ -31,7 +31,7 @@
       "objectType" : "Content",
       "children" : [ {
         "ownershipType" : [ "createdBy" ],
-        "parent" : "${rootId}",
+        "parent" : "${collectionIdVal}",
         "code" : "b9a50833-eff6-4ef5-a2a4-2413f2d51f6c",
         "channel" : "channel-01",
         "description" : "Test_CourseUnit_desc_1",
@@ -309,7 +309,7 @@
       "totalCompressedSize" : "@isNumber()@",
       "mimeTypesCount" : "{\"application/pdf\":3,\"application/vnd.ekstep.content-collection\":3}",
       "contentType" : "TextBook",
-      "identifier" : "${rootId}",
+      "identifier" : "${collectionIdVal}",
       "audience" : [ "Learner" ],
       "toc_url" : "@ignore@",
       "visibility" : "Default",
