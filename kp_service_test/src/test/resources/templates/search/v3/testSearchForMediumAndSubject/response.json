@@ -15,8 +15,8 @@
         "content": [
             {
                 "identifier": "${contentIdVal}",
-                "subject": "English",
-                "medium": "Hindi",
+                "subject": ["English"],
+                "medium": ["Hindi"],
                 "objectType": "Content"
             }
         ]

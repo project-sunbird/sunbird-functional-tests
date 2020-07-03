@@ -24,8 +24,7 @@
       "mimeType": "application/vnd.ekstep.content-collection",
       "idealScreenSize": "normal",
       "createdOn": "@matchesDatePattern('yyyy-MM-dd')@",
-      "children": null,
-      "appId": "@ignore@",
+      "children": [],
       "contentDisposition": "inline",
       "contentEncoding": "gzip",
       "lastUpdatedOn": "@matchesDatePattern('yyyy-MM-dd')@",
@@ -51,7 +50,11 @@
       "depth": 0,
       "compatibilityLevel": "@isNumber()@",
       "name": "TextBook Updated",
-      "status": "Draft"
+      "status": "Draft",
+      "languageCode": [
+        "en"
+      ],
+      "objectType": "Content"
     }
   }
 }

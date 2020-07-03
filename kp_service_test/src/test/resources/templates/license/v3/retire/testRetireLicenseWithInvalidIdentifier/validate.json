@@ -2,12 +2,12 @@
   "id" : "api.license.read",
   "ver" : "3.0",
   "ts": "@matchesDatePattern('yyyy-MM-dd')@","params" : {
-    "resmsgid" : "@ignore@",
-"msgid" : null,
-    "err" : null,
-    "status" : "successful",
-    "errmsg" : null
-  },
+  "resmsgid" : "@ignore@",
+  "msgid" : null,
+  "err" : null,
+  "status" : "successful",
+  "errmsg" : null
+},
   "responseCode" : "OK",
   "result" : {
     "license" : {
@@ -19,7 +19,10 @@
       "createdOn" : "@matchesDatePattern('yyyy-MM-dd')@",
       "url" : "www.kp-test.in",
       "status" : "Live",
-      "versionKey" : "@isNumber()@"
+      "versionKey" : "@isNumber()@",
+      "languageCode": [
+      ],
+      "objectType": "License"
     }
   }
 }
