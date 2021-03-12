@@ -1,0 +1,79 @@
+{
+  "id": "api.content.read",
+  "ver": "3.0",
+  "ts": "@ignore@",
+  "params": {
+    "resmsgid":  "@ignore@",
+    "msgid": null,
+    "err": null,
+    "status": "successful",
+    "errmsg": null
+  },
+  "responseCode": "OK",
+  "result": {
+    "content": {
+      "ownershipType": [
+        "createdBy"
+      ],
+      "code": "kp.ft.resource.pdf",
+      "previewUrl":  "@ignore@",
+      "downloadUrl": "@ignore@",
+      "channel": "@ignore@",
+      "description": "KP-Updated description pdf",
+      "language": [
+        "English"
+      ],
+      "variants": {
+        "spine": {
+          "ecarUrl":  "@ignore@",
+          "size": "@isNumber()@"
+        }
+      },
+      "mimeType": "application/pdf",
+      "streamingUrl":  "@ignore@",
+      "idealScreenSize": "normal",
+      "createdOn":  "@ignore@",
+      "appId":  "@ignore@",
+      "contentDisposition": "inline",
+      "contentEncoding": "identity",
+      "lastUpdatedOn":  "@ignore@",
+      "artifactUrl":  "@ignore@",
+      "sYS_INTERNAL_LAST_UPDATED_ON":  "@ignore@",
+      "contentType": "Resource",
+      "dialcodeRequired": "No",
+      "identifier":  "@ignore@",
+      "audience": [
+        "Learner"
+      ],
+      "lastStatusChangedOn":  "@ignore@",
+      "visibility": "Default",
+      "os": [
+        "All"
+      ],
+      "consumerId":  "@ignore@",
+      "mediaType": "content",
+      "osId": "org.ekstep.quiz.app",
+      "lastPublishedBy": "KP_FT_PUBLISHER",
+      "languageCode": ["en"],
+      "version": "@isNumber()@",
+      "pkgVersion": "@isNumber()@",
+      "pragma": [
+        "external"
+      ],
+      "versionKey": "@isNumber()@",
+      "license": "CC BY 4.0",
+      "idealScreenDensity": "hdpi",
+      "prevState": "Draft",
+      "s3Key":  "@ignore@",
+      "framework": "NCF",
+      "size": "@isNumber()@",
+      "lastPublishedOn":  "@ignore@",
+      "compatibilityLevel": "@isNumber()@",
+      "name": "KP-Updated-pdf",
+      "status": "Draft",
+      "prevStatus": "Live",
+      "objectType": "ContentImage",
+      "cloudStorageKey": "@ignore@"
+    }
+  }
+}

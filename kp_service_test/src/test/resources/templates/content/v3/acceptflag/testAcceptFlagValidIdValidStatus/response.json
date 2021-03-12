@@ -1,0 +1,18 @@
+{
+  "id": "api.content.flag.accept",
+  "ver": "3.0",
+  "ts": "@ignore@",
+  "params": {
+    "resmsgid": "@ignore@",
+    "msgid": "@ignore@",
+    "err": "@ignore@",
+    "status": "successful",
+    "errmsg": "@ignore@"
+  },
+  "responseCode": "OK",
+  "result": {
+    "node_id": "${contentIdVal}",
+    "identifier": "${contentIdVal}",
+    "versionKey": "@ignore@"
+  }
+}

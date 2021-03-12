@@ -1,0 +1,14 @@
+{
+  "id": "api.content.hierarchy.update",
+  "ver": "3.0",
+  "ts": "@ignore@",
+  "params": {
+    "resmsgid": "@ignore@",
+    "msgid": null,
+    "err": "NOT_FOUND",
+    "status": "failed",
+    "errmsg": "Error! Node(s) doesn't Exists. | [Invalid Node Id.]: resourceId"
+  },
+  "responseCode": "RESOURCE_NOT_FOUND",
+  "result": {"messages":null}
+}

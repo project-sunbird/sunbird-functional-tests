@@ -1,0 +1,16 @@
+{
+  "id": "api.content.flag.accept",
+  "ver": "3.0",
+  "ts": "@ignore@",
+  "params": {
+    "resmsgid": "@ignore@",
+    "msgid": "@ignore@",
+    "err": "NOT_FOUND",
+    "status": "failed",
+    "errmsg": "@ignore@"
+  },
+  "responseCode": "RESOURCE_NOT_FOUND",
+    "result": {
+    "messages":null
+    }
+}

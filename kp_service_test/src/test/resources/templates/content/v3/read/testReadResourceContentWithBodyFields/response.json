@@ -1,0 +1,20 @@
+{
+  "id": "api.content.read",
+  "ver": "3.0",
+  "ts": "@matchesDatePattern('yyyy-MM-dd')@",
+  "params": {
+    "resmsgid": "@ignore@",
+    "msgid": null,
+    "err": null,
+    "status": "successful",
+    "errmsg": null
+  },
+  "responseCode": "OK",
+  "result": {
+    "content": {
+      "identifier":"${contentIdVal}",
+      "body": "@ignore@",
+      "languageCode":["en"]
+      }
+  }
+}

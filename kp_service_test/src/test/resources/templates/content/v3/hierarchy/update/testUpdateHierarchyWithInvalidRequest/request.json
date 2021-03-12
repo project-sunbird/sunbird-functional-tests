@@ -1,0 +1,21 @@
+{
+  "request": {
+    "data": {
+      "hierarchy": {
+        "${rootId}": {
+          "contentType": "TextBook",
+          "children": [
+            "2cb4d698-dc19-4f0c-9990-96f49daff753"
+          ],
+          "root": true
+        },
+        "2cb4d698-dc19-4f0c-9990-96f49daff753": {
+          "contentType": "TextBookUnit",
+          "children": ["${resourceId}"],
+          "root": false
+        }
+
+      }
+    }
+  }
+}

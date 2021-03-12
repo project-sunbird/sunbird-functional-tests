@@ -2,12 +2,16 @@ package org.sunbird.kp.test.common;
 
 import com.consol.citrus.context.TestContext;
 import com.consol.citrus.dsl.testng.TestNGCitrusTestRunner;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Random;
+import java.util.UUID;
 
 /**
  * Base Runner Class for Integration Test
@@ -18,13 +22,18 @@ public class BaseCitrusTestRunner extends TestNGCitrusTestRunner {
 
     @Autowired
     public TestContext testContext;
-
+    public static final String IMAGE_SUFFIX = ".img";
     public static final String REQUEST_FORM_DATA = "request.params";
     public static final String REQUEST_JSON = "request.json";
     public static final String RESPONSE_JSON = "response.json";
+    public static final String VALIDATE_JSON = "validate.json";
 
     private static final String API_KEY = AppConfig.config.getString("kp_api_key");
     private static final Boolean IS_USER_AUTH_REQUIRED = AppConfig.config.getBoolean("user_auth_enable");
+
+    protected static ObjectMapper objectMapper = new ObjectMapper();
+
+    private static List<String> CS_API_LIST = AppConfig.config.getStringList("cs_api_list");
 
     public BaseCitrusTestRunner() {
     }
@@ -54,7 +63,7 @@ public class BaseCitrusTestRunner extends TestNGCitrusTestRunner {
                 builder ->
                         TestActionUtil.processGetRequest(
                                 builder,
-                                Constant.KP_ENDPOINT,
+                                getEndPoint(requestUrl),
                                 testName,
                                 requestUrl,
                                 getHeaders(headers)
@@ -62,7 +71,7 @@ public class BaseCitrusTestRunner extends TestNGCitrusTestRunner {
         runner.http(
                 builder ->
                         TestActionUtil.getResponse(
-                                builder, Constant.KP_ENDPOINT, templateDir, testName, responseCode, responseJson, validationParams));
+                                builder, getEndPoint(requestUrl), templateDir, testName, responseCode, responseJson, validationParams));
     }
 
     /**
@@ -94,7 +103,7 @@ public class BaseCitrusTestRunner extends TestNGCitrusTestRunner {
                 builder ->
                         TestActionUtil.processPostRequest(
                                 builder,
-                                Constant.KP_ENDPOINT,
+                                getEndPoint(requestUrl),
                                 templateDir,
                                 testName,
                                 requestUrl,
@@ -105,7 +114,7 @@ public class BaseCitrusTestRunner extends TestNGCitrusTestRunner {
             runner.http(
                     builder ->
                             TestActionUtil.getResponse(
-                                    builder, Constant.KP_ENDPOINT, templateDir, testName, responseCode, responseJson, validationParams));
+                                    builder, getEndPoint(requestUrl), templateDir, testName, responseCode, responseJson, validationParams));
 
 
     }
@@ -134,12 +143,13 @@ public class BaseCitrusTestRunner extends TestNGCitrusTestRunner {
             HttpStatus responseCode,
             Map<String, Object> validationParams,
             String responseJson) {
+
         getTestCase().setName(testName);
         runner.http(
                 builder ->
                         TestActionUtil.processPatchRequest(
                                 builder,
-                                Constant.KP_ENDPOINT,
+                                getEndPoint(requestUrl),
                                 templateDir,
                                 testName,
                                 requestUrl,
@@ -150,7 +160,7 @@ public class BaseCitrusTestRunner extends TestNGCitrusTestRunner {
         runner.http(
                 builder ->
                         TestActionUtil.getResponse(
-                                builder, Constant.KP_ENDPOINT, templateDir, testName, responseCode, responseJson, validationParams));
+                                builder, getEndPoint(requestUrl), templateDir, testName, responseCode, responseJson, validationParams));
     }
 
     /**
@@ -182,7 +192,7 @@ public class BaseCitrusTestRunner extends TestNGCitrusTestRunner {
                 builder ->
                         TestActionUtil.processDeleteRequest(
                                 builder,
-                                Constant.KP_ENDPOINT,
+                                getEndPoint(requestUrl),
                                 templateDir,
                                 testName,
                                 requestUrl,
@@ -193,7 +203,7 @@ public class BaseCitrusTestRunner extends TestNGCitrusTestRunner {
         runner.http(
                 builder ->
                         TestActionUtil.getResponse(
-                                builder, Constant.KP_ENDPOINT, templateDir, testName, responseCode, responseJson, validationParams));
+                                builder, getEndPoint(requestUrl), templateDir, testName, responseCode, responseJson, validationParams));
     }
 
     /**
@@ -223,7 +233,7 @@ public class BaseCitrusTestRunner extends TestNGCitrusTestRunner {
                         TestActionUtil.processMultipartRequest(
                                 testContext,
                                 builder,
-                                Constant.KP_ENDPOINT,
+                                getEndPoint(requestUrl),
                                 templateDir,
                                 testName,
                                 requestUrl,
@@ -234,7 +244,7 @@ public class BaseCitrusTestRunner extends TestNGCitrusTestRunner {
         runner.http(
                 builder ->
                         TestActionUtil.getResponse(
-                                builder, Constant.KP_ENDPOINT, templateDir, testName, responseCode, responseJson, validationParams));
+                                builder, getEndPoint(requestUrl), templateDir, testName, responseCode, responseJson, validationParams));
     }
 
     /**
@@ -280,12 +290,32 @@ public class BaseCitrusTestRunner extends TestNGCitrusTestRunner {
 
         if (!headers.containsKey(Constant.X_CHANNEL_ID))
             headers.put(Constant.X_CHANNEL_ID, AppConfig.config.getString("kp_test_default_channel"));
+        if (!headers.containsKey(Constant.X_APP_ID))
+            headers.put(Constant.X_APP_ID, AppConfig.config.getString("kp_test_default_appId"));
 
         headers.put(Constant.AUTHORIZATION, Constant.BEARER + API_KEY);
+        headers.put(Constant.X_CONSUMER_ID, UUID.randomUUID().toString());
 
         if (IS_USER_AUTH_REQUIRED)
             headers.put(Constant.X_AUTHENTICATED_USER_TOKEN, "${accessToken}");
         return headers;
+    }
+
+    protected void delay(TestNGCitrusTestRunner runner, long time) {
+        try {
+            runner.sleep(time);
+        } catch (Exception e) {
+            System.out.println("Exception : "+e);
+        }
+    }
+
+    protected static int generateRandomDigits(int n) {
+        int m = (int) Math.pow(10, n - 1);
+        return m + new Random().nextInt(9 * m);
+    }
+
+    public  String getEndPoint(String reqUrl) {
+        return CS_API_LIST.stream().anyMatch(url -> StringUtils.contains(reqUrl, url))? Constant.KP_CONTENT_SERVICE_ENDPOINT : Constant.KP_ENDPOINT;
     }
 
 }

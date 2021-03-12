@@ -1,0 +1,16 @@
+{
+    "id": "api.license.update",
+    "ver": "3.0",
+    "ts": "@matchesDatePattern('yyyy-MM-dd')@",
+    "params": {
+        "resmsgid": "@ignore@",
+        "msgid": null,
+        "err": "CLIENT_ERROR",
+        "status": "failed",
+        "errmsg": "Validation Errors"
+    },
+    "responseCode": "CLIENT_ERROR",
+    "result": {
+        "messages":["Metadata url should be a/an String value"]
+    }
+}

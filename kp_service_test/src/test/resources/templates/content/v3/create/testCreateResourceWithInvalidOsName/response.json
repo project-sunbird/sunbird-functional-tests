@@ -1,0 +1,18 @@
+{
+  "id": "api.content.create",
+  "ver": "3.0",
+  "ts": "@matchesDatePattern('yyyy-MM-dd')@",
+  "params": {
+    "resmsgid": "@ignore@",
+    "msgid": null,
+    "err": "CLIENT_ERROR",
+    "status": "failed",
+    "errmsg": "Validation Errors"
+  },
+  "responseCode": "CLIENT_ERROR",
+  "result": {
+    "messages": [
+      "Metadata os should be one of: [All, Android, iOS, Windows]"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "request": {
+    "filters": {
+      "identifier":"${contentIdVal}",
+      "status":[]
+    },
+    "fields" : [
+      "identifier",
+      "subject",
+      "medium"
+    ]
+  }
+}

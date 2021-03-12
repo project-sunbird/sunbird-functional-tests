@@ -1,0 +1,17 @@
+{
+  "id": "api.content.create",
+  "ver": "3.0",
+  "ts": "@matchesDatePattern('yyyy-MM-dd')@",
+  "params": {
+    "resmsgid": "@ignore@",
+    "msgid": null,
+    "err": "ERR_PLUGIN_CODE_REQUIRED",
+    "status": "failed",
+    "errmsg": "Unique code is mandatory for plugins"
+  },
+  "responseCode": "CLIENT_ERROR",
+  "result": {
+    "messages":null
+  }
+}
+

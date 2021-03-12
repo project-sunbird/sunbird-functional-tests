@@ -1,0 +1,31 @@
+{
+  "id" : "api.license.read",
+  "ver" : "3.0",
+  "ts": "@matchesDatePattern('yyyy-MM-dd')@",
+  "params" : {
+    "resmsgid" : "@ignore@",
+"msgid" : null,
+    "err" : null,
+    "status" : "successful",
+    "errmsg" : null
+  },
+  "responseCode" : "OK",
+  "result" : {
+    "license" : {
+      "identifier" : "${identifier}",
+      "lastStatusChangedOn" : "@matchesDatePattern('yyyy-MM-dd')@",
+      "consumerId" : "@ignore@",
+      "appId" : "@ignore@",
+      "name" : "KP_FT_${idVal}",
+      "channel" : "channel-01",
+      "lastUpdatedOn" : "@matchesDatePattern('yyyy-MM-dd')@",
+      "description" : "updated description",
+      "createdOn" : "@matchesDatePattern('yyyy-MM-dd')@",
+      "url" : "www.url-updated.com",
+      "status" : "Live",
+      "versionKey" : "@isNumber()@",
+      "objectType":"License",
+      "languageCode":[]
+    }
+  }
+}

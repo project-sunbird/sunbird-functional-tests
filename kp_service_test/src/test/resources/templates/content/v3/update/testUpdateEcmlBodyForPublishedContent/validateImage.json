@@ -1,0 +1,75 @@
+{
+  "id": "api.content.read",
+  "ver": "3.0",
+  "ts": "@matchesDatePattern('yyyy-MM-dd')@",
+  "params": {
+    "resmsgid": "@ignore@",
+    "msgid": null,
+    "err": null,
+    "status": "successful",
+    "errmsg": null
+  },
+  "responseCode": "OK",
+  "result": {
+    "content": {
+      "ownershipType": [
+        "createdBy"
+      ],
+      "code": "kp.ft.resource.ecml",
+      "previewUrl": "@ignore@",
+      "downloadUrl": "@ignore@",
+      "channel": "@ignore@",
+      "description": "KP-Updated description ecml",
+      "language": [
+        "English"
+      ],
+      "variants": {
+        "spine": {
+          "ecarUrl": "@ignore@",
+          "size": "@isNumber()@"
+        }
+      },
+      "mimeType": "application/vnd.ekstep.ecml-archive",
+      "streamingUrl": "@ignore@",
+      "idealScreenSize": "normal",
+      "createdOn": "@matchesDatePattern('yyyy-MM-dd')@",
+      "appId": "@ignore@",
+      "contentDisposition": "inline",
+      "contentEncoding": "gzip",
+      "lastUpdatedOn": "@matchesDatePattern('yyyy-MM-dd')@",
+      "sYS_INTERNAL_LAST_UPDATED_ON": "@ignore@",
+      "contentType": "Resource",
+      "dialcodeRequired": "No",
+      "identifier": "@ignore@",
+      "audience": [
+        "Learner"
+      ],
+      "lastStatusChangedOn": "@matchesDatePattern('yyyy-MM-dd')@",
+      "visibility": "Default",
+      "os": [
+        "All"
+      ],
+      "consumerId": "@ignore@",
+      "mediaType": "content",
+      "osId": "org.ekstep.quiz.app",
+      "lastPublishedBy": "KP_FT_PUBLISHER",
+      "languageCode": ["en"],
+      "version": "@isNumber()@",
+      "pkgVersion": "@isNumber()@",
+      "versionKey": "@isNumber()@",
+      "license": "CC BY 4.0",
+      "idealScreenDensity": "hdpi",
+      "prevState": "Draft",
+      "s3Key": "@ignore@",
+      "framework": "NCF",
+      "size": "@isNumber()@",
+      "lastPublishedOn": "@matchesDatePattern('yyyy-MM-dd')@",
+      "compatibilityLevel": "@isNumber()@",
+      "name": "KP-Updated-ecml",
+      "status": "Draft",
+      "objectType": "ContentImage",
+      "prevStatus": "Live",
+      "cloudStorageKey": "@ignore@"
+    }
+  }
+}

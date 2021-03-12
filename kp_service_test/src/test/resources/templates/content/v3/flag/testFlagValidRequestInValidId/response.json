@@ -1,0 +1,16 @@
+{
+    "id": "@ignore@",
+    "ver": "@ignore@",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": "@ignore@",
+        "msgid": null,
+        "err": "NOT_FOUND",
+        "status": "failed",
+        "errmsg": "Error! Node(s) doesn't Exists. | [Invalid Node Id.]: ${contentIdVal}"
+    },
+    "responseCode": "RESOURCE_NOT_FOUND",
+    "result": {
+      "messages":null
+    }
+}

@@ -1,0 +1,74 @@
+{
+  "id": "api.content.read",
+  "ver": "3.0",
+  "ts": "@matchesDatePattern('yyyy-MM-dd')@",
+  "params": {
+    "resmsgid": "@ignore@",
+    "msgid": null,
+    "err": null,
+    "status": "successful",
+    "errmsg": null
+  },
+  "responseCode": "OK",
+  "result": {
+    "content": {
+      "ownershipType": [
+        "createdBy"
+      ],
+      "previewUrl": "@ignore@",
+      "code": "kp.ft.resource.ecml",
+      "downloadUrl": "@ignore@",
+      "channel": "channel-01",
+      "description": "KP Integration Test Content",
+      "language": [
+        "English"
+      ],
+      "variants": {
+        "spine": {
+          "ecarUrl": "@ignore@",
+          "size": "@isNumber()@"
+        }
+      },
+      "mimeType": "application/vnd.ekstep.ecml-archive",
+      "streamingUrl": "@ignore@",
+      "idealScreenSize": "normal",
+      "publishComment": "OK",
+      "createdOn": "@matchesDatePattern('yyyy-MM-dd')@",
+      "contentDisposition": "inline",
+      "artifactUrl": "@ignore@",
+      "contentEncoding": "gzip",
+      "lastUpdatedOn": "@matchesDatePattern('yyyy-MM-dd')@",
+      "SYS_INTERNAL_LAST_UPDATED_ON": "@matchesDatePattern('yyyy-MM-dd')@",
+      "dialcodeRequired": "No",
+      "contentType": "Resource",
+      "lastUpdatedBy": "KP_FT_PUBLISHER",
+      "identifier": "@ignore@",
+      "audience": [
+        "Learner"
+      ],
+      "lastStatusChangedOn": "@matchesDatePattern('yyyy-MM-dd')@",
+      "os": [
+        "All"
+      ],
+      "visibility": "Default",
+      "consumerId":"@ignore@",
+      "mediaType": "content",
+      "osId": "org.ekstep.quiz.app",
+      "lastPublishedBy": "KP_FT_PUBLISHER",
+      "version": "@isNumber()@",
+      "pkgVersion": "@isNumber()@",
+      "versionKey": "@ignore@",
+      "idealScreenDensity": "hdpi",
+      "license": "CC BY 4.0",
+      "s3Key": "@ignore@",
+      "framework": "NCF",
+      "size": "@isNumber()@",
+      "lastPublishedOn": "@matchesDatePattern('yyyy-MM-dd')@",
+      "compatibilityLevel": "@isNumber()@",
+      "name": "KP Integration Test Content",
+      "publisher": "KP_FT_PUBLISHER",
+      "status": "Live",
+      "languageCode": "en"
+    }
+  }
+}

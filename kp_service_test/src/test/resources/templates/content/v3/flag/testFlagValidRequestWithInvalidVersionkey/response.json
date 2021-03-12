@@ -1,0 +1,16 @@
+{
+    "id": "@ignore@",
+    "ver": "@ignore@",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": "@ignore@",
+        "msgid": null,
+        "err": "CLIENT_ERROR",
+        "status": "failed",
+        "errmsg": "Invalid version Key"
+    },
+    "responseCode": "CLIENT_ERROR",
+    "result": {
+        "messages":null
+    }
+}

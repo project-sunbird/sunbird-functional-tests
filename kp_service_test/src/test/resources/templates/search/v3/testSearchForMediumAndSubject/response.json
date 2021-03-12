@@ -1,0 +1,24 @@
+{
+    "id": "api.search-service.search",
+    "ver": "3.0",
+    "ts": "@matchesDatePattern('yyyy-MM-dd')@",
+    "params": {
+        "resmsgid": "@ignore@",
+        "msgid": null,
+        "err": null,
+        "status": "successful",
+        "errmsg": null
+    },
+    "responseCode": "OK",
+    "result": {
+        "count": "@isNumber()@",
+        "content": [
+            {
+                "identifier": "${contentIdVal}",
+                "subject": ["English"],
+                "medium": ["Hindi"],
+                "objectType": "Content"
+            }
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "api.content.upload",
+  "ver": "3.0",
+  "ts": "@ignore@",
+  "params": {
+    "resmsgid": "@ignore@",
+    "msgid": null,
+    "err": "ERR_INVALID_FILE",
+    "status": "failed",
+    "errmsg": "Please Provide Valid File!"
+  },
+  "responseCode": "CLIENT_ERROR",
+  "result": {
+    "messages": null
+  }
+}

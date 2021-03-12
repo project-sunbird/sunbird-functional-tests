@@ -1,0 +1,9 @@
+{
+  "request": {
+    "content": {
+      "description": "KP-Updated description ecml",
+      "versionKey": "${versionKeyVal}",
+      "framework": "KP_INVALID_FRAMEWORK"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id" : "api.content.read",
+  "ver" : "3.0",
+  "ts" : "@matchesDatePattern('yyyy-MM-dd')@",
+  "params" : {
+    "resmsgid" : "@ignore@",
+    "msgid" : null,
+    "err" : "ERR_CONTENT_NOT_FOUND",
+    "status" : "failed",
+    "errmsg" : "Content not found with id: ${contentIdVal}"
+  },
+  "responseCode" : "RESOURCE_NOT_FOUND",
+  "result" : { }
+}

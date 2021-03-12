@@ -1,0 +1,12 @@
+{
+  "request": {
+    "content": {
+      "name": "KP-Updated-pdf",
+      "description": "KP-Updated description pdf",
+      "versionKey": "${versionKeyVal}",
+      "reservedDialcodes":{
+        "DJAK1K" :1,
+        "ADL23L": 2
+      }    }
+  }
+}

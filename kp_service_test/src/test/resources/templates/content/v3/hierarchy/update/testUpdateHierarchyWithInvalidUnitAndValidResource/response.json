@@ -1,0 +1,16 @@
+{
+  "id": "api.content.hierarchy.update",
+  "ver": "3.0",
+  "ts": "@ignore@",
+  "params": {
+    "resmsgid": "@ignore@",
+    "msgid": null,
+    "err": "ERR_CONTENT_NOT_FOUND",
+    "status": "failed",
+    "errmsg": "Content not found with identifier: 2cb4d698-dc19-4f0c-9990-96f49daff753"
+  },
+  "responseCode": "RESOURCE_NOT_FOUND",
+  "result": {
+    "messages":null
+  }
+}

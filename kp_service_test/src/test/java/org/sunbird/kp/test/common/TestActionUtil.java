@@ -328,7 +328,7 @@ public class TestActionUtil {
         if (MapUtils.isNotEmpty(validationParams)) {
             String path = objectTypes.stream().filter(x->testTemplateDir.toLowerCase().contains(x)).collect(Collectors.toList()).get(0);
             System.out.println("path : "+path);
-            HttpClientActionBuilder.HttpClientReceiveActionBuilder response = builder.client(Constant.KP_ENDPOINT).receive();
+            HttpClientActionBuilder.HttpClientReceiveActionBuilder response = builder.client(endpointName).receive();
             return response
                     .response(responseCode)
                     .validationCallback(

@@ -1,0 +1,16 @@
+{
+  "id": "api.license.create",
+  "ver": "3.0",
+  "ts": "@matchesDatePattern('yyyy-MM-dd')@",
+  "params": {
+    "resmsgid": "@ignore@",
+    "msgid": null,
+    "err": "ERR_NAME_SET_AS_IDENTIFIER",
+    "status": "failed",
+    "errmsg": "name will be set as identifier"
+  },
+  "responseCode": "CLIENT_ERROR",
+  "result": {
+    "messages": null
+  }
+}

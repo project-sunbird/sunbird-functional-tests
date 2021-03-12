@@ -1,0 +1,14 @@
+{
+  "request": {
+    "content": {
+      "name": "KP-Updated-pdf",
+      "description": "KP-Updated description pdf",
+      "versionKey": "${versionKeyVal}",
+      "body": {
+        "solutions": [
+          "<p>When the bird.</p>"
+        ]
+      }
+    }
+  }
+}

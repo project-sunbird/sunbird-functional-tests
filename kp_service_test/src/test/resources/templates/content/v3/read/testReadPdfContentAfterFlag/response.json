@@ -1,0 +1,73 @@
+{
+  "id" : "api.content.read",
+  "ver" : "3.0",
+  "ts" : "@matchesDatePattern('yyyy-MM-dd')@",
+  "params" : {
+    "resmsgid" : "@ignore@",
+    "msgid" : null,
+    "err" : null,
+    "status" : "successful",
+    "errmsg" : null
+  },
+  "responseCode" : "OK",
+  "result" : {
+    "content" : {
+      "ownershipType" : [ "createdBy" ],
+      "previewUrl" : "@ignore@",
+      "downloadUrl" : "@ignore@",
+      "channel" : "channel-01",
+      "language" : [ "English" ],
+      "variants" : {
+        "spine" : {
+          "ecarUrl" : "@ignore@",
+          "size" :"@isNumber()@"
+        }
+      },
+      "mimeType" : "application/pdf",
+      "artifactUrl" : "@ignore@",
+      "contentEncoding" : "identity",
+      "contentType" : "Resource",
+      "lastUpdatedBy" : "KP-Tester",
+      "identifier" : "${contentIdVal}",
+      "audience" : [ "Learner" ],
+      "visibility" : "Default",
+      "consumerId" : "@ignore@",
+      "mediaType" : "content",
+      "osId" : "org.ekstep.quiz.app",
+      "lastPublishedBy" : "KP_FT_PUBLISHER",
+      "languageCode": ["en"],
+      "version" :"@isNumber()@",
+      "pragma" : [ "external" ],
+      "prevState" : "Draft",
+      "license" : "CC BY 4.0",
+      "lastPublishedOn" : "@matchesDatePattern('yyyy-MM-dd')@",
+      "size" :"@isNumber()@",
+      "name" : "KP Integration Test Content",
+      "status" : "Flagged",
+      "code" : "kp.ft.resource.pdf",
+      "flags" : [ "kp-flags", "newKp-flags" ],
+      "description" : "KP Integration Test Content",
+      "lastFlaggedOn" : "@matchesDatePattern('yyyy-MM-dd')@",
+      "streamingUrl" :"@ignore@",
+      "flaggedBy" : [ "KP-Tester" ],
+      "idealScreenSize" : "normal",
+      "createdOn" : "@matchesDatePattern('yyyy-MM-dd')@",
+      "contentDisposition" : "inline",
+      "lastUpdatedOn" : "@matchesDatePattern('yyyy-MM-dd')@",
+      "sYS_INTERNAL_LAST_UPDATED_ON" : "@matchesDatePattern('yyyy-MM-dd')@",
+      "dialcodeRequired" : "No",
+      "lastStatusChangedOn" : "@matchesDatePattern('yyyy-MM-dd')@",
+      "flagReasons" : [ "Copyright Violation" ],
+      "os" : [ "All" ],
+      "pkgVersion" :"@isNumber()@",
+      "versionKey" : "@ignore@",
+      "idealScreenDensity" : "hdpi",
+      "s3Key" : "@ignore@",
+      "framework" : "NCF",
+      "compatibilityLevel" :"@isNumber()@",
+      "objectType": "Content",
+      "cloudStorageKey": "@ignore@",
+      "prevStatus": "Processing"
+    }
+  }
+}

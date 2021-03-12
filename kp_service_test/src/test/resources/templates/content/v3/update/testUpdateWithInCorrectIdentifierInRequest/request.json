@@ -1,0 +1,10 @@
+{
+  "request": {
+    "content": {
+      "identifier": "akjkajfkja",
+      "name": "KP-Updated-pdf",
+      "description": "KP-Updated description pdf",
+      "versionKey": "${versionKeyVal}"
+    }
+  }
+}

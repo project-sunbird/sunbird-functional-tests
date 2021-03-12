@@ -1,3 +1,4 @@
+@Library('deploy-conf')_
 pipeline {
     environment {
         sunbird_api_key = "${sunbird_api_keys}"
@@ -46,7 +47,8 @@ pipeline {
                 '''
             }
             finally {
-                archiveArtifacts 'sunbird_service_api_test/target/target/citrus-reports/citrus-test-results.html'            
+                archiveArtifacts 'sunbird_service_api_test/target/target/citrus-reports/citrus-test-results.html'
+		email_notify("${kp_team_email_group}")     
 	    }
         }
 }

@@ -1,0 +1,13 @@
+{
+  "id":"api.content.update",
+  "ver":"3.0",
+  "ts":"@ignore@",
+  "params":{
+    "resmsgid":"@ignore@",
+    "msgid":null,
+    "err":"ERR_GRAPH_SEARCH_UNKNOWN_ERROR",
+    "status":"failed",
+    "errmsg":"Error! Node(s) doesn't Exists. | [Invalid Node Id.]: ${contentIdVal}.img"},
+  "responseCode":"RESOURCE_NOT_FOUND",
+  "result":"@ignore@"
+}

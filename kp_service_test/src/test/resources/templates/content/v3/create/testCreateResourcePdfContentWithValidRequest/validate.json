@@ -1,0 +1,56 @@
+{
+  "id": "api.content.read",
+  "ver": "3.0",
+  "ts": "@matchesDatePattern('yyyy-MM-dd')@",
+  "params": {
+    "resmsgid": "@ignore@",
+    "msgid": null,
+    "err": null,
+    "status": "successful",
+    "errmsg": null
+  },
+  "responseCode": "OK",
+  "result": {
+    "content": {
+      "ownershipType": [
+        "createdBy"
+      ],
+      "code": "kp.ft.resource.pdf",
+      "channel": "channel-01",
+      "language": [
+        "English"
+      ],
+      "mimeType": "application/pdf",
+      "idealScreenSize": "normal",
+      "createdOn": "@matchesDatePattern('yyyy-MM-dd')@",
+      "appId": "@ignore@",
+      "consumerId": "@ignore@",
+      "contentDisposition": "inline",
+      "contentEncoding": "identity",
+      "lastUpdatedOn": "@matchesDatePattern('yyyy-MM-dd')@",
+      "contentType": "Resource",
+      "dialcodeRequired": "No",
+      "identifier": "${contentIdVal}",
+      "lastStatusChangedOn": "@matchesDatePattern('yyyy-MM-dd')@",
+      "audience": [
+        "Learner"
+      ],
+      "visibility": "Default",
+      "os": [
+        "All"
+      ],
+      "mediaType": "content",
+      "osId": "org.ekstep.quiz.app",
+      "languageCode": ["en"],
+      "version": "@isNumber()@",
+      "versionKey": "@isNumber()@",
+      "license": "CC BY 4.0",
+      "idealScreenDensity": "hdpi",
+      "framework": "NCF",
+      "compatibilityLevel": "@isNumber()@",
+      "name": "KP Integration Test Content",
+      "status": "Draft",
+      "objectType": "Content"
+    }
+  }
+}

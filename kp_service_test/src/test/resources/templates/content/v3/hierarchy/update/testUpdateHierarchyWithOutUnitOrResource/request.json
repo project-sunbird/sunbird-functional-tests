@@ -1,0 +1,16 @@
+{
+  "request": {
+    "data": {
+      "nodesModified": {
+        "${rootId}":{
+          "isNew": false,
+          "root": true,
+          "metadata": {
+            "name": "TextBook Updated"
+          }
+        }
+      },
+      "hierarchy": {}
+    }
+  }
+}

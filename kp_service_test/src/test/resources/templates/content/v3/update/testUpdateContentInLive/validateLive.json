@@ -1,0 +1,78 @@
+{
+  "id": "api.content.read",
+  "ver": "3.0",
+  "ts": "@matchesDatePattern('yyyy-MM-dd')@",
+  "params": {
+    "resmsgid": "@ignore@",
+    "msgid": null,
+    "err": null,
+    "status": "successful",
+    "errmsg": null
+  },
+  "responseCode": "OK",
+  "result": {
+    "content": {
+      "ownershipType": [
+        "createdBy"
+      ],
+      "previewUrl": "@ignore@",
+      "code": "kp.ft.resource.pdf",
+      "downloadUrl": "@ignore@",
+      "channel": "channel-01",
+      "description": "KP Integration Test Content",
+      "language": [
+        "English"
+      ],
+      "streamingUrl": "@ignore@",
+      "variants": {
+        "spine": {
+          "ecarUrl": "@ignore@",
+          "size": "@isNumber()@"
+        }
+      },
+      "mimeType": "application/pdf",
+      "idealScreenSize": "normal",
+      "createdOn": "@matchesDatePattern('yyyy-MM-dd')@",
+      "contentDisposition": "inline",
+      "artifactUrl": "@ignore@",
+      "contentEncoding": "identity",
+      "lastUpdatedOn": "@matchesDatePattern('yyyy-MM-dd')@",
+      "sYS_INTERNAL_LAST_UPDATED_ON": "@matchesDatePattern('yyyy-MM-dd')@",
+      "contentType": "Resource",
+      "dialcodeRequired": "No",
+      "identifier": "@ignore@",
+      "audience": [
+        "Learner"
+      ],
+      "lastStatusChangedOn": "@matchesDatePattern('yyyy-MM-dd')@",
+      "visibility": "Default",
+      "os": [
+        "All"
+      ],
+      "consumerId": "@ignore@",
+      "mediaType": "content",
+      "osId": "org.ekstep.quiz.app",
+      "lastPublishedBy": "KP_FT_PUBLISHER",
+      "version": "@isNumber()@",
+      "pkgVersion": "@isNumber()@",
+      "pragma": [
+        "external"
+      ],
+      "versionKey": "@isNumber()@",
+      "prevState": "Draft",
+      "license": "CC BY 4.0",
+      "idealScreenDensity": "hdpi",
+      "s3Key": "@ignore@",
+      "framework": "NCF",
+      "lastPublishedOn": "@matchesDatePattern('yyyy-MM-dd')@",
+      "size": "@isNumber()@",
+      "compatibilityLevel": "@isNumber()@",
+      "name": "KP Integration Test Content",
+      "status": "Live",
+      "languageCode": ["en"],
+      "objectType": "Content",
+      "cloudStorageKey": "@ignore@",
+      "prevStatus": "Processing"
+    }
+  }
+}
