@@ -1,7 +1,0 @@
-{
-    "request":{
-    "userId":"${userId}",
-    "private":["gender","location","address","address"],
-    "public":["gender"]
-}
-}

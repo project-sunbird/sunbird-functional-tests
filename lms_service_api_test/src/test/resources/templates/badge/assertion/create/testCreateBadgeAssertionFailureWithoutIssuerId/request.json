@@ -1,7 +1,0 @@
-{
-  "request": {
-    "recipientId": "someId",
-    "recipientType": "user",
-    "badgeId": "someBadgeId"
-  }
-}

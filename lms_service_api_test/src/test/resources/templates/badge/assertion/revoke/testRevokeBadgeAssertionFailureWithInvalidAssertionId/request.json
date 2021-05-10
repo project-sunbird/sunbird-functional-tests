@@ -1,8 +1,0 @@
-{
-  "request": {
-    "assertionId": "invalid_assertion_id",
-    "recipientId": "${userId}",
-    "recipientType": "user",
-    "revocationReason": "some reason"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "request": {
-    "query":"mar",
-    "filters": {
-      "firstName":"amit"
-    }
-  }
-}

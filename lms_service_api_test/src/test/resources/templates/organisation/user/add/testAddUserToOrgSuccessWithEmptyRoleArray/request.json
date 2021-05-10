@@ -1,7 +1,0 @@
-{
-  "request": {
-    "userId": "${userId}",
-    "roles": [],
-    "organisationId": "${organisationId}"
-  }
-}

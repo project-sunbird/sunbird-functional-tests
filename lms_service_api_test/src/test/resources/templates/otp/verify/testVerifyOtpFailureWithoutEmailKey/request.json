@@ -1,7 +1,0 @@
-{
-    "request": {
-        "type" : "email",
-        "otp" : "someOtp"
-	}
-}
-

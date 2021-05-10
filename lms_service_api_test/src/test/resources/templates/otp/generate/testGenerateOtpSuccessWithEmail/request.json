@@ -1,8 +1,0 @@
-{
- "request":
-     {
-       "key":"citrus:randomString(10, MIXED, true)@gmail.com",
-       "type" : "email"
-     }
- 
-}

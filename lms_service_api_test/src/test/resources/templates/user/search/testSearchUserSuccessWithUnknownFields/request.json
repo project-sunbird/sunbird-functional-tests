@@ -1,8 +1,0 @@
-{
-  "request": {
-    "filters": {
-     "unknown" : "some value",
-     "unknown1" : "some value"
-    }
-  }
-}
