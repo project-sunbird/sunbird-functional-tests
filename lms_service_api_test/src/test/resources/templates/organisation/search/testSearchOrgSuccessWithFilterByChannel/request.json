@@ -1,7 +1,0 @@
-{
-  "request": {
-    "filters": {
-      "channel": "${channel}"
-    }
-  }
-}

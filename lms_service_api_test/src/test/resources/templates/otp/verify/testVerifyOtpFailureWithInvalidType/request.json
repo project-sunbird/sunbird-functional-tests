@@ -1,8 +1,0 @@
-{
-    "request": {
-        "key" : "invalidPhoneNumber",
-        "type" : "invalidType",
-        "otp" : "someOtp"
-	}
-}
-

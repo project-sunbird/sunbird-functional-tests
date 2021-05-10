@@ -1,9 +1,0 @@
-{
-
-    "request":{
-        "userId":"#INVALID_VALUE",
-        "organisationId":"${organisationId}",
-        "roles": ["CONTENT_CURATION","CONTENT_CREATION","CONTENT_REVIEW"]
-
-    }
-}

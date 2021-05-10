@@ -1,9 +1,0 @@
-{
-	"request": {
-		"firstName": "ft_testuser",
-		"password": "password",
-		"userName": "citrus:concat('ft_',citrus:randomString(100, MIXED, true))",
-		"emailVerified": true,
-		"email": "citrus:concat('ft_',citrus:concat(citrus:randomString(100, MIXED, true),'@gmail.com'))"
-	}
-}

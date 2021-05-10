@@ -1,9 +1,0 @@
-{
-  "request": {
-    "recipientId": "${userId}",
-    "recipientType": "user",
-    "issuerId": "${issuerId}",
-    "badgeId": "${badgeId}",
-    "evidence": "citrus:concat('https://',citrus:randomString(5, MIXED, true),'.com')"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "request": {
-    "endorsedUserId": "${endorsedUserId}",
-    "userId": "${endorsedUserId}",
-    "skillName": "C"
-  }
-}

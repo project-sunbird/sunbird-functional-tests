@@ -1,6 +1,0 @@
-{
-  "request": {
-    "userId": "${userId}",
-    "endorsedUserId": "${endorsedUserId}"
-  }
-}
