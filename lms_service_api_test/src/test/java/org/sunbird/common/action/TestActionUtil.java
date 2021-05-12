@@ -21,7 +21,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.sunbird.common.util.Constant;
-import org.sunbird.integration.test.user.EndpointConfig.TestGlobalProperty;
+import org.sunbird.common.util.EndpointConfig.TestGlobalProperty;
 
 public class TestActionUtil {
 

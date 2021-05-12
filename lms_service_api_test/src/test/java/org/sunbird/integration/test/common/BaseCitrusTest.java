@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.HttpStatus;
 import org.sunbird.common.util.HttpUtil;
-import org.sunbird.integration.test.user.EndpointConfig.TestGlobalProperty;
+import org.sunbird.common.util.EndpointConfig.TestGlobalProperty;
 
 public class BaseCitrusTest extends TestNGCitrusTestDesigner {
 
