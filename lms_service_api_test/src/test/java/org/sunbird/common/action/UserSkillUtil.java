@@ -4,7 +4,7 @@ import com.consol.citrus.context.TestContext;
 import org.springframework.http.MediaType;
 import org.springframework.util.StringUtils;
 import org.sunbird.common.util.Constant;
-import org.sunbird.integration.test.common.BaseCitrusTestRunner;
+import org.sunbird.common.BaseCitrusTestRunner;
 
 public class UserSkillUtil {
 

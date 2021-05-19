@@ -1,4 +1,4 @@
-package org.sunbird.common.util;
+package org.sunbird.common;
 
 import com.consol.citrus.dsl.endpoint.CitrusEndpoints;
 import com.consol.citrus.http.client.HttpClient;

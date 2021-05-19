@@ -5,7 +5,7 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.sunbird.common.util.Constant;
-import org.sunbird.integration.test.common.BaseCitrusTestRunner;
+import org.sunbird.common.BaseCitrusTestRunner;
 import org.sunbird.integration.test.course.batch.CreateCourseBatchTest;
 
 public class CourseBatchUtil {

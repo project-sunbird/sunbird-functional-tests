@@ -5,8 +5,8 @@ import com.consol.citrus.testng.CitrusParameters;
 import javax.ws.rs.core.MediaType;
 import org.springframework.http.HttpStatus;
 import org.sunbird.integration.test.common.BaseCitrusTestRunner;
-import org.sunbird.integration.test.user.EndpointConfig;
-import org.sunbird.integration.test.user.EndpointConfig.TestGlobalProperty;
+import org.sunbird.integration.test.common.EndpointConfig;
+import org.sunbird.integration.test.common.EndpointConfig.TestGlobalProperty;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 

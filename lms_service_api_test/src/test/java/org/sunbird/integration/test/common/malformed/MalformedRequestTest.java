@@ -4,7 +4,7 @@ import com.consol.citrus.annotations.CitrusTest;
 import com.consol.citrus.testng.CitrusParameters;
 import org.springframework.http.HttpStatus;
 import org.sunbird.common.util.Constant;
-import org.sunbird.integration.test.common.BaseCitrusTestRunner;
+import org.sunbird.common.BaseCitrusTestRunner;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 

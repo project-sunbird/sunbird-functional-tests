@@ -32,8 +32,8 @@ import org.springframework.util.MultiValueMap;
 import org.sunbird.common.models.response.Response;
 import org.sunbird.common.models.response.ResponseCode;
 import org.sunbird.integration.test.common.BaseCitrusTest;
-import org.sunbird.integration.test.user.EndpointConfig;
-import org.sunbird.integration.test.user.EndpointConfig.TestGlobalProperty;
+import org.sunbird.integration.test.common.EndpointConfig;
+import org.sunbird.integration.test.common.EndpointConfig.TestGlobalProperty;
 import org.testng.Assert;
 
 /**
