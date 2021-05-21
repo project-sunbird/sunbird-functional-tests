@@ -49,7 +49,7 @@ node() {
 
     finally {
              archiveArtifacts 'lms_service_api_test/target/target/citrus-reports/citrus-test-results.html'
-             email_notify("${lms_team_email_group}")
+//              email_notify("${lms_team_email_group}")
     	    }
 
 }
