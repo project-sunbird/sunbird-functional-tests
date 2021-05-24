@@ -3,8 +3,8 @@ package org.sunbird.common.action;
 import com.consol.citrus.context.TestContext;
 import org.springframework.http.MediaType;
 import org.sunbird.common.util.Constant;
-import org.sunbird.integration.test.common.BaseCitrusTestRunner;
-import org.sunbird.integration.test.user.EndpointConfig.TestGlobalProperty;
+import org.sunbird.common.BaseCitrusTestRunner;
+import org.sunbird.common.EndpointConfig.TestGlobalProperty;
 
 public class CourseEnrollmentUtil {
   public static final String TEMPLATE_DIR_ENROLL_COURSE = "templates/course/batch/enroll";

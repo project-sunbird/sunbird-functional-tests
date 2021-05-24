@@ -4,7 +4,7 @@ import com.consol.citrus.context.TestContext;
 import org.springframework.http.HttpStatus;
 import org.sunbird.common.util.Constant;
 import org.sunbird.integration.test.common.BaseCitrusTestRunner;
-import org.sunbird.integration.test.user.EndpointConfig.TestGlobalProperty;
+import org.sunbird.integration.test.common.EndpointConfig.TestGlobalProperty;
 
 public class BadgeClassUtil {
 

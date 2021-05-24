@@ -2,11 +2,11 @@ package org.sunbird.common.util;
 
 import com.datastax.driver.core.ResultSet;
 import com.datastax.driver.core.Session;
-import java.util.HashMap;
+
 import java.util.List;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.sunbird.integration.test.user.EndpointConfig.TestGlobalProperty;
+import org.sunbird.common.EndpointConfig.TestGlobalProperty;
 
 /**
  * Class to perform the clean up things from cassandra database.

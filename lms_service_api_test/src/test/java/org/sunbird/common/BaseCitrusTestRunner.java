@@ -1,4 +1,4 @@
-package org.sunbird.integration.test.common;
+package org.sunbird.common;
 
 import com.consol.citrus.context.TestContext;
 import com.consol.citrus.dsl.testng.TestNGCitrusTestRunner;
@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.sunbird.common.action.TestActionUtil;
 import org.sunbird.common.util.Constant;
-import org.sunbird.integration.test.user.EndpointConfig.TestGlobalProperty;
+import org.sunbird.common.EndpointConfig.TestGlobalProperty;
 
 public class BaseCitrusTestRunner extends TestNGCitrusTestRunner {
 

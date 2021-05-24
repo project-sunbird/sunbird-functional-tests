@@ -9,10 +9,8 @@ import javax.ws.rs.core.MediaType;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.HttpStatus;
 import org.sunbird.common.action.ContentStoreUtil;
-import org.sunbird.common.action.OrgUtil;
-import org.sunbird.common.action.UserUtil;
 import org.sunbird.common.util.PropertiesReader;
-import org.sunbird.integration.test.common.BaseCitrusTestRunner;
+import org.sunbird.common.BaseCitrusTestRunner;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 

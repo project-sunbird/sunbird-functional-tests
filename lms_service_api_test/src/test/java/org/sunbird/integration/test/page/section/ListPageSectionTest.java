@@ -3,7 +3,7 @@ package org.sunbird.integration.test.page.section;
 import com.consol.citrus.annotations.CitrusTest;
 import com.consol.citrus.testng.CitrusParameters;
 import org.springframework.http.HttpStatus;
-import org.sunbird.integration.test.common.BaseCitrusTestRunner;
+import org.sunbird.common.BaseCitrusTestRunner;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 

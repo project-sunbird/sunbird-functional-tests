@@ -7,7 +7,7 @@ import org.sunbird.common.action.ContentStoreUtil;
 import org.sunbird.common.action.CourseBatchUtil;
 import org.sunbird.common.action.CourseEnrollmentUtil;
 import org.sunbird.common.util.Constant;
-import org.sunbird.integration.test.common.BaseCitrusTestRunner;
+import org.sunbird.common.BaseCitrusTestRunner;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 

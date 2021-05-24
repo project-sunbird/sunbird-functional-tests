@@ -17,7 +17,7 @@ import org.apache.http.util.EntityUtils;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
-import org.sunbird.integration.test.user.EndpointConfig.TestGlobalProperty;
+import org.sunbird.common.EndpointConfig.TestGlobalProperty;
 
 /**
  * Helper class for performing HTTP related APIs.
