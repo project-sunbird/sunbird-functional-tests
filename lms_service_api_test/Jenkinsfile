@@ -28,10 +28,7 @@ node() {
         }
 
         stage('Build') {
-            withCredentials([string(credentialsId: 'lms_private_api_key', variable: 'lms_private_api_key'), string(credentialsId: 'lms_ft_access_key', variable: 'lms_ft_access_key')]) {
             sh """
-                 export lms_private_api_key=$lms_private_api_key
-                 export lms_ft_access_key=$lms_ft_access_key
                  cd lms_service_api_test
                  ls
                  mvn -X clean verify
