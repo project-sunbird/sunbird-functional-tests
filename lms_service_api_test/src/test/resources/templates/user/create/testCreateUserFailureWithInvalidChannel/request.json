@@ -1,0 +1,11 @@
+{
+    "request": {
+        "firstName": "ft_testName",
+        "lastName": "test",
+        "password": "password",
+        "userName": "citrus:concat('ft_username',citrus:randomString(30, MIXED, true))",
+        "email": "citrus:randomString(30, MIXED, true)@gmail.com",
+        "emailVerified": true,
+        "channel": "functionalTest#Invalid$Channel@1235123"
+    }
+}

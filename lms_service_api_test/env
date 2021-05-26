@@ -1,0 +1,24 @@
+| Key                          |  Description
+
+| sunbird_api_key              | Kong api key to make server call
+| sunbird_cassandra_host       | Host of cassandra to connect . this will be used to delete data after test case executed
+| sunbird_cassandra_port       | Port of cassandra
+| sunbird_cassandra_username   | User name
+| sunbird_cassandra_keyspace   | Keyspace name
+| sunbird_sso_url              | Keycloak server auth URL
+| sunbird_sso_username         | Keycloak admin user name . required to remove update password operation from key cloak , after user creation
+| sunbird_sso_password         | Keycloak admin user password.
+| sunbird_sso_realm            | Keycloak relam name , required to generate user auth token
+| sunbird_sso_client_id        | Keycloak client id   , required to generate user auth token
+| sunbird_es_host              | Elastic search host , required to deleted test data
+| sunbird_es_port              | Elastic search port , required to delete test data
+| sunbird_es_index_type        | Need to discuss
+| sunbird_es_index             | Elastic search index name.
+| sunbird_test_base_url        | https://dev.open-sunbird.org 
+| sunbird_default_channel      | Default channel value for Sunbird. This is the default channel value of a root organisation created. e.g. sunbird-dev
+| sunbird_username             | Already created user which is used for API authorisation. e.g. ft_org_admin
+| sunbird_user_password        | Password corresponding to user set in 'sunbird_username' environment variable.
+| content_store_api_base_url   | Base URL for content store API
+| content_store_api_key        | Authentication key for content store API
+| sunbird_test_email_address_1 | Test email address 1 e.g. 'sunbirdtest101@gmail.com'  
+| sunbird_test_email_address_2 | Test email address 2 e.g. 'sunbirdtest102@gmail.com'

@@ -1,0 +1,9 @@
+{
+  "request": {
+	  "courseId": "${courseId}",
+	  "id":"${batchId}",
+	"startDate":"${startDate}",
+    "enrollmentEndDate":"2020-09-10",
+    "endDate": "${endDate}"
+  }
+}

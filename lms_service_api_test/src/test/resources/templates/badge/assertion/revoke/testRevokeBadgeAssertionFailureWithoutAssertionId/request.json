@@ -1,0 +1,7 @@
+{
+  "request": {
+    "recipientId": "some_recipient_id",
+    "recipientType": "user",
+    "revocationReason": "some reason"
+  }
+}

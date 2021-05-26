@@ -1,0 +1,14 @@
+{
+    "id": "api.otp.verify",
+    "ver": "@ignore@",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": null,
+        "msgid": "@ignore@",
+        "err": "INVALID_VALUE",
+        "status": "INVALID_VALUE",
+        "errmsg": "Invalid type: invalidType. Valid values are: email, phone."
+    },
+    "responseCode": "CLIENT_ERROR",
+    "result": {}
+}

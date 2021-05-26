@@ -1,0 +1,60 @@
+{
+    "id": "api.org.search",
+    "ver": "v1",
+    "ts": "@ignore@",
+    "params": {
+        "resmsgid": "@ignore@",
+        "msgid": "@ignore@",
+        "err": "@ignore@",
+        "status": "success",
+        "errmsg": "@ignore@"
+    },
+    "responseCode": "OK",
+    "result": {
+        "response": {
+            "count": 1,
+            "content": [
+                {
+                    "dateTime": "@ignore@",
+                    "preferredLanguage": "@ignore@",
+                    "approvedBy": "@ignore@",
+                    "channel": "ft_channel_01",
+                    "description": "@ignore@",
+                    "updatedDate": "@ignore@",
+                    "addressId": "@ignore@",
+                    "orgType": "@ignore@",
+                    "provider": "@ignore@",
+                    "locationId": "@ignore@",
+                    "orgCode": "@ignore@",
+                    "theme": "@ignore@",
+                    "id": "0126391644091351040",
+                    "communityId": "@ignore@",
+                    "isApproved": "@ignore@",
+                    "email": "@ignore@",
+                    "slug": "ft_channel_01",
+                    "identifier": "0126391644091351040",
+                    "thumbnail": "@ignore@",
+                    "orgName": "FT_channel_01",
+                    "updatedBy": "@ignore@",
+                    "address": "@ignore@",
+                    "locationIds": "@ignore@",
+                    "externalId": "@ignore@",
+                    "isRootOrg": true,
+                    "rootOrgId": "0126391644091351040",
+                    "approvedDate": "@ignore@",
+                    "imgUrl": "@ignore@",
+                    "homeUrl": "@ignore@",
+                    "orgTypeId": "@ignore@",
+                    "isDefault": "@ignore@",
+                    "contactDetail": "@ignore@",
+                    "createdDate": "@ignore@",
+                    "createdBy": "@ignore@",
+                    "parentOrgId": "@ignore@",
+                    "hashTagId": "0126391644091351040",
+                    "noOfMembers": "@ignore@",
+                    "status": 1
+                }
+            ]
+        }
+    }
+}

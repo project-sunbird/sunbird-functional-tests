@@ -1,0 +1,10 @@
+{
+	"request": {
+		"firstName": "ft_name",
+		"lastName": "test",
+		"password": "password",
+		"userName": " ",
+		"emailVerified": true,
+		"email": "manzarul07+769@gmail.com"
+	}
+}

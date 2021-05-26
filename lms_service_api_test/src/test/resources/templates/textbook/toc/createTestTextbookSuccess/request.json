@@ -1,0 +1,22 @@
+{
+	"request": {
+		"content": {
+			"osId": "org.ekstep.quiz.app",
+			"mediaType": "content",
+			"visibility": "Default",
+			"description": "Textbook for TOC Integration Test",
+			"name": "SB_FT_TOC_TEXTBOOK",
+			"language": [
+				"English"
+			],
+			"contentType": "TextBook",
+			"code": "citrus:concat('SB_FT_COURSE_', citrus:currentDate('yyyyMMddhhmmss'))",
+			"tags": [
+				"QA_Content"
+			],
+			"mimeType": "application/vnd.ekstep.content-collection",
+			"children": [],
+			"createdBy": "3d5778a6-0447-4bb1-acb2-51bcf4f587f3"
+		}
+	}
+}

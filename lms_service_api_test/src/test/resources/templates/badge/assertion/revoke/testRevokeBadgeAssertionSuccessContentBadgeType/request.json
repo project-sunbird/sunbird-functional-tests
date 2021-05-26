@@ -1,0 +1,8 @@
+{
+  "request": {
+    "assertionId": "${assertionId}",
+    "recipientId": "${courseId}",
+    "recipientType": "content",
+    "revocationReason": "some reason"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "request": {
+    "rootOrgId": "invalidOrgId",
+    "data": [
+      {
+        "location": "someLocation",
+        "type": "someType"
+      }
+    ]
+  }
+}

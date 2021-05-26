@@ -1,0 +1,12 @@
+{
+  "params": {},
+  "request": {
+    "subject": "some Subject ",
+    "body": "some body",
+    "orgImgUrl": "some org Img url",
+    "actionName": "some action",
+    "actionUrl": "some action url",
+    "orgName": "someOrgName",
+    "emailTemplateType": "someEmailTemplateType"
+}
+}
