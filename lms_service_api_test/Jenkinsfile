@@ -1,4 +1,4 @@
-node('build-slave') {
+node('deploy-conf') {
     try {
         String ANSI_GREEN = "\u001B[32m"
         String ANSI_NORMAL = "\u001B[0m"
@@ -7,17 +7,12 @@ node('build-slave') {
         String ANSI_YELLOW = "\u001B[33m"
         ansiColor('xterm') {
                 stage('Checkout') {
-                    if (!env.hub_org) {
-                        println(ANSI_BOLD + ANSI_RED + "Uh Oh! Please set a Jenkins environment variable named hub_org with value as registery/sunbidrded" + ANSI_NORMAL)
-                        error 'Please resolve the errors and rerun..'
-                    } else
-                        println(ANSI_BOLD + ANSI_GREEN + "Found environment variable named hub_org with value as: " + hub_org + ANSI_NORMAL)
+                    cleanWs()
+                    checkout scm
+                    commit_hash = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
+                    build_tag = sh(script: "echo " + params.github_release_tag.split('/')[-1] + "_" + commit_hash + "_" + env.BUILD_NUMBER, returnStdout: true).trim()
+                    echo "build_tag: " + build_tag
                 }
-                cleanWs()
-                checkout scm
-                commit_hash = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
-                build_tag = sh(script: "echo " + params.github_release_tag.split('/')[-1] + "_" + commit_hash + "_" + env.BUILD_NUMBER, returnStdout: true).trim()
-                echo "build_tag: " + build_tag
                 stage('Clone the lms functional test repo') {
                   dir("lmsRepo")
                   {
@@ -26,23 +21,22 @@ node('build-slave') {
                   }
                 }
                 stage('deploy') {
-                            values = [:]
-                            envDir = sh(returnStdout: true, script: "echo $JOB_NAME").split('/')[-3].trim()
-                            module = sh(returnStdout: true, script: "echo $JOB_NAME").split('/')[-2].trim()
-                            jobName = sh(returnStdout: true, script: "echo $JOB_NAME").split('/')[-1].trim()
-                            currentWs = sh(returnStdout: true, script: 'pwd').trim()
-                            ansiblePlaybook = "sunbird-devops/kubernetes/ansible/lms-ft.yml"
-                            ansibleExtraArgs = "--vault-password-file /var/lib/jenkins/secrets/vault-pass"
-                            values.put('currentWs', currentWs)
-                            values.put('env', envDir)
-                            values.put('module', module)
-                            values.put('jobName', jobName)
-                            values.put('ansiblePlaybook', ansiblePlaybook)
-                            values.put('ansibleExtraArgs', ansibleExtraArgs)
-                            println values
-                            ansible_playbook_run(values)
-                            currentBuild.result = 'SUCCESS'
-                            currentBuild.description = "Private: ${params.private_branch}, Public: ${params.branch_or_tag}"
+                    values = [:]
+                    envDir = sh(returnStdout: true, script: "echo $JOB_NAME").split('/')[-3].trim()
+                    module = sh(returnStdout: true, script: "echo $JOB_NAME").split('/')[-2].trim()
+                    jobName = sh(returnStdout: true, script: "echo $JOB_NAME").split('/')[-1].trim()
+                    currentWs = sh(returnStdout: true, script: 'pwd').trim()
+                    ansiblePlaybook = "kubernetes/ansible/lms-ft.yml"
+                    values.put('currentWs', currentWs)
+                    values.put('env', envDir)
+                    values.put('module', module)
+                    values.put('jobName', jobName)
+                    values.put('ansiblePlaybook', ansiblePlaybook)
+                    values.put('ansibleExtraArgs', ansibleExtraArgs)
+                    println values
+                    ansible_playbook_run(values)
+                    currentBuild.result = 'SUCCESS'
+                    currentBuild.description = "Private: ${params.private_branch}, Public: ${params.branch_or_tag}"
                 }
         }
     } catch (err) {
