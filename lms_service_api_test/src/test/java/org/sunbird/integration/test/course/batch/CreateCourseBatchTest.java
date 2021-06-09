@@ -39,20 +39,14 @@ public class CreateCourseBatchTest extends BaseCitrusTestRunner {
   public static final String TEST_CREATE_COURSE_BATCH_FAILURE_WITH_ENROLLMENT_END_DATE_AFTER_END_DATE =
           "testCreateCourseBatchFailureEnrollmentEndDateAfterEndDate";
   public static final String TEST_CREATE_COURSE_BATCH_FAILURE_WITH_INVALID_CREATED_FOR =
-      "testCreateCourseBatchFailureInviteOnlyWithInvalidCreatedFor";
-  public static final String TEST_CREATE_COURSE_BATCH_FAILURE_INVITE_ONLY_WITH_INVALID_MENTOR =
-      "testCreateCourseBatchFailureInviteOnlyWithInvalidMentor";
+      "testCreateCourseBatchFailureWithInvalidCreatedFor";
   public static final String TEST_CREATE_COURSE_BATCH_FAILURE_OPEN_BATCH_WITH_INVALID_MENTOR =
       "testCreateCourseBatchFailureOpenBatchWithInvalidMentor";
   public static final String TEST_CREATE_COURSE_BATCH_FAILURE_WITH_PARTICIPANT =
       "testCreateCourseBatchFailureWithParticipant";
 
-  public static final String TEST_CREATE_COURSE_BATCH_SUCCESS_INVITE_ONLY_BATCH =
-      "testCreateCourseBatchSuccessInviteOnlyBatch";
-  public static final String TEST_CREATE_COURSE_BATCH_SUCCESS_INVITE_ONLY_WITH_CREATED_FOR =
-      "testCreateCourseBatchSuccessInviteOnlyWithCreatedFor";
-  public static final String TEST_CREATE_COURSE_BATCH_SUCCESS_INVITE_ONLY_WITH_MENTORS =
-      "testCreateCourseBatchSuccessInviteOnlyWithMentors";
+  public static final String TEST_CREATE_COURSE_BATCH_SUCCESS_WITH_CREATED_FOR =
+          "templates.course.batch.create.testCreateCourseBatchSuccessWithCreatedFor";
   public static final String TEST_CREATE_COURSE_BATCH_SUCCESS_OPEN_BATCH =
       "testCreateCourseBatchSuccessOpenBatch";
   public static final String TEST_CREATE_COURSE_BATCH_SUCCESS_OPEN_BATCH_WITH_MENTORS =
@@ -129,32 +123,25 @@ public class CreateCourseBatchTest extends BaseCitrusTestRunner {
         false,
         HttpStatus.BAD_REQUEST
       },
-            new Object[] {
-                    TEST_CREATE_COURSE_BATCH_FAILURE_WITH_ENROLLMENT_END_DATE_BEFORE_START_DATE,
-                    false,
-                    false,
-                    false,
-                    HttpStatus.BAD_REQUEST
-            },
-            new Object[] {
-                    TEST_CREATE_COURSE_BATCH_FAILURE_WITH_ENROLLMENT_END_DATE_AFTER_END_DATE,
-                    false,
-                    false,
-                    false,
-                    HttpStatus.BAD_REQUEST
-            },
       new Object[] {
-        TEST_CREATE_COURSE_BATCH_FAILURE_WITH_INVALID_CREATED_FOR,
-        true,
+        TEST_CREATE_COURSE_BATCH_FAILURE_WITH_ENROLLMENT_END_DATE_BEFORE_START_DATE,
+        false,
         false,
         false,
         HttpStatus.BAD_REQUEST
       },
       new Object[] {
-        TEST_CREATE_COURSE_BATCH_FAILURE_INVITE_ONLY_WITH_INVALID_MENTOR,
+        TEST_CREATE_COURSE_BATCH_FAILURE_WITH_ENROLLMENT_END_DATE_AFTER_END_DATE,
+        false,
+        false,
+        false,
+        HttpStatus.BAD_REQUEST
+      },
+      new Object[] {
+        TEST_CREATE_COURSE_BATCH_FAILURE_WITH_INVALID_CREATED_FOR,
         true,
         false,
-        true,
+        false,
         HttpStatus.BAD_REQUEST
       },
       new Object[] {
@@ -205,19 +192,13 @@ public class CreateCourseBatchTest extends BaseCitrusTestRunner {
   @DataProvider(name = "createCourseBatchSuccessDataProvider")
   public Object[][] createCourseBatchSuccessDataProvider() {
     return new Object[][] {
-      new Object[] {
-        TEST_CREATE_COURSE_BATCH_SUCCESS_INVITE_ONLY_BATCH, false, false, HttpStatus.OK
-      },
       new Object[] {TEST_CREATE_COURSE_BATCH_SUCCESS_OPEN_BATCH, false, false, HttpStatus.OK},
       new Object[] {
-        TEST_CREATE_COURSE_BATCH_SUCCESS_INVITE_ONLY_WITH_CREATED_FOR, true, false, HttpStatus.OK
-        },
-     new Object[] {
-      TEST_CREATE_COURSE_BATCH_SUCCESS_INVITE_ONLY_WITH_MENTORS, false, true, HttpStatus.OK
-        },
-      new Object[] {
         TEST_CREATE_COURSE_BATCH_SUCCESS_OPEN_BATCH_WITH_MENTORS, false, true, HttpStatus.OK
-      }
+      },
+      new Object[] {
+      TEST_CREATE_COURSE_BATCH_SUCCESS_WITH_CREATED_FOR, true, false, HttpStatus.OK
+    }
     };
   }
 

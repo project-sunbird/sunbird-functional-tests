@@ -1,5 +1,5 @@
 {
-  "id": "api.course.batch.create",
+  "id": "api.course.batch.update",
   "ver": "v1",
   "ts": "@ignore@",
   "params": {
@@ -11,7 +11,6 @@
   },
   "responseCode": "OK",
   "result": {
-    "response": "SUCCESS",
-    "batchId": "@ignore@"
+
   }
 }

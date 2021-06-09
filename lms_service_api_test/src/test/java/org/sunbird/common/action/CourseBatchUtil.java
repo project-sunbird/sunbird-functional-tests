@@ -11,11 +11,8 @@ import org.sunbird.integration.test.course.batch.CreateCourseBatchTest;
 public class CourseBatchUtil {
 
   private String openCourseBatchId;
-  private String inviteOnlyCourseBatchId;
   public static final String TEST_NAME_CREATE_COURSE_BATCH_SUCCESS_OPEN_BATCH =
       "testCreateCourseBatchSuccessOpenBatch";
-  public static final String TEST_NAME_CREATE_COURSE_BATCH_SUCCESS_INVITE_ONLY_BATCH =
-      "testCreateCourseBatchSuccessInviteOnlyBatch";
 
   private static String getCreateCourseBatchUrl(BaseCitrusTestRunner runner) {
     return runner.getLmsApiUriPath("/api/course/v1/batch/create", "/v1/course/batch/create");
@@ -27,16 +24,6 @@ public class CourseBatchUtil {
           getCourseBatchId(runner, testContext, TEST_NAME_CREATE_COURSE_BATCH_SUCCESS_OPEN_BATCH);
     }
     return openCourseBatchId;
-  }
-
-  public String getInviteOnlyCourseBatchId(
-      BaseCitrusTestRunner runner, TestContext testContext) {
-    if (StringUtils.isBlank(inviteOnlyCourseBatchId)) {
-      inviteOnlyCourseBatchId =
-          getCourseBatchId(
-              runner, testContext, TEST_NAME_CREATE_COURSE_BATCH_SUCCESS_INVITE_ONLY_BATCH);
-    }
-    return inviteOnlyCourseBatchId;
   }
 
   private static String getCourseBatchId(

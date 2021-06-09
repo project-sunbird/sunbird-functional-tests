@@ -2,7 +2,7 @@
   "request": {
   	"name":"testCourseBatch",
   	"courseId": "testCourseId",
-  	"enrollmentType":"invite-only",
+  	"enrollmentType":"open",
 	"startDate":"2000-01-01"
   }
 }

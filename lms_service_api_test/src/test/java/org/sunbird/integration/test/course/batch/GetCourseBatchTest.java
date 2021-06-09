@@ -18,8 +18,6 @@ public class GetCourseBatchTest extends BaseCitrusTestRunner {
   private CourseBatchUtil courseBatchUtil = new CourseBatchUtil();
   public static final String TEST_NAME_GET_COURSE_BATCH_SUCCESS_OPEN_BATCH_WITH_VALID_ID =
       "testGetCourseBatchSuccessOpenBatchWithValidId";
-  public static final String TEST_NAME_GET_COURSE_BATCH_SUCCESS_INVITE_ONLY_BATCH_WITH_VALID_ID =
-      "testGetCourseBatchSuccessInviteOnlyBatchWithValidId";
   public static final String TEST_NAME_GET_COURSE_BATCH_FAILURE_WITH_INVALID_ID =
       "testGetCourseBatchFailureWithInvalidId";
   public static final String TEST_NAME_GET_COURSE_BATCH_FAILURE_WITHOUT_AUTH_TOKEN =
@@ -60,8 +58,7 @@ public class GetCourseBatchTest extends BaseCitrusTestRunner {
   @DataProvider(name = "readCourseBatchSuccessDataProvider")
   public Object[][] readCourseBatchSuccessDataProvider() {
     return new Object[][] {
-      new Object[] {TEST_NAME_GET_COURSE_BATCH_SUCCESS_OPEN_BATCH_WITH_VALID_ID, true},
-      new Object[] {TEST_NAME_GET_COURSE_BATCH_SUCCESS_INVITE_ONLY_BATCH_WITH_VALID_ID, false}
+      new Object[] {TEST_NAME_GET_COURSE_BATCH_SUCCESS_OPEN_BATCH_WITH_VALID_ID, true}
     };
   }
 
@@ -90,10 +87,6 @@ public class GetCourseBatchTest extends BaseCitrusTestRunner {
       courseId= PropertiesReader.getInstance().getProperty("sunbird_course_id");
     variable("courseId", courseId);
     System.out.println("niharika"+ courseId);
-    if (isOpen) {
-      courseBatchId = courseBatchUtil.getOpenCourseBatchId(this, testContext);
-    } else {
-      courseBatchId = courseBatchUtil.getInviteOnlyCourseBatchId(this, testContext);
-    }
+    courseBatchId = courseBatchUtil.getOpenCourseBatchId(this, testContext);
   }
 }

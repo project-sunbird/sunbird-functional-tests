@@ -94,11 +94,7 @@ public class LearnerStateUpdateTest extends BaseCitrusTestRunner {
         String courseId = ContentStoreUtil.createLiveCourse(this, testContext);
         String resourceId = ContentStoreUtil.getResourceId();
         String courseBatchId = "";
-        if (isOpenBatch) {
-            courseBatchId = courseBatchUtil.getOpenCourseBatchId(this, testContext);
-        } else {
-            courseBatchId = courseBatchUtil.getInviteOnlyCourseBatchId(this, testContext);
-        }
+        courseBatchId = courseBatchUtil.getOpenCourseBatchId(this, testContext);
         variable("batchId", courseBatchId);
         variable("courseId", courseId);
         variable("contentId", resourceId);
