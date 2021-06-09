@@ -24,8 +24,6 @@ public class UnenrollCourseTest extends BaseCitrusTestRunner {
       "testUnenrollCourseFailureWithoutBatchId";
   public static final String TEST_NAME_UNENROLL_COURSE_FAILURE_WITHOUT_USER_ID =
       "testUnenrollCourseFailureWithoutUserId";
-  public static final String TEST_NAME_UNENROLL_COURSE_FAILURE_INVITE_ONLY_BATCH =
-      "testUnenrollCourseFailureForInviteOnlyBatch";
   public static final String TEST_NAME_UNENROLL_COURSE_FAILURE_INVALID_COURSE_ID =
       "testUnenrollCourseFailureForInvalidCourseId";
   public static final String TEST_NAME_UNENROLL_COURSE_FAILURE_INVALID_USER_ID =
@@ -71,15 +69,6 @@ public class UnenrollCourseTest extends BaseCitrusTestRunner {
         TEST_NAME_UNENROLL_COURSE_FAILURE_WITHOUT_USER_ID,
         false,
         false,
-        false,
-        false,
-        false,
-        HttpStatus.BAD_REQUEST
-      },
-      new Object[] {
-        TEST_NAME_UNENROLL_COURSE_FAILURE_INVITE_ONLY_BATCH,
-        true,
-        true,
         false,
         false,
         false,
@@ -207,11 +196,7 @@ public class UnenrollCourseTest extends BaseCitrusTestRunner {
       variable("startDate", TODAY_DATE);
       String courseId = ContentStoreUtil.getCourseId(this, testContext);
       variable("courseId", courseId);
-      if (isOpenBatch) {
-        courseBatchId = courseBatchUtil.getOpenCourseBatchId(this, testContext);
-      } else {
-        courseBatchId = courseBatchUtil.getInviteOnlyCourseBatchId(this, testContext);
-      }
+      courseBatchId = courseBatchUtil.getOpenCourseBatchId(this, testContext);
       variable("batchId", courseBatchId);
     }
 

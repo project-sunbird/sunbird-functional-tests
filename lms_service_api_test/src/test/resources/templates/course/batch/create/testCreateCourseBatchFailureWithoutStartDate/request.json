@@ -2,6 +2,6 @@
   "request": {
   	"name":"testCourseBatch",
   	"courseId": "testCourseId",
-  	"enrollmentType":"invite-only"
+  	"enrollmentType":"open"
   }
 }

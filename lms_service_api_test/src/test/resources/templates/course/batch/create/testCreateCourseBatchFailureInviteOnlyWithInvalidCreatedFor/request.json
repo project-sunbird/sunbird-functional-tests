@@ -1,9 +1,0 @@
-{
-  "request": {
-  	"name":"testCourseBatch",
-  	"courseId": "${courseId}",
-  	"enrollmentType":"open",
-	"startDate":"${startDate}",
-	"createdFor":["invalid"]
-  }
-}
