@@ -1,0 +1,8 @@
+{
+	"request": {
+	"courseId": "${courseId}",
+	"id":"${batchId}",
+	"startDate":"${startDate}",
+	"createdFor":["${organisationId}"]
+	}
+}
