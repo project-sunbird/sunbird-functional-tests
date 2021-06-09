@@ -151,13 +151,6 @@ public class CreateCourseBatchTest extends BaseCitrusTestRunner {
         HttpStatus.BAD_REQUEST
       },
       new Object[] {
-        TEST_CREATE_COURSE_BATCH_FAILURE_INVITE_ONLY_WITH_INVALID_MENTOR,
-        true,
-        false,
-        true,
-        HttpStatus.BAD_REQUEST
-      },
-      new Object[] {
         TEST_CREATE_COURSE_BATCH_FAILURE_OPEN_BATCH_WITH_INVALID_MENTOR,
         true,
         false,
@@ -205,16 +198,7 @@ public class CreateCourseBatchTest extends BaseCitrusTestRunner {
   @DataProvider(name = "createCourseBatchSuccessDataProvider")
   public Object[][] createCourseBatchSuccessDataProvider() {
     return new Object[][] {
-      new Object[] {
-        TEST_CREATE_COURSE_BATCH_SUCCESS_INVITE_ONLY_BATCH, false, false, HttpStatus.OK
-      },
       new Object[] {TEST_CREATE_COURSE_BATCH_SUCCESS_OPEN_BATCH, false, false, HttpStatus.OK},
-      new Object[] {
-        TEST_CREATE_COURSE_BATCH_SUCCESS_INVITE_ONLY_WITH_CREATED_FOR, true, false, HttpStatus.OK
-        },
-     new Object[] {
-      TEST_CREATE_COURSE_BATCH_SUCCESS_INVITE_ONLY_WITH_MENTORS, false, true, HttpStatus.OK
-        },
       new Object[] {
         TEST_CREATE_COURSE_BATCH_SUCCESS_OPEN_BATCH_WITH_MENTORS, false, true, HttpStatus.OK
       }

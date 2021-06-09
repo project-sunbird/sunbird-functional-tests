@@ -49,7 +49,9 @@ public class TestActionUtil {
                 + userName
                 + "&password="
                 + password
-                + "&grant_type=password");
+                + "&grant_type=password"
+                + "&client_secret="
+                + System.getenv("sunbird_sso_client_secret"));
   }
 
   public static TestAction getPutRequestTestAction(
