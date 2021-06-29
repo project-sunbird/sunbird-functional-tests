@@ -37,13 +37,14 @@ public class UpdateCourseBatchTest extends BaseCitrusTestRunner {
   private static final String TEST_UPDATE_COURSE_BATCH_SUCCESS_WITH_VALID_CREATED_FOR =
           "testUpdateCourseBatchSuccessWithValidCreatedFor";
   private static final String TEST_UPDATE_COURSE_BATCH_FAILURE_WITH_INVALID_CREATED_FOR =
-          "templates.course.batch.update.testUpdateCourseBatchFailureWithInvalidCreatedFor";
+          "testUpdateCourseBatchFailureWithInvalidCreatedFor";
 
   private static String courseBatchId = "FT_Course_Batch_Id" + Instant.now().getEpochSecond();
   public static final String TEMPLATE_DIR = "templates/course/batch/update";
   public static final String START_DATE = calculateDate(3);
   public static final String END_DATE = calculateDate(8);
   public static final String FUTURE_START_DATE = calculateDate(5);
+  public static final String FUTURE_ENROLLMENT_END_DATE = calculateDate(10);
   private String getUpdateCourseBatchUrl() {
     return getLmsApiUriPath("/api/course/v1/batch/update", "/v1/course/batch/update");
   }
@@ -143,6 +144,10 @@ public class UpdateCourseBatchTest extends BaseCitrusTestRunner {
     getTestCase().setName(testName);
       beforeTest(isOpenBatch);
     variable("startDate", START_DATE);
+    if(testName.equals(TEST_UPDATE_COURSE_BATCH_FAILURE_WITH_ENROLLMENT_END_DATE_AFTER_END_DATE)){
+      variable("futureEnrollmentEndDate", FUTURE_ENROLLMENT_END_DATE);
+      variable("endDate", END_DATE);
+    }
     performPatchTest(
         this,
         TEMPLATE_DIR,

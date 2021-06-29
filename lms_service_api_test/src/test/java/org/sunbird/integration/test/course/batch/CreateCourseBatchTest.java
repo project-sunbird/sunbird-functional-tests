@@ -46,7 +46,7 @@ public class CreateCourseBatchTest extends BaseCitrusTestRunner {
       "testCreateCourseBatchFailureWithParticipant";
 
   public static final String TEST_CREATE_COURSE_BATCH_SUCCESS_WITH_CREATED_FOR =
-          "templates.course.batch.create.testCreateCourseBatchSuccessWithCreatedFor";
+      "testCreateCourseBatchSuccessWithCreatedFor";
   public static final String TEST_CREATE_COURSE_BATCH_SUCCESS_OPEN_BATCH =
       "testCreateCourseBatchSuccessOpenBatch";
   public static final String TEST_CREATE_COURSE_BATCH_SUCCESS_OPEN_BATCH_WITH_MENTORS =
