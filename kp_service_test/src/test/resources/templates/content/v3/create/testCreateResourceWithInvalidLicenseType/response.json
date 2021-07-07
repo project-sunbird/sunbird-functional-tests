@@ -1,16 +1,18 @@
 {
-    "id": "api.content.create",
+    "id": "api.content.update",
     "ver": "3.0",
     "ts": "@matchesDatePattern('yyyy-MM-dd')@",
     "params": {
         "resmsgid": "@ignore@",
         "msgid": null,
-        "err": "ERR_INVALID_EDGE_PROPERTY",
+        "err": "CLIENT_ERROR",
         "status": "failed",
-        "errmsg": "@ignore@"
+        "errmsg": "Validation Errors"
     },
     "responseCode": "CLIENT_ERROR",
     "result": {
-        "messages": null
+        "messages": [
+            "Metadata license should be a/an String value"
+        ]
     }
 }

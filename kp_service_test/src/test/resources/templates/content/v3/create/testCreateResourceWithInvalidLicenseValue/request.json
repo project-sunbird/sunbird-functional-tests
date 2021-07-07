@@ -6,7 +6,7 @@
       "contentType": "Resource",
       "code": "citrus:Code",
       "mimeType": "application/pdf",
-      "license": ["CC BY 4.0"]
+      "license": "InvalidValue"
     }
   }
 }

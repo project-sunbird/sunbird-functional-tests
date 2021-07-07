@@ -130,6 +130,12 @@ public class CreateContentTest extends BaseCitrusTestRunner {
                 },
                 new Object[]{
                         ContentV3Scenario.TEST_CREATE_RESOURCE_WITH_CONCEPTS
+                },
+                new Object[]{
+                        ContentV3Scenario.TEST_CREATE_RESOURCE_CONTENT_WITH_VALID_LICENSE
+                },
+                new Object[]{
+                        ContentV3Scenario.TEST_CREATE_RESOURCE_CONTENT_WITHOUT_LICENSE
                 }
         };
     }
@@ -210,6 +216,9 @@ public class CreateContentTest extends BaseCitrusTestRunner {
                 },
                 new Object[]{
                         ContentV3Scenario.TEST_CREATE_RESOURCE_CONTENT_WITH_VALID_FRAMEWORK_INVALID_CATEGORY
+                },
+                new Object[]{
+                        ContentV3Scenario.TEST_CREATE_RESOURCE_CONTENT_WITH_INVALID_LICENSE_VALUE
                 }
         };
     }
